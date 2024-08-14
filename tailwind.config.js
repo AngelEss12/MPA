@@ -4,7 +4,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        titulos: ["Dancing Script", "cursive"]
+        titulos: ["Dancing Script", "cursive"],
+        cuerpos:["Raleway", "sans-serif"]
       }
     },
   },
