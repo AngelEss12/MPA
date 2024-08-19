@@ -1,8 +1,51 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+@import 'animations.css';
+
+.animate-appear {
+    view-timeline-name: --image;
+    view-timeline-axis: block;
+
+    animation-timeline: --image;
+    animation-name: appear;
+
+    animation-range: entry 25% cover 50%;
+    animation-fill-mode: both;
+}
+
+
 .button {
-    @apply font-cuerpos font-bold text-center text-sm border-2 rounded-3xl py-2 px-8 transition-all ease-in duration-300 hover:scale-110;
+    @apply font-cuerpos font-bold text-center text-sm border-2 rounded-3xl py-2 px-8 transition-all ease-in duration-300;
+}
+
+.contenedor-principal {
+    @apply flex flex-col justify-center items-center pb-8 md:pb-12;
+}
+
+.title {
+    @apply text-center text-2xl font-bold font-titulos py-4 sm:text-4xl md:py-8;
+}
+
+.pop {
+    @apply animate-fade animate-once animate-ease-in;
+}
+
+.up {
+    @apply animate-fade-up animate-once animate-ease-linear animate-delay-500;
+}
+
+.down {
+    @apply animate-fade-down animate-once animate-ease-linear animate-delay-500;
+}
+
+.jump {
+    @apply animate-jump-in animate-once animate-ease-in animate-delay-500;
+}
+
+.pulse {
+    @apply animate-pulse animate-once animate-ease-linear animate-delay-500;
 }
