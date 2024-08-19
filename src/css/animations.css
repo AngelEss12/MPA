@@ -1,0 +1,18 @@
+@keyframes appear {
+    0% {
+        opacity: 0;
+        scale: 25%;
+    }
+
+    50% {
+        opacity: 0.5;
+        scale: 50%;
+    }
+
+    100% {
+        opacity: 1;
+        scale: 100%;
+    }
+}
+
+  
