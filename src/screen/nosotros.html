@@ -8,18 +8,17 @@
 </head>
 <body>
     <header class="w-full max-h-[750px] relative pop">
-        <div class="bg-black/60 grid grid-rows-[15%,85%] sm:grid-rows-[10%,90%] w-full absolute h-full z-10">
+        <div class="bg-black/65 grid grid-rows-[15%,85%] sm:grid-rows-[10%,90%] w-full absolute h-full z-10">
             <div class="w-full flex items-center px-4 lg:py-0">
-                <nav
-                    class="w-full flex justify-between text-[16px] text-white font-titulos font-extrabold gap-4 sm:text-2xl md:text-3xl lg:text-5xl lg:px-8">
-                    <a class="down hover:border-b-[3px] lg:hover:border-b-[5px] hover:border-red-400 hover:transition-all hover:ease-out hover:duration-100">Inicio</a>
-                    <a href="src/screen/nosotros.html" class="down hover:border-b-[3px] lg:hover:border-b-[5px] hover:border-yellow-400 hover:transition-all hover:ease-out hover:duration-100">Nosotros</a>
-                    <a href="#" class="down hover:border-b-[3px] lg:hover:border-b-[5px] hover:border-blue-400 hover:transition-all hover:ease-out hover:duration-100">Actividades</a>
-                    <a href="#" class="down hover:border-b-[3px] lg:hover:border-b-[5px] hover:border-purple-400 hover:transition-all hover:ease-out hover:duration-100">Testimonios</a>
+                <nav class="w-full flex justify-between text-[16px] text-white font-titulos font-extrabold gap-4 sm:text-2xl md:text-3xl lg:text-5xl lg:px-8">
+                    <a href="/index.html" class="down hover:border-b-[3px] lg:hover:border-b-[5px] hover:text-red-200 hover:border-red-400 hover:transition-all hover:ease-linear hover:duration-300">Inicio</a>
+                    <a href="src/screen/nosotros.html" class="down text-yellow-200 border-b-[3px]  md:border-b-[5px] border-yellow-400 transition-all">Nosotros</a>
+                    <a href="#" class="down hover:border-b-[3px] lg:hover:border-b-[5px] hover:text-blue-200 hover:border-blue-400 hover:transition-all hover:ease-linear hover:duration-300">Actividades</a>
+                    <a href="#" class="down hover:border-b-[3px] lg:hover:border-b-[5px] hover:text-purple-200 hover:border-purple-400 hover:transition-all hover:ease-linear hover:duration-300">Testimonios</a>
                 </nav> <!--Fin de Navegacion-->
             </div>
 
-            <div class="flex flex-col justify-center items-center text-center text-4xl sm:text-4xl md:text-6xl lg:text-9xl lg:space-y-12 font-extrabold">
+            <div class="flex flex-col justify-center items-center text-center text-6xl sm:text-7xl md:text-8xl lg:text-9xl lg:space-y-12 font-extrabold">
                 <h2 class="text-white font-titulos animate-heartbeat">Nosotros</h2>
                 <a href="#" class="text-white font-titulos text-lg my-4 border-2 rounded-3xl px-8 jump transition-all ease-in duration-300 hover:scale-110 hover:bg-white hover:text-black hover:font-extrabold sm:text-3xl sm:px-16 sm:py-2 md:text-4xl md:px-28 lg:text-6xl lg:m-0 lg:px-40 lg:py-3">Contactanos</a>
             </div>
@@ -29,5 +28,21 @@
             <img class="w-full max-h-[750px] object-cover aspect-video" src="/assets/banner/Banner Us.webp" alt="banner nosotros">
         </div>
     </header>
+
+    <main>
+        <section class="h-[350px] grid grid-cols-6 grid-rows-6">
+            <div class="w-full border-2 border-white col-span-3 row-span-3 bg-[#f251a4] flex justify-center items-center up">
+                <h2 class="text-center text-4xl font-titulos  text-black font-extrabold ">Logo</h2>
+            </div>
+
+            <div class="w-full border-2 border-white col-start-4 col-span-3 row-span-3 bg-[#dd75c3] flex justify-center items-center up">
+                <h2 class="text-center text-4xl font-titulos  text-black font-extrabold ">Himno</h2>
+            </div>
+
+            <div class="w-full border-2 border-white col-start-1 col-span-6 row-start-4 row-span-3 bg-[#f3bfe4] flex justify-center items-center up">
+                <h2 class="text-center text-4xl font-titulos  text-black font-extrabold ">Creador</h2>
+            </div>
+        </section> <!--Fin de Identidad-->
+    </main>
 </body>
 </html>
