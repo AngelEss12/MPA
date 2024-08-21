@@ -10,9 +10,13 @@ module.exports = {
 
       keyframes: {
         appear: {
-          '0%': { opacity: '0', transform: 'scale(0.25)' }, // Escala inicial al 25%
-          '50%': { opacity: '0.5', transform: 'scale(0.5)' }, // Escala inicial al 25%
+          '0%': { opacity: '0', transform: 'scale(0.75)' }, // Escala inicial al 25%
           '100%': { opacity: '1', transform: 'scale(1)' },   // Escala final al 100%
+        },
+
+        load: {
+          '0%': { width: '0'}, // Escala inicial al 25%
+          '100%': { width: '5rem'},   // Escala final al 100%
         },
 
         heartbeat: {
@@ -48,8 +52,9 @@ module.exports = {
         },
       },
       animation: {
-        appear: 'appear ease-in-out',  // Define la animación con la duración y timing-function que desees
+        appear: 'appear 0.6s ease-in-out both',  // Define la animación con la duración y timing-function que desees
         heartbeat: 'heartbeat 2s linear 1s infinite both',
+        load: 'load 7s linear forwards',
         bubbleup: 'bubbleup 8s infinite',
         'bubbleup-delayed-1': 'bubbleup 8s infinite 2s',
         'bubbleup-delayed-2': 'bubbleup 8s infinite 4s',
@@ -64,7 +69,18 @@ module.exports = {
     },
   },
   plugins: [
+    function({ addComponents }) {
+      addComponents({
+        '.animate-appear': {
+          'view-timeline-name': '--image',
+          'view-timeline-axis': 'block',
+          'animation-timeline': '--image',
+          'animation-name': 'appear',
+          'animation-range': 'entry 25% cover 50%',
+          'animation-fill-mode': 'both',
+        },
+      });
+    },
     require('tailwindcss-animated')
   ],
 }
-
