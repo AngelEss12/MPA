@@ -40,29 +40,55 @@
     </header>
 
     <main>
-        <section class="bg-white relative w-full h-[450px]">
-            <div id="burbujas" class="absolute inset-0 flex flex-wrap justify-center items-center gap-8 py-4 z-0 overflow-hidden">
-                <div class="w-[200px] h-[200px] bg-purple-400 rounded-full filter animate-bubbleup blur-3xl absolute left-10 -bottom-[300px]"></div>
-                <div class="w-[200px] h-[200px] bg-red-400 rounded-full filter animate-bubbleup-delayed-1 blur-3xl absolute -left-3 -bottom-[50px]"></div>
-                <div class="w-[200px] h-[200px] bg-yellow-300 rounded-full filter animate-bubbleup-delayed-2 blur-3xl absolute -bottom-[150px] -right-10"></div>
-                <div class="w-[200px] h-[200px] bg-slate-400 rounded-full filter animate-bubbleup-delayed-3 blur-3xl absolute -bottom-[350px]"></div>
-                <div class="w-[200px] h-[200px] bg-pink-400 rounded-full filter animate-bubbleup-delayed-4 blur-3xl absolute right-0 -bottom-[400px]"></div>
-                <div class="w-[200px] h-[200px] bg-lime-300 rounded-full filter animate-bubbleup-delayed-5 blur-3xl absolute left-44 -bottom-[200px]"></div> 
-                <div class="w-[200px] h-[200px] bg-cyan-300 rounded-full filter animate-bubbleup-delayed-6 blur-3xl absolute -right-16 -bottom-[250px]"></div>
-                <div class="w-[200px] h-[200px] bg-orange-300 rounded-full filter animate-bubbleup-delayed-7 blur-3xl absolute right-20 -bottom-[100px]"></div> 
+        <section class="bg-white relative w-full">
+            <div id="burbujas"
+                class="absolute inset-0 flex flex-wrap justify-center items-center gap-8 py-4 z-0 overflow-hidden">
+                <div
+                    class="w-[200px] h-[200px] bg-purple-400 rounded-full filter animate-bubbleup blur-3xl absolute left-10 -bottom-[300px]">
+                </div>
+                <div
+                    class="w-[200px] h-[200px] bg-red-400 rounded-full filter animate-bubbleup-delayed-1 blur-3xl absolute -left-3 -bottom-[50px]">
+                </div>
+                <div
+                    class="w-[200px] h-[200px] bg-yellow-300 rounded-full filter animate-bubbleup-delayed-2 blur-3xl absolute -bottom-[150px] -right-10">
+                </div>
+                <div
+                    class="w-[200px] h-[200px] bg-slate-400 rounded-full filter animate-bubbleup-delayed-3 blur-3xl absolute -bottom-[350px]">
+                </div>
+                <div
+                    class="w-[200px] h-[200px] bg-pink-400 rounded-full filter animate-bubbleup-delayed-4 blur-3xl absolute right-0 -bottom-[400px]">
+                </div>
+                <div
+                    class="w-[200px] h-[200px] bg-lime-300 rounded-full filter animate-bubbleup-delayed-5 blur-3xl absolute left-44 -bottom-[200px]">
+                </div>
+                <div
+                    class="w-[200px] h-[200px] bg-cyan-300 rounded-full filter animate-bubbleup-delayed-6 blur-3xl absolute -right-16 -bottom-[250px]">
+                </div>
+                <div
+                    class="w-[200px] h-[200px] bg-orange-300 rounded-full filter animate-bubbleup-delayed-7 blur-3xl absolute right-20 -bottom-[100px]">
+                </div>
             </div>
 
-            <div id="container" class="relative flex flex-col justify-center items-center z-10 up">
+            <div id="container-identidad" class="relative flex flex-col justify-center items-center z-10 up">
                 <h2 class="font-titulos font-extrabold text-4xl py-4">Identidad</h2>
-                <div id="c-identidad" class="w-full flex justify-around items-center">
-                    <img class="w-5 h-5 animate-pulse animate-infinite border-2 border-black rounded-full" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAOhJREFUSEvt1TEKAjEQheF/LyAoCJYWFjaKlxFbOytLb2FpZ+c5RERRL7FeQtBWHdhALJSZBDdN0gWSfDuPSbYg0SgSuWS4tuRz1CFRN4CbdWNs1ANgD0yArQWPgR3aAu7ACCi1eCjcB06AoDI2wBR4/hMW9AC0K2QNzCyo7LNW3APOHroC5toq/XUWWNAj0KkOCEYtFXeBi4cu3w21CKnU7dFWnAyWD00StUsoSXM5PMl18vHaHxCHD6t3ugk8AJlftZ2u7epv57n3egzstKjlHv86M8lv0VLkx9rYqDOsTiBHrY4qduELjSgkH8IAy5kAAAAASUVORK5CYII=" alt="Siguiente"/>
-                    <h3 class="font-titulos font-extrabold text-3xl">Logo</h3>
-                    <img class="w-5 h-5 animate-pulse animate-infinite border-2 border-black rounded-full" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAOlJREFUSEvtlTEOQUEQhr/XicIlxCEQQjTiEDqd0i2UKiqNC6FQKBQKiSBxAplkXiKPxO68ZDeS3Xpmvpk/M/9mRHpZJC4JHEz5JLWr1DXg6Rr8Lc4i9RDYAD1gZ4X7guvAFqgCN6BvhfuCJX4NjHXSO9AGDr6T+4KlvuQsgYnCrkALOPrALeC8/uoNfgE6PvAyYGlgAUy1E4E3gZPL5GXBwpgDM4WddfKf8L8FR5E6+HJFOaeigcgNd0MYSEMtswI8FLp3OZ9ijGWrR2qbA6tP5/ZnaTjKt2hp9CPHInUCmxRIUptksyS9AIx6Kh9ESA21AAAAAElFTkSuQmCC" alt="Siguiente"/>
-                    
-                    <!-- Contenido adicional aquí -->
+                <div id="h-identidad" class="w-full flex justify-around items-center">
+                    <img id="l-arrow" class="w-5 h-5 animate-pulse animate-infinite border-2 border-black rounded-full"
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAOhJREFUSEvt1TEKAjEQheF/LyAoCJYWFjaKlxFbOytLb2FpZ+c5RERRL7FeQtBWHdhALJSZBDdN0gWSfDuPSbYg0SgSuWS4tuRz1CFRN4CbdWNs1ANgD0yArQWPgR3aAu7ACCi1eCjcB06AoDI2wBR4/hMW9AC0K2QNzCyo7LNW3APOHroC5toq/XUWWNAj0KkOCEYtFXeBi4cu3w21CKnU7dFWnAyWD00StUsoSXM5PMl18vHaHxCHD6t3ugk8AJlftZ2u7epv57n3egzstKjlHv86M8lv0VLkx9rYqDOsTiBHrY4qduELjSgkH8IAy5kAAAAASUVORK5CYII="
+                        alt="Siguiente" />
+                    <h3 id="t-identidad" class="font-titulos font-extrabold text-3xl">Logo</h3>
+                    <img id="r-arrow" class="w-5 h-5 animate-pulse animate-infinite border-2 border-black rounded-full"
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAOlJREFUSEvtlTEOQUEQhr/XicIlxCEQQjTiEDqd0i2UKiqNC6FQKBQKiSBxAplkXiKPxO68ZDeS3Xpmvpk/M/9mRHpZJC4JHEz5JLWr1DXg6Rr8Lc4i9RDYAD1gZ4X7guvAFqgCN6BvhfuCJX4NjHXSO9AGDr6T+4KlvuQsgYnCrkALOPrALeC8/uoNfgE6PvAyYGlgAUy1E4E3gZPL5GXBwpgDM4WddfKf8L8FR5E6+HJFOaeigcgNd0MYSEMtswI8FLp3OZ9ijGWrR2qbA6tP5/ZnaTjKt2hp9CPHInUCmxRIUptksyS9AIx6Kh9ESA21AAAAAElFTkSuQmCC"
+                        alt="Siguiente" />
+
+                </div>
+                <!-- Contenido adicional aquí -->
+                <div class="flex flex-col justify-center items-center" id="c-identidad">
+                    <div id="container" class="w-full max-w-xs mx-auto text-center">
+                    </div>
                 </div>
             </div>
         </section> <!--Fin de Identidad-->
+
     </main>
 </body>
 <script src="/src/js/app.js"></script>
