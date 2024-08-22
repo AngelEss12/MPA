@@ -4,8 +4,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@import 'animations.css';
-
 .animate-appear {
     view-timeline-name: --image;
     view-timeline-axis: block;
@@ -42,10 +40,24 @@
     @apply animate-fade-down animate-once animate-ease-linear animate-delay-500;
 }
 
-.jump {
-    @apply animate-jump-in animate-once animate-ease-in animate-delay-500;
-}
-
 .pulse {
     @apply animate-pulse animate-once animate-ease-linear animate-delay-500;
 }
+
+/** Clases Himno */
+.displayHimno {
+    @apply bg-pink-600 w-4/5 h-[450px] flex flex-col items-center justify-around py-4 rounded-lg;
+}
+
+.imgHimno {
+    @apply w-1/5 rounded-lg;
+}
+
+.divConHimno {
+    @apply w-4/5 flex flex-col gap-4 overflow-hidden whitespace-nowrap box-border
+}
+
+.textHimno {
+    @apply text-lg font-bold text-white font-cuerpos animate-marquee;
+}
+
