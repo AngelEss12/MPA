@@ -10,13 +10,8 @@ module.exports = {
 
       keyframes: {
         appear: {
-          '0%': { opacity: '0', transform: 'scale(0.75)' }, // Escala inicial al 25%
+          '0%': { opacity: '0', transform: 'scale(0.5)' }, // Escala inicial al 25%
           '100%': { opacity: '1', transform: 'scale(1)' },   // Escala final al 100%
-        },
-
-        load: {
-          '0%': { width: '0'}, // Escala inicial al 25%
-          '100%': { width: '5rem'},   // Escala final al 100%
         },
 
         heartbeat: {
@@ -42,19 +37,33 @@ module.exports = {
             'animation-timing-function': 'ease-out',
           },
         },
+
         bubbleup: {
           '0%': { transform: 'translateY(0) scale(1)' },
           '100%': { transform: 'translateY(-750px) scale(1.2)' },
         },
+
         positionSwap: {
           '0%': { transform: 'translate(0, 0)' },
           '100%': { transform: 'translate(100px, -100px)' }, // Esta es una posición de ejemplo
         },
+
+        marquee: {
+          '0%': { transform: 'translateX(0%)' },
+          '5%': { transform: 'translateX(0%)' },
+          '100%': { transform: 'translateX(-200%)' },
+        },
+
+        load: {
+          '0%': { width: '0'}, // Escala inicial al 25%
+          '100%': { width: '5rem'},   // Escala final al 100%
+        },
       },
       animation: {
-        appear: 'appear 0.6s ease-in-out both',  // Define la animación con la duración y timing-function que desees
+        appear: 'appear 0.4s ease-in-out both',  // Define la animación con la duración y timing-function que desees
         heartbeat: 'heartbeat 2s linear 1s infinite both',
-        load: 'load 7s linear forwards',
+        load: 'load 10s linear forwards',
+        marquee: 'marquee 10s linear infinite',
         bubbleup: 'bubbleup 8s infinite',
         'bubbleup-delayed-1': 'bubbleup 8s infinite 2s',
         'bubbleup-delayed-2': 'bubbleup 8s infinite 4s',
@@ -69,18 +78,6 @@ module.exports = {
     },
   },
   plugins: [
-    function({ addComponents }) {
-      addComponents({
-        '.animate-appear': {
-          'view-timeline-name': '--image',
-          'view-timeline-axis': 'block',
-          'animation-timeline': '--image',
-          'animation-name': 'appear',
-          'animation-range': 'entry 25% cover 50%',
-          'animation-fill-mode': 'both',
-        },
-      });
-    },
     require('tailwindcss-animated')
   ],
 }
