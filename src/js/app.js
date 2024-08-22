@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Ejecutar la función inmediatamente al cargar la página
     contenidoIdentidad();
     updateBubblePositions();
-
+    
     // Repetir la ejecución de la función cada 8 segundos
     setInterval(updateBubblePositions, 8000);
 });
@@ -13,6 +13,7 @@ const identidadContenido = document.querySelector('#c-identidad');
 const identidadTitulo = document.querySelector('#t-identidad');
 const arrowLeft = document.querySelector('#l-arrow');
 const arrowRight = document.querySelector('#r-arrow');
+const pogressDiv = document.querySelector('#pogress-identidad');
 
 // EventListener para screen Nosotros
 
@@ -23,9 +24,10 @@ arrowLeft.addEventListener('click', () =>{
         identidadTitulo.innerHTML = 'Himno';
     } else {
         identidadTitulo.innerHTML = 'Logo';
+        limpiarLogo();
+        logoIdentidad();
+        pogressDiv.classList.add('block')
     } 
-
-
 })
 
 arrowRight.addEventListener('click', () =>{
@@ -35,6 +37,9 @@ arrowRight.addEventListener('click', () =>{
         identidadTitulo.innerHTML = 'Creador';
     } else {
         identidadTitulo.innerHTML = 'Logo';
+        limpiarLogo();
+        logoIdentidad();
+        pogressDiv.classList.remove('hidden')
     }
 })
 
@@ -73,35 +78,67 @@ const updateBubblePositions = () => {
 };
 
 // Funciones para el Nosotros
-const contenidoIdentidad = (e) => {
+
+// Logo
+const contenidoIdentidad = () => {
     logoIdentidad();
 }
 
 // Crear elementos HTML para el Nosotros
-let textIdentidad = document.createElement('P');
+const textIdentidad = document.createElement('P');
 textIdentidad.id = 'text-identidad';
-textIdentidad.classList.add('text-sm', 'text-justify', 'pb-1', 'px-8' , 'font-cuerpos', 'w-[90%]');
+textIdentidad.classList.add('text-sm', 'text-justify', 'pb-1', 'px-4' , 'font-cuerpos', 'w-[90%]');
 
-let barDiv = document.createElement('DIV');
-barDiv.id = 'bar-logo';
-barDiv.classList.add('w-24', 'h-1', 'bg-gray-600', 'my-2', 'rounded-lg', 'animate-load');
+const img = document.createElement('img');
+img.classList.add('w-[50%]','py-4','rounded-[100%]');
+
+const texts = [
+    'El logo del Movimiento Pandillas de la Amistad muestra un globo terráqueo con colores vivos que simbolizan la diversidad y la alegría de la unidad en la fe, reflejando la riqueza cultural de las distintas regiones del mundo.',
+    'Sobre el globo, una cruz destaca como símbolo central del cristianismo, recordando que la fe es fundamental para el movimiento. Alrededor, un grupo de niños tomados de la mano representa la unión y la amistad que Pandillas de la Amistad busca fomentar en los jóvenes.',
+    'El lema "Unidos Todos... Para Formar un Mundo Mejor" rodea el globo, junto al nombre "Pandillas de la Amistad". Este mensaje refleja la esencia del movimiento: un llamado a los jóvenes a unirse en amistad y fe para construir un futuro lleno de esperanza y amor.'
+];
 
 const logoIdentidad = () => {
-    const img = document.createElement('img');
-    img.src = '/assets/nosotros/Logo_MPA-removebg.png';
-    img.classList.add('w-[40%]','py-4','rounded-[100%]');
+    img.src = '/assets/nosotros/Logo_MPA-removebg1.png';
     identidadContenido.appendChild(img);
 
-    textoLogo('El logo del Movimiento Pandillas de la Amistad muestra un globo terráqueo con colores vivos que simbolizan la diversidad y la alegría de la unidad en la fe, reflejando la riqueza cultural de las distintas regiones del mundo.');
+    textIdentidad.textContent = texts[0];
+    identidadContenido.appendChild(textIdentidad);
 };
 
-const textoLogo = (text) => {
-    textIdentidad.textContent = text;
-    identidadContenido.appendChild(textIdentidad);
+pogressDiv.addEventListener('animationend', () => {
+    if(textIdentidad.textContent === texts[0]) {
+        textIdentidad.textContent = texts[1];
+        rebootAnimation();
+    } else if(textIdentidad.textContent === texts[1]){
+        textIdentidad.textContent = texts[2]
+        rebootAnimation();
+    } else {
+        textIdentidad.textContent = texts[0];
+        rebootAnimation();
+    }
+});
 
-    identidadContenido.appendChild(barDiv);
+const rebootAnimation = () => {
+    pogressDiv.classList.remove("animate-load");
+    void pogressDiv.offsetWidth; 
+    pogressDiv.classList.add("animate-load");
 }
 
-const displayLogo = () => {
-    textoLogo('Sobre el globo, una cruz destaca como símbolo central del cristianismo, recordando que la fe es fundamental para el movimiento. Alrededor, un grupo de niños tomados de la mano representa la unión y la amistad que Pandillas de la Amistad busca fomentar en los jóvenes.');
-};
+const limpiarLogo = () => {
+    img.remove();
+    textIdentidad.remove();
+    pogressDiv.classList.add('hidden');
+}
+
+
+
+// Himno
+
+const himnoDiv = document.createElement("DIV");
+himnoDiv.id = "himno-contendor";
+himnoDiv.classList.add("");
+
+const himnoIdentidad = () => {
+
+}
