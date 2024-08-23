@@ -50,7 +50,7 @@
 }
 
 .imgHimno {
-    @apply w-1/5 rounded-lg;
+    @apply w-3/4 rounded-lg;
 }
 
 .divConHimno {
@@ -60,4 +60,3 @@
 .textHimno {
     @apply text-lg font-bold text-white font-cuerpos animate-marquee;
 }
-
