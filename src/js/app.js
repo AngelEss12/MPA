@@ -1,3 +1,57 @@
+// Variables para screen Nosotros
+const identidadContenido = document.querySelector('#c-identidad');
+const identidadTitulo = document.querySelector('#t-identidad');
+const arrowLeft = document.querySelector('#l-arrow');
+const arrowRight = document.querySelector('#r-arrow');
+const pogressDiv = document.querySelector('#pogress-identidad');
+
+// Varirables para el touch
+let touchStartX = 0;
+let touchEndX = 0;
+
+// Listener for touch events
+identidadContenido.addEventListener('touchstart', (event) => {
+    // Change the variables (start)
+    touchStartX = event.changedTouches[0].screenX;
+    });
+
+    identidadContenido.addEventListener('touchend', (event) => {
+    // Change the variables (end)
+    touchEndX = event.changedTouches[0].screenX;
+    touchMove();
+    });
+
+const touchMove = () => {
+    // Put a mensage in the console
+if (touchEndX < touchStartX) { 
+    if(identidadTitulo.textContent === 'Logo'){
+        limpiarLogo();
+        identidadTitulo.innerHTML = 'Creador';
+    } else if(identidadTitulo.textContent === 'Creador') {
+        identidadTitulo.innerHTML = 'Himno';
+        himnoIdentidad();
+    } else {
+        identidadTitulo.innerHTML = 'Logo';
+        limpiarHimno();
+        logoIdentidad();
+        pogressDiv.classList.remove('hidden');
+    } 
+} if (touchEndX > touchStartX) {
+    if(identidadTitulo.textContent === 'Logo'){
+        identidadTitulo.innerHTML = 'Himno';
+        limpiarLogo();
+        himnoIdentidad();
+    } else if(identidadTitulo.textContent === 'Himno') {
+        limpiarHimno();
+        identidadTitulo.innerHTML = 'Creador';
+    } else {
+        identidadTitulo.innerHTML = 'Logo';
+        logoIdentidad();
+        pogressDiv.classList.remove('hidden')
+    }
+    }
+}
+
 //  Cuando el documento carga
 document.addEventListener("DOMContentLoaded", () => {
     // Ejecutar la función inmediatamente al cargar la página
@@ -8,27 +62,21 @@ document.addEventListener("DOMContentLoaded", () => {
     setInterval(updateBubblePositions, 8000);
 });
 
-// Variables para screen Nosotros
-const identidadContenido = document.querySelector('#c-identidad');
-const identidadTitulo = document.querySelector('#t-identidad');
-const arrowLeft = document.querySelector('#l-arrow');
-const arrowRight = document.querySelector('#r-arrow');
-const pogressDiv = document.querySelector('#pogress-identidad');
 
 // EventListener para screen Nosotros
 
 arrowLeft.addEventListener('click', () =>{
     if(identidadTitulo.textContent === 'Logo'){
+        limpiarLogo();
         identidadTitulo.innerHTML = 'Creador';
     } else if(identidadTitulo.textContent === 'Creador') {
         identidadTitulo.innerHTML = 'Himno';
-        limpiarLogo();
         himnoIdentidad();
     } else {
         identidadTitulo.innerHTML = 'Logo';
-        limpiarLogo();
+        limpiarHimno();
         logoIdentidad();
-        pogressDiv.classList.add('block')
+        pogressDiv.classList.remove('hidden');
     } 
 })
 
@@ -38,10 +86,10 @@ arrowRight.addEventListener('click', () =>{
         limpiarLogo();
         himnoIdentidad();
     } else if(identidadTitulo.textContent === 'Himno') {
+        limpiarHimno();
         identidadTitulo.innerHTML = 'Creador';
     } else {
         identidadTitulo.innerHTML = 'Logo';
-        limpiarLogo();
         logoIdentidad();
         pogressDiv.classList.remove('hidden')
     }
@@ -91,10 +139,9 @@ const contenidoIdentidad = () => {
 // Crear elementos HTML para el Nosotros
 const textIdentidad = document.createElement('P');
 textIdentidad.id = 'text-identidad';
-textIdentidad.classList.add('text-sm', 'text-justify', 'pb-1', 'px-4' , 'font-cuerpos', 'w-[90%]');
+textIdentidad.classList.add('text-sm', 'text-justify', 'pb-1', 'px-8' , 'font-cuerpos', 'w-[90%]');
 
 const img = document.createElement('img');
-img.classList.add('w-[50%]','py-4','rounded-[100%]');
 
 const texts = [
     'El logo del Movimiento Pandillas de la Amistad muestra un globo terráqueo con colores vivos que simbolizan la diversidad y la alegría de la unidad en la fe, reflejando la riqueza cultural de las distintas regiones del mundo.',
@@ -103,7 +150,8 @@ const texts = [
 ];
 
 const logoIdentidad = () => {
-    img.src = '/assets/nosotros/Logo_MPA-removebg1.png';
+    img.src = '/assets/nosotros/Logo_MPA-removebg.png';
+    img.classList.add('w-[60%]','py-4','rounded-[100%]');
     identidadContenido.appendChild(img);
 
     textIdentidad.textContent = texts[0];
@@ -143,11 +191,12 @@ const limpiarLogo = () => {
 
 const himnoIdentidad = () => {
     const displayHimno = document.createElement("DIV");
+    displayHimno.id = "display-himno";
     displayHimno.classList.add("displayHimno");
 
     identidadContenido.appendChild(displayHimno);
     img.src = "/assets/banner/Logo MPA.jpg";
-    img.classList.add("imgHimno");
+    img.classList.add('imgHimno', 'animted-spinright');
     displayHimno.appendChild(img);
 
     const divHimno = document.createElement("DIV");
@@ -164,4 +213,10 @@ const himnoIdentidad = () => {
     spantext.textContent = "Movimiento Pandillas de la amistad";
     textHimno.appendChild(spantext);
 
+}
+
+const limpiarHimno = () => {
+    img.className = "";
+    const pantallaHimno = document.querySelector("#display-himno");
+    identidadContenido.removeChild(pantallaHimno);
 }
