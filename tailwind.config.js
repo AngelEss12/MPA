@@ -10,7 +10,7 @@ module.exports = {
 
       keyframes: {
         appear: {
-          '0%': { opacity: '0', transform: 'scale(0.5)' }, // Escala inicial al 25%
+          '0%': { opacity: '0', transform: 'scale(0.25)' }, // Escala inicial al 25%
           '100%': { opacity: '1', transform: 'scale(1)' },   // Escala final al 100%
         },
 
@@ -51,16 +51,21 @@ module.exports = {
         marquee: {
           '0%': { transform: 'translateX(0%)' },
           '5%': { transform: 'translateX(0%)' },
-          '100%': { transform: 'translateX(-200%)' },
+          '100%': { transform: 'translateX(-180%)' },
         },
 
         load: {
           '0%': { width: '0'}, // Escala inicial al 25%
           '100%': { width: '5rem'},   // Escala final al 100%
         },
+
+        spinright: {
+          '0%': { transform: 'rotate(0deg)' },
+          '100%': { transform: 'rotate(360deg)' },
+        },
       },
       animation: {
-        appear: 'appear 0.4s ease-in-out both',  // Define la animación con la duración y timing-function que desees
+        appear: 'appear 0.2s linear both',  // Define la animación con la duración y timing-function que desees
         heartbeat: 'heartbeat 2s linear 1s infinite both',
         load: 'load 10s linear forwards',
         marquee: 'marquee 10s linear infinite',
@@ -73,6 +78,7 @@ module.exports = {
         'bubbleup-delayed-6': 'bubbleup 8s infinite 5s',
         'bubbleup-delayed-7': 'bubbleup 8s infinite 7s',
         'position-swap': 'positionSwap 8s infinite',
+        spinright: 'spinright 16s linear infinite',
       },
       
     },
