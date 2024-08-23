@@ -22,6 +22,8 @@ arrowLeft.addEventListener('click', () =>{
         identidadTitulo.innerHTML = 'Creador';
     } else if(identidadTitulo.textContent === 'Creador') {
         identidadTitulo.innerHTML = 'Himno';
+        limpiarLogo();
+        himnoIdentidad();
     } else {
         identidadTitulo.innerHTML = 'Logo';
         limpiarLogo();
@@ -33,6 +35,8 @@ arrowLeft.addEventListener('click', () =>{
 arrowRight.addEventListener('click', () =>{
     if(identidadTitulo.textContent === 'Logo'){
         identidadTitulo.innerHTML = 'Himno';
+        limpiarLogo();
+        himnoIdentidad();
     } else if(identidadTitulo.textContent === 'Himno') {
         identidadTitulo.innerHTML = 'Creador';
     } else {
@@ -126,6 +130,7 @@ const rebootAnimation = () => {
 }
 
 const limpiarLogo = () => {
+    img.className = "";
     img.remove();
     textIdentidad.remove();
     pogressDiv.classList.add('hidden');
@@ -135,10 +140,28 @@ const limpiarLogo = () => {
 
 // Himno
 
-const himnoDiv = document.createElement("DIV");
-himnoDiv.id = "himno-contendor";
-himnoDiv.classList.add("");
 
 const himnoIdentidad = () => {
+    const displayHimno = document.createElement("DIV");
+    displayHimno.classList.add("displayHimno");
+
+    identidadContenido.appendChild(displayHimno);
+    img.src = "/assets/banner/Logo MPA.jpg";
+    img.classList.add("imgHimno");
+    displayHimno.appendChild(img);
+
+    const divHimno = document.createElement("DIV");
+    divHimno.classList.add("divConHimno");
+    displayHimno.appendChild(divHimno);
+
+    const textHimno = document.createElement("P");
+    textHimno.classList.add("textHimno");
+    textHimno.textContent = "Movimiento Pandillas de la amistad";
+    divHimno.appendChild(textHimno);
+
+    const spantext = document.createElement("SPAN");
+    spantext.classList.add("ml-[50%]");
+    spantext.textContent = "Movimiento Pandillas de la amistad";
+    textHimno.appendChild(spantext);
 
 }
