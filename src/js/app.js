@@ -36,10 +36,10 @@ const touchMove = () => {
     if (Math.abs(deltaX) > Math.abs(deltaY)) {
         // Si el deslizamiento fue hacia la izquierda
         if (deltaX < 0) {
-            if(identidadTitulo.textContent === 'Logo'){
+            if (identidadTitulo.textContent === 'Logo') {
                 limpiarLogo();
                 identidadTitulo.innerHTML = 'Creador';
-            } else if(identidadTitulo.textContent === 'Creador') {
+            } else if (identidadTitulo.textContent === 'Creador') {
                 identidadTitulo.innerHTML = 'Himno';
                 himnoIdentidad();
             } else {
@@ -47,15 +47,15 @@ const touchMove = () => {
                 limpiarHimno();
                 logoIdentidad();
                 pogressDiv.classList.remove('hidden');
-            } 
-        } 
+            }
+        }
         // Si el deslizamiento fue hacia la derecha
         else if (deltaX > 0) {
-            if(identidadTitulo.textContent === 'Logo'){
+            if (identidadTitulo.textContent === 'Logo') {
                 identidadTitulo.innerHTML = 'Himno';
                 limpiarLogo();
                 himnoIdentidad();
-            } else if(identidadTitulo.textContent === 'Himno') {
+            } else if (identidadTitulo.textContent === 'Himno') {
                 limpiarHimno();
                 identidadTitulo.innerHTML = 'Creador';
             } else {
@@ -72,36 +72,34 @@ document.addEventListener("DOMContentLoaded", () => {
     // Ejecutar la función inmediatamente al cargar la página
     contenidoIdentidad();
     updateBubblePositions();
-    
+
     // Repetir la ejecución de la función cada 8 segundos
     setInterval(updateBubblePositions, 8000);
 });
 
-
 // EventListener para screen Nosotros
-
-arrowLeft.addEventListener('click', () =>{
-    if(identidadTitulo.textContent === 'Logo'){
+arrowLeft.addEventListener('click', () => {
+    if (identidadTitulo.textContent === 'Logo') {
         limpiarLogo();
         identidadTitulo.innerHTML = 'Creador';
-    } else if(identidadTitulo.textContent === 'Creador') {
+    } else if (identidadTitulo.textContent === 'Creador') {
         identidadTitulo.innerHTML = 'Himno';
         himnoIdentidad();
-        
+
     } else {
         identidadTitulo.innerHTML = 'Logo';
         limpiarHimno();
         logoIdentidad();
         pogressDiv.classList.remove('hidden');
-    } 
+    }
 })
 
-arrowRight.addEventListener('click', () =>{
-    if(identidadTitulo.textContent === 'Logo'){
+arrowRight.addEventListener('click', () => {
+    if (identidadTitulo.textContent === 'Logo') {
         identidadTitulo.innerHTML = 'Himno';
         limpiarLogo();
         himnoIdentidad();
-    } else if(identidadTitulo.textContent === 'Himno') {
+    } else if (identidadTitulo.textContent === 'Himno') {
         limpiarHimno();
         identidadTitulo.innerHTML = 'Creador';
     } else {
@@ -111,8 +109,7 @@ arrowRight.addEventListener('click', () =>{
     }
 })
 
-
-// Funciones para el Index
+// Funciones para las burbujas
 // Animacion de burbujas
 const updateBubblePositions = () => {
     const burbujas = document.querySelectorAll("#burbujas > div");
@@ -154,9 +151,10 @@ const contenidoIdentidad = () => {
 }
 
 // Crear elementos HTML para el Nosotros
+// Logo
 const textIdentidad = document.createElement('P');
 textIdentidad.id = 'text-identidad';
-textIdentidad.classList.add('text-sm', 'text-justify', 'pb-1', 'px-8' , 'font-cuerpos', 'w-[90%]');
+textIdentidad.classList.add('text-sm', 'text-justify', 'pb-1', 'px-8', 'font-cuerpos', 'w-[90%]');
 
 const img = document.createElement('img');
 
@@ -167,8 +165,8 @@ const texts = [
 ];
 
 const logoIdentidad = () => {
-    img.src = '/assets/nosotros/Logo_MPA-removebg1.png';
-    img.classList.add('w-[60%]', 'max-w-[350px]','py-4','rounded-[100%]');
+    img.src = '/assets/nosotros/Logo_MPA-removebg.png';
+    img.classList.add('w-[60%]', 'max-w-[350px]', 'py-4', 'rounded-[100%]');
     identidadContenido.appendChild(img);
 
     textIdentidad.textContent = texts[0];
@@ -176,10 +174,10 @@ const logoIdentidad = () => {
 };
 
 pogressDiv.addEventListener('animationend', () => {
-    if(textIdentidad.textContent === texts[0]) {
+    if (textIdentidad.textContent === texts[0]) {
         textIdentidad.textContent = texts[1];
         rebootAnimation();
-    } else if(textIdentidad.textContent === texts[1]){
+    } else if (textIdentidad.textContent === texts[1]) {
         textIdentidad.textContent = texts[2]
         rebootAnimation();
     } else {
@@ -190,7 +188,7 @@ pogressDiv.addEventListener('animationend', () => {
 
 const rebootAnimation = () => {
     pogressDiv.classList.remove("animate-load");
-    void pogressDiv.offsetWidth; 
+    void pogressDiv.offsetWidth;
     pogressDiv.classList.add("animate-load");
 }
 
@@ -201,14 +199,15 @@ const limpiarLogo = () => {
     pogressDiv.classList.add('hidden');
 }
 
-
-
 // Himno
 const himno = new Audio('/assets/audio/Himno Movimiento Pandillas De La Amistad.mp3');
 const divReproductor = document.createElement("DIV");
 const iconBack = document.createElement("IMG");
 const iconPlay = document.createElement("IMG");
 const iconNext = document.createElement("IMG");
+const barraHimno = document.createElement("DIV");
+const progresoHimno = document.createElement("DIV");
+progresoHimno.id = 'progresoHimno';
 
 const himnoIdentidad = () => {
     const displayHimno = document.createElement("DIV");
@@ -217,7 +216,7 @@ const himnoIdentidad = () => {
 
     identidadContenido.appendChild(displayHimno);
     img.src = "/assets/banner/Logo MPA.jpg";
-    img.classList.add('imgHimno', 'animted-spinright');
+    img.classList.add('imgHimno');
     displayHimno.appendChild(img);
 
     const divHimno = document.createElement("DIV");
@@ -228,18 +227,22 @@ const himnoIdentidad = () => {
     textHimno.classList.add("textHimno");
     textHimno.textContent = "Movimiento Pandillas de la amistad";
     divHimno.appendChild(textHimno);
-    
+
     const spantext = document.createElement("SPAN");
     spantext.classList.add("ml-[50%]");
     spantext.textContent = "Movimiento Pandillas de la amistad";
     textHimno.appendChild(spantext);
-    
+
+    barraHimno.classList.add("barraHimno");
+    progresoHimno.classList.add("progresoHimno");
+    barraHimno.appendChild(progresoHimno);
+    divHimno.appendChild(barraHimno);
+
     divReproductor.classList.add("reproductorHimno");
     divHimno.appendChild(divReproductor);
-    
+
     iconBack.src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAAAXNSR0IArs4c6QAAAZtJREFUaEPtmFFKAzEQhr++iD4LXqG0eAjB8+gV1Mda3wSPIPjgHTyEB3JHTAlx2ew2KWQmE1hKl02Yf77Jv5Nd0dlYdaYXF2yduBN2wsYy4CVtDOg/OU7YCRvLgJe0MaBuWl7SXtLzMnADyBWPr+GeXCXjGvguWSCdW6ukH4GHZPGn4b/cP3bcAc/AxbELjM1rUfAl8AHc/gVcK8bf5WotVouwiHwHriI6tWJsSvAZ8AJIGZ9q2zUjeAN8DmUsv6fcdk0IDsZ0PmFMJko6NaYpI1YveMyYTAoWY9oD9wvfqyoJ54zJFOE5xqROsLSVaRv5CmyjjmlhJR8eb7KkxwS/AeueBAtxOUCYLOlcL92VaYXNONUvqzOtHOFYkDQecvyTbmvOaNK0lggWkXL8k2NgOPOaJhyLk65rB5g/PMSic4ZmoqTTEu7qA0DO0EwSjkWnhmZecBAfDK3Jz7TdfYif00A08UzV/dGEokwQLlgDpZIYnXBJ9jTMdcIaKJXE6IRLsqdhrhPWQKkkRidckj0Nc52wBkolMXZH+Af5u0w9QC+L0gAAAABJRU5ErkJggg==";
 
-    
     iconNext.src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAAAXNSR0IArs4c6QAAAXRJREFUaEPtmDFuAkEMRR/XyVHoqdNGVNwgSOEWqVOSi3ACSq4QJWUU5CgjBTK7Gm9WQvb8KcHs+vlbH3sWdHYWnfEi4OyKS2EpnKwCaulkgv7BkcJSOFkF1NLJBJVpqaXV0m0VuAOOwGdb+GDUtvJN7bPJr5mrpS2pJbACTpOzga/Kb+fK8fvRcz3MgB+Bd+AeeJ0IHQ64cL4ADz8F8LCHBTZIa21r8YODODSwcZqJPQG7RkMLD1zENZVbDC0NsIG3GFoq4BZDSwk8ZmhpgYcMLTVwzdDCANuU9Z+ZtxjaPtpo6ZgxLkI/gA3w3APw7//oMC1dlgePwjaF2QRmk1hZK9MCD83ZKYFtdbQV0ozq+qQCfgPWgK2OQycNcDfLQ82YxowttMJdXQCMGVMqhVuMKQ1wV9e03V3Ee0bKm8bOdRF/UwjPywXsqVbEWCkcUTVPzlLYU62IsVI4omqenKWwp1oRY6VwRNU8OUthT7Uixnan8BmtvmY9fsmkSAAAAABJRU5ErkJggg==";
 
     iconPlay.src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAAAXNSR0IArs4c6QAAAR1JREFUaEPtmbENAkEMBP2FI6iCgiiHgBqQJT6CCK3t0d1+Qna68QzoLY7Y7Dk24w0Dr27chm14sQk46cWEfuHYsA0vNgEnvZhQ/2ipkr5FxDMi7vRClMDXiHhExOXziWRXA5+QaTrBXzTqKuDkTNiERmVeCXzKRWXeAYzKvBMYkXk38HjmU8BjmU8Dt2dOAG7NnATckjkRuDRzKnBZ5nRgeeYG/nO7yX0410P1I38Ppxou27SIwKW7NAlYnu+v7xcBuCxfInBpviTglnwJwK35TgO35zsFPJZvN/B4vp3AiHw7gFH5VgNv9WeaeksqO0/1all2QfXBBlZPlHaeDdOMqO9jw+qJ0s6zYZoR9X1sWD1R2nk2TDOivs92ht8QgVg9ivN1VgAAAABJRU5ErkJggg==";
@@ -248,24 +251,51 @@ const himnoIdentidad = () => {
     iconPlay.classList.add("iconosReproductor");
     iconNext.classList.add("iconosReproductor");
 
-    
-
     divReproductor.appendChild(iconBack);
     divReproductor.appendChild(iconPlay);
-    divReproductor.appendChild(iconNext);    
+    divReproductor.appendChild(iconNext);
 }
 
-    iconPlay.addEventListener("click", () => {
-        if(himno.paused){
-            himno.play();
-        } else {
-            himno.pause();
-        }
-    })
+iconPlay.addEventListener("click", reproducir)
+function reproducir() {
+    iniciar();
+    if (himno.paused) {
+        himno.play()
+        
+    } else {
+        himno.pause()
+        
+    }
+}
 
+iconBack.addEventListener("click", menos5sg)
+function menos5sg() {
+    himno.play()
+    himno.currentTime = himno.currentTime - 5
+}
+
+iconNext.addEventListener("click", mas5sg)
+
+function mas5sg() {
+    himno.currentTime = himno.currentTime + 5
+    himno.play()
+}
+
+function iniciar() {
+    himno.addEventListener('timeupdate', function () {
+        
+        // La currenttime especifica el tiempo de reproducción actual y lo divide por la duracion del audio 
+
+        // El himno dura 3.25 min que es igual a 205 segundo es decir que cada 2.05s es igual al 1% de la cancion del audio
+        progresoHimno.style.width = (this.currentTime * 100 / this.duration) + '%';
+    });
+}
 
 const limpiarHimno = () => {
     img.className = "";
     const pantallaHimno = document.querySelector("#display-himno");
     identidadContenido.removeChild(pantallaHimno);
+    himno.pause();
 }
+
+// Creador
