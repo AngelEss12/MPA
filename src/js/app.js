@@ -5,52 +5,67 @@ const arrowLeft = document.querySelector('#l-arrow');
 const arrowRight = document.querySelector('#r-arrow');
 const pogressDiv = document.querySelector('#pogress-identidad');
 
-// Varirables para el touch
+// Variables para el touch
 let touchStartX = 0;
 let touchEndX = 0;
+let touchStartY = 0;
+let touchEndY = 0;
 
-// Listener for touch events
+// Listener para eventos touch
 identidadContenido.addEventListener('touchstart', (event) => {
-    // Change the variables (start)
+    // Captura la posición inicial del touch
     touchStartX = event.changedTouches[0].screenX;
-    });
+    touchStartY = event.changedTouches[0].screenY;
+});
 
-    identidadContenido.addEventListener('touchend', (event) => {
-    // Change the variables (end)
+identidadContenido.addEventListener('touchend', (event) => {
+    // Captura la posición final del touch
     touchEndX = event.changedTouches[0].screenX;
+    touchEndY = event.changedTouches[0].screenY;
+
+    // Llama a la función para manejar el movimiento
     touchMove();
-    });
+});
 
 const touchMove = () => {
-    // Put a mensage in the console
-if (touchEndX < touchStartX) { 
-    if(identidadTitulo.textContent === 'Logo'){
-        limpiarLogo();
-        identidadTitulo.innerHTML = 'Creador';
-    } else if(identidadTitulo.textContent === 'Creador') {
-        identidadTitulo.innerHTML = 'Himno';
-        himnoIdentidad();
-    } else {
-        identidadTitulo.innerHTML = 'Logo';
-        limpiarHimno();
-        logoIdentidad();
-        pogressDiv.classList.remove('hidden');
-    } 
-} if (touchEndX > touchStartX) {
-    if(identidadTitulo.textContent === 'Logo'){
-        identidadTitulo.innerHTML = 'Himno';
-        limpiarLogo();
-        himnoIdentidad();
-    } else if(identidadTitulo.textContent === 'Himno') {
-        limpiarHimno();
-        identidadTitulo.innerHTML = 'Creador';
-    } else {
-        identidadTitulo.innerHTML = 'Logo';
-        logoIdentidad();
-        pogressDiv.classList.remove('hidden')
+    // Calcula las diferencias entre las posiciones de inicio y fin
+    const deltaX = touchEndX - touchStartX;
+    const deltaY = touchEndY - touchStartY;
+
+    // Verifica si el deslizamiento es más horizontal que vertical
+    if (Math.abs(deltaX) > Math.abs(deltaY)) {
+        // Si el deslizamiento fue hacia la izquierda
+        if (deltaX < 0) {
+            if(identidadTitulo.textContent === 'Logo'){
+                limpiarLogo();
+                identidadTitulo.innerHTML = 'Creador';
+            } else if(identidadTitulo.textContent === 'Creador') {
+                identidadTitulo.innerHTML = 'Himno';
+                himnoIdentidad();
+            } else {
+                identidadTitulo.innerHTML = 'Logo';
+                limpiarHimno();
+                logoIdentidad();
+                pogressDiv.classList.remove('hidden');
+            } 
+        } 
+        // Si el deslizamiento fue hacia la derecha
+        else if (deltaX > 0) {
+            if(identidadTitulo.textContent === 'Logo'){
+                identidadTitulo.innerHTML = 'Himno';
+                limpiarLogo();
+                himnoIdentidad();
+            } else if(identidadTitulo.textContent === 'Himno') {
+                limpiarHimno();
+                identidadTitulo.innerHTML = 'Creador';
+            } else {
+                identidadTitulo.innerHTML = 'Logo';
+                logoIdentidad();
+                pogressDiv.classList.remove('hidden');
+            }
+        }
     }
-    }
-}
+};
 
 //  Cuando el documento carga
 document.addEventListener("DOMContentLoaded", () => {
@@ -72,6 +87,7 @@ arrowLeft.addEventListener('click', () =>{
     } else if(identidadTitulo.textContent === 'Creador') {
         identidadTitulo.innerHTML = 'Himno';
         himnoIdentidad();
+        
     } else {
         identidadTitulo.innerHTML = 'Logo';
         limpiarHimno();
@@ -97,6 +113,7 @@ arrowRight.addEventListener('click', () =>{
 
 
 // Funciones para el Index
+// Animacion de burbujas
 const updateBubblePositions = () => {
     const burbujas = document.querySelectorAll("#burbujas > div");
     const container = document.getElementById('burbujas');
@@ -150,8 +167,8 @@ const texts = [
 ];
 
 const logoIdentidad = () => {
-    img.src = '/assets/nosotros/Logo_MPA-removebg.png';
-    img.classList.add('w-[60%]','py-4','rounded-[100%]');
+    img.src = '/assets/nosotros/Logo_MPA-removebg1.png';
+    img.classList.add('w-[60%]', 'max-w-[350px]','py-4','rounded-[100%]');
     identidadContenido.appendChild(img);
 
     textIdentidad.textContent = texts[0];
@@ -187,7 +204,11 @@ const limpiarLogo = () => {
 
 
 // Himno
-
+const himno = new Audio('/assets/audio/Himno Movimiento Pandillas De La Amistad.mp3');
+const divReproductor = document.createElement("DIV");
+const iconBack = document.createElement("IMG");
+const iconPlay = document.createElement("IMG");
+const iconNext = document.createElement("IMG");
 
 const himnoIdentidad = () => {
     const displayHimno = document.createElement("DIV");
@@ -207,13 +228,41 @@ const himnoIdentidad = () => {
     textHimno.classList.add("textHimno");
     textHimno.textContent = "Movimiento Pandillas de la amistad";
     divHimno.appendChild(textHimno);
-
+    
     const spantext = document.createElement("SPAN");
     spantext.classList.add("ml-[50%]");
     spantext.textContent = "Movimiento Pandillas de la amistad";
     textHimno.appendChild(spantext);
+    
+    divReproductor.classList.add("reproductorHimno");
+    divHimno.appendChild(divReproductor);
+    
+    iconBack.src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAAAXNSR0IArs4c6QAAAZtJREFUaEPtmFFKAzEQhr++iD4LXqG0eAjB8+gV1Mda3wSPIPjgHTyEB3JHTAlx2ew2KWQmE1hKl02Yf77Jv5Nd0dlYdaYXF2yduBN2wsYy4CVtDOg/OU7YCRvLgJe0MaBuWl7SXtLzMnADyBWPr+GeXCXjGvguWSCdW6ukH4GHZPGn4b/cP3bcAc/AxbELjM1rUfAl8AHc/gVcK8bf5WotVouwiHwHriI6tWJsSvAZ8AJIGZ9q2zUjeAN8DmUsv6fcdk0IDsZ0PmFMJko6NaYpI1YveMyYTAoWY9oD9wvfqyoJ54zJFOE5xqROsLSVaRv5CmyjjmlhJR8eb7KkxwS/AeueBAtxOUCYLOlcL92VaYXNONUvqzOtHOFYkDQecvyTbmvOaNK0lggWkXL8k2NgOPOaJhyLk65rB5g/PMSic4ZmoqTTEu7qA0DO0EwSjkWnhmZecBAfDK3Jz7TdfYif00A08UzV/dGEokwQLlgDpZIYnXBJ9jTMdcIaKJXE6IRLsqdhrhPWQKkkRidckj0Nc52wBkolMXZH+Af5u0w9QC+L0gAAAABJRU5ErkJggg==";
 
+    
+    iconNext.src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAAAXNSR0IArs4c6QAAAXRJREFUaEPtmDFuAkEMRR/XyVHoqdNGVNwgSOEWqVOSi3ACSq4QJWUU5CgjBTK7Gm9WQvb8KcHs+vlbH3sWdHYWnfEi4OyKS2EpnKwCaulkgv7BkcJSOFkF1NLJBJVpqaXV0m0VuAOOwGdb+GDUtvJN7bPJr5mrpS2pJbACTpOzga/Kb+fK8fvRcz3MgB+Bd+AeeJ0IHQ64cL4ADz8F8LCHBTZIa21r8YODODSwcZqJPQG7RkMLD1zENZVbDC0NsIG3GFoq4BZDSwk8ZmhpgYcMLTVwzdDCANuU9Z+ZtxjaPtpo6ZgxLkI/gA3w3APw7//oMC1dlgePwjaF2QRmk1hZK9MCD83ZKYFtdbQV0ozq+qQCfgPWgK2OQycNcDfLQ82YxowttMJdXQCMGVMqhVuMKQ1wV9e03V3Ee0bKm8bOdRF/UwjPywXsqVbEWCkcUTVPzlLYU62IsVI4omqenKWwp1oRY6VwRNU8OUthT7Uixnan8BmtvmY9fsmkSAAAAABJRU5ErkJggg==";
+
+    iconPlay.src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAAAXNSR0IArs4c6QAAAR1JREFUaEPtmbENAkEMBP2FI6iCgiiHgBqQJT6CCK3t0d1+Qna68QzoLY7Y7Dk24w0Dr27chm14sQk46cWEfuHYsA0vNgEnvZhQ/2ipkr5FxDMi7vRClMDXiHhExOXziWRXA5+QaTrBXzTqKuDkTNiERmVeCXzKRWXeAYzKvBMYkXk38HjmU8BjmU8Dt2dOAG7NnATckjkRuDRzKnBZ5nRgeeYG/nO7yX0410P1I38Ppxou27SIwKW7NAlYnu+v7xcBuCxfInBpviTglnwJwK35TgO35zsFPJZvN/B4vp3AiHw7gFH5VgNv9WeaeksqO0/1all2QfXBBlZPlHaeDdOMqO9jw+qJ0s6zYZoR9X1sWD1R2nk2TDOivs92ht8QgVg9ivN1VgAAAABJRU5ErkJggg==";
+
+    iconBack.classList.add("iconosReproductor");
+    iconPlay.classList.add("iconosReproductor");
+    iconNext.classList.add("iconosReproductor");
+
+    
+
+    divReproductor.appendChild(iconBack);
+    divReproductor.appendChild(iconPlay);
+    divReproductor.appendChild(iconNext);    
 }
+
+    iconPlay.addEventListener("click", () => {
+        if(himno.paused){
+            himno.play();
+        } else {
+            himno.pause();
+        }
+    })
+
 
 const limpiarHimno = () => {
     img.className = "";
