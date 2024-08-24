@@ -46,7 +46,7 @@
 
 /** Clases Himno */
 .displayHimno {
-    @apply bg-pink-600 w-4/5 h-[450px] flex flex-col items-center justify-around rounded-lg shadow-sm shadow-black/70;
+    @apply bg-pink-600/80 w-4/5 h-[450px] my-4 flex flex-col items-center justify-around rounded-lg shadow-sm shadow-black/70;
 }
 
 .imgHimno {
@@ -59,4 +59,16 @@
 
 .textHimno {
     @apply text-lg font-bold text-pink-100 font-cuerpos animate-marquee;
+}
+
+.reproductorHimno {
+    @apply w-full flex items-center justify-center;
+}
+
+.barraHimno {
+    @apply relative h-3 w-full border bg-pink-100 border-pink-400 rounded-md;
+}
+
+.progresoHimno {
+    @apply absolute h-full w-[0%] bg-pink-300 rounded-md;
 }
