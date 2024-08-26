@@ -226,7 +226,6 @@ function timeConvert(num) {
 }
 
 iconPlay.addEventListener("click", reproducir);
-
 function reproducir() {
     iniciar();
     if (himno.paused) {
@@ -239,13 +238,11 @@ function reproducir() {
 }
 
 iconBack.addEventListener("click", menos5sg);
-
 function menos5sg() {
     himno.currentTime = himno.currentTime - 5;
 }
 
 iconNext.addEventListener("click", mas5sg);
-
 function mas5sg() {
     himno.currentTime = himno.currentTime + 5;
     iniciar();
@@ -281,3 +278,48 @@ const limpiarCreador = () => {
     displayCreador.classList.remove("flex");
     displayCreador.classList.add("hidden");
 };
+
+// Galeria Creador 
+const galleryImages = document.querySelectorAll('#displayCreador img');
+
+    // Selecciona el contenedor del lightbox y su contenido
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const closeLightbox = document.getElementById('close-lightbox');
+    const texLightbox = document.createElement("P");
+    const body = document.querySelector("body");
+
+    // Función para mostrar el lightbox
+    galleryImages.forEach(img => {
+        img.addEventListener('click', () => {
+            setTimeout(() => {
+                if(img.id === "img-8") {
+                    body.classList.add('fixed');
+                    texLightbox.classList.add('text-sm', 'text-center', 'text-slate-200', 'font-cuerpos', 'px-8', 'py-2');
+                    texLightbox.textContent = "Fotografía del Primer retiro del Movimiento Pandillas de la Amistad";
+                    lightbox.appendChild(texLightbox);
+                    lightboxImg.src = img.src;
+                    lightbox.classList.remove('hidden');
+                } else{
+                    body.classList.add('fixed');
+                    texLightbox.textContent = "";
+                    lightboxImg.src = img.src;
+                    lightbox.classList.remove('hidden');
+                }
+            }, 250)
+        });
+    });
+
+    // Función para cerrar el lightbox
+    closeLightbox.addEventListener('click', () => {
+        lightbox.classList.add('hidden');
+        body.classList.remove('fixed');
+    });
+
+    // Cerrar lightbox cuando se haga clic fuera de la imagen
+    lightbox.addEventListener('click', (e) => {
+        if (e.target !== lightboxImg) {
+            body.classList.remove('fixed');
+            lightbox.classList.add('hidden');
+        }
+    });
