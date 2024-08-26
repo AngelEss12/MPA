@@ -10,7 +10,7 @@ module.exports = {
 
       keyframes: {
         appear: {
-          '0%': { opacity: '0', transform: 'scale(0.25)' }, // Escala inicial al 25%
+          '0%': { opacity: '0', transform: 'scale(0.5)' }, // Escala inicial al 25%
           '100%': { opacity: '1', transform: 'scale(1)' },   // Escala final al 100%
         },
 
