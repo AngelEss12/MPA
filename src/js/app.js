@@ -287,21 +287,20 @@ const galleryImages = document.querySelectorAll('#displayCreador img');
     const lightboxImg = document.getElementById('lightbox-img');
     const closeLightbox = document.getElementById('close-lightbox');
     const texLightbox = document.createElement("P");
-    const body = document.querySelector("body");
 
     // Función para mostrar el lightbox
     galleryImages.forEach(img => {
         img.addEventListener('click', () => {
             setTimeout(() => {
                 if(img.id === "img-8") {
-                    body.classList.add('fixed');
                     texLightbox.classList.add('text-sm', 'text-center', 'text-slate-200', 'font-cuerpos', 'px-8', 'py-2');
                     texLightbox.textContent = "Fotografía del Primer retiro del Movimiento Pandillas de la Amistad";
                     lightbox.appendChild(texLightbox);
                     lightboxImg.src = img.src;
+                    document.body.style.overflow = 'hidden';
                     lightbox.classList.remove('hidden');
                 } else{
-                    body.classList.add('fixed');
+                    document.body.style.overflow = 'hidden';
                     texLightbox.textContent = "";
                     lightboxImg.src = img.src;
                     lightbox.classList.remove('hidden');
@@ -312,14 +311,15 @@ const galleryImages = document.querySelectorAll('#displayCreador img');
 
     // Función para cerrar el lightbox
     closeLightbox.addEventListener('click', () => {
-        lightbox.classList.add('hidden');
-        body.classList.remove('fixed');
+        lightbox.classList.add('hidden')
+        document.body.style.overflow = '';
     });
 
     // Cerrar lightbox cuando se haga clic fuera de la imagen
     lightbox.addEventListener('click', (e) => {
         if (e.target !== lightboxImg) {
-            body.classList.remove('fixed');
-            lightbox.classList.add('hidden');
+            lightbox.classList.add('hidden')
+            document.body.style.overflow = '';;
         }
     });
+
