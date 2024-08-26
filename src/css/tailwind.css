@@ -11,7 +11,7 @@
     animation-timeline: --image;
     animation-name: appear;
 
-    animation-range: entry 25% cover 50%;
+    animation-range: entry 35% cover 50%;
     animation-fill-mode: both;
 }
 
@@ -46,19 +46,19 @@
 
 /*? Logo  */
 .imgLogo {
-    @apply w-[60%] max-w-[350px] py-4 rounded-[100%];
+    @apply w-[50%] md:w-[40%] lg:w-[30%]  rounded-[100%];
 }
 .textLogo {
-    @apply text-sm text-justify pb-1 px-8 font-cuerpos w-[90%] sm:text-xl sm:w-[50%]
+    @apply text-gray-800 text-sm text-justify py-2 px-8 font-cuerpos w-[90%] lg:w-[75%] sm:text-lg md:text-xl lg:text-2xl; 
 }
 
 /** Clases Himno */
 .displayHimno {
-    @apply w-4/5 py-8 flex-col sm:flex-row gap-4 md:gap-16 items-center justify-around md:justify-center rounded-lg shadow-sm shadow-black/70;
+    @apply w-4/5 md:w-[90%] py-8 flex-col md:flex-row gap-4 md:gap-16 items-center justify-around md:justify-center rounded-lg shadow-sm shadow-black/70;
 }
 
 .imgHimno {
-    @apply max-w-[60%] max-h-[60%] mb-4 md:w-2/6 rounded-full shadow-[0_0_10px_rgb(0,0,0,0.75)] animate-spinright;
+    @apply max-w-[50%] max-h-[50%] mb-4 md:w-2/6 rounded-full shadow-[0_0_10px_rgb(0,0,0,0.75)] animate-spinright;
 }
 
 .divConHimno {
