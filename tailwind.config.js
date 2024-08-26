@@ -40,7 +40,7 @@ module.exports = {
 
         bubbleup: {
           '0%': { transform: 'translateY(0) scale(1)' },
-          '100%': { transform: 'translateY(-750px) scale(1.2)' },
+          '100%': { transform: 'translateY(-1150px) scale(1.4)' },
         },
 
         positionSwap: {
