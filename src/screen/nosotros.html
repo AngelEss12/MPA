@@ -27,7 +27,7 @@
             </div>
 
             <div
-                class="flex flex-col justify-center items-center text-center text-6xl sm:text-7xl md:text-8xl lg:text-9xl lg:space-y-12 font-extrabold">
+                class="flex flex-col justify-center items-center text-center text-6xl sm:text-7xl md:text-8xl lg:text-[250px] lg:space-y-12 font-extrabold">
                 <h1 class="text-white font-titulos animate-heartbeat">Nosotros</h1>
                 <a href="#"
                     class="text-white font-titulos text-lg my-4 border-2 rounded-3xl px-8 jump transition-all ease-in duration-300 hover:scale-110 hover:bg-white hover:text-black hover:font-extrabold sm:text-3xl sm:px-16 sm:py-2 md:text-4xl md:px-28 lg:text-6xl lg:m-0 lg:px-40 lg:py-3">Contactanos</a>
@@ -70,24 +70,22 @@
             </div>
 
             <div id="container-identidad" class="w-full flex flex-col justify-center items-center z-10 up">
-                <h2 class="font-titulos font-extrabold text-4xl py-4 sm:text-6xl">
+                <h2 class="font-titulos font-extrabold text-4xl py-4 sm:text-6xl md:text-7xl lg:text-8xl">
                     Identidad
                 </h2>
                 <div id="h-identidad" class="w-full flex justify-around items-center">
                     <img id="l-arrow"
-                        class="w-7 h-7w-7 animate-pulse animate-infinite border-2 border-black rounded-full"
-                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAOhJREFUSEvt1TEKAjEQheF/LyAoCJYWFjaKlxFbOytLb2FpZ+c5RERRL7FeQtBWHdhALJSZBDdN0gWSfDuPSbYg0SgSuWS4tuRz1CFRN4CbdWNs1ANgD0yArQWPgR3aAu7ACCi1eCjcB06AoDI2wBR4/hMW9AC0K2QNzCyo7LNW3APOHroC5toq/XUWWNAj0KkOCEYtFXeBi4cu3w21CKnU7dFWnAyWD00StUsoSXM5PMl18vHaHxCHD6t3ugk8AJlftZ2u7epv57n3egzstKjlHv86M8lv0VLkx9rYqDOsTiBHrY4qduELjSgkH8IAy5kAAAAASUVORK5CYII="
+                        class="w-7 h-7 sm:w-10 md:w-12 lg:w-14 sm:h-10 md:h-12 lg:h-14 animate-pulse animate-infinite"
+                        src="/assets/nosotros/icons/atras.png"
                         alt="Siguiente" />
-                    <h3 id="t-identidad" class="font-titulos font-extrabold text-3xl sm:text-5xl pb-2">
-                        Logo
-                    </h3>
+                    <h3 id="t-identidad" class="font-titulos font-extrabold text-3xl sm:text-5xl md:text-6xl lg:text-7xl pb-2">Logo</h3>
                     <img id="r-arrow"
-                        class="w-7 h-7w-7 animate-pulse animate-infinite border-2 border-black rounded-full"
-                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAOlJREFUSEvtlTEOQUEQhr/XicIlxCEQQjTiEDqd0i2UKiqNC6FQKBQKiSBxAplkXiKPxO68ZDeS3Xpmvpk/M/9mRHpZJC4JHEz5JLWr1DXg6Rr8Lc4i9RDYAD1gZ4X7guvAFqgCN6BvhfuCJX4NjHXSO9AGDr6T+4KlvuQsgYnCrkALOPrALeC8/uoNfgE6PvAyYGlgAUy1E4E3gZPL5GXBwpgDM4WddfKf8L8FR5E6+HJFOaeigcgNd0MYSEMtswI8FLp3OZ9ijGWrR2qbA6tP5/ZnaTjKt2hp9CPHInUCmxRIUptksyS9AIx6Kh9ESA21AAAAAElFTkSuQmCC"
+                        class="w-7 h-7w-7 sm:w-10 md:w-12 lg:w-14 sm:h-10 md:h-12 lg:h-14 animate-pulse animate-infinite"
+                        src="/assets/nosotros/icons/adelante.png"
                         alt="Siguiente" />
                 </div>
-                <!-- Contenido adicional aquí -->
-                <div class="w-full flex flex-col justify-center items-center py-4 md:p-8">
+                <!-- Contenido identidad adicional aquí Logo - Himno - Creador -->
+                <div class="w-full flex flex-col justify-center items-center py-4 md:p-2 lg:py-4">
                     <div id="c-identidad"
                         class="w-full mx-auto text-center flex flex-col sm:flex-row justify-center items-center">
 
@@ -101,7 +99,7 @@
                                 y la alegría de la unidad en la fe, reflejando la riqueza
                                 cultural de las distintas regiones del mundo.
                             </p>
-                            <div id="pogress-identidad" class="w-24 h-1 bg-gray-600 my-2 rounded-lg animate-load"></div>
+                            <div id="pogress-identidad" class="w-24 h-2 bg-slate-600 my-2 rounded-lg animate-load"></div>
                         </div> <!-- Aqui termina el logo-->
 
                         <!-- Aqui empieza el himno -->
@@ -130,37 +128,35 @@
                         </div>
 
                         <!-- Aqui empieza el creador -->
-                        <div id="displayCreador" class="w-4/5 my-4 hidden flex-col sm:flex-row gap-4 md:gap-16 items-center justify-around md:justify-center rounded-lg shadow-sm shadow-black/70 overflow-hidden">
-                            <div class="w-full bg-slate-700 flex flex-col justify-center items-center py-8 w">
-                                <div class="w-[90%] flex flex-col items-center justify-center space-y-4 pb-8">
-                                    <img class="aspect-square object-cover border-[10px] border-slate-500 max-h-60 rounded-full"
+                        <div id="displayCreador" class="w-4/5 lg:w-[90%] my-4 lg:my-0 hidden flex-col lg:gap-0 items-center justify-around md:justify-center rounded-lg shadow-sm shadow-black/70 overflow-hidden">
+                            <div class="w-full bg-slate-700 flex flex-col lg:flex-row justify-center lg:justify-around items-center py-8 lg:py-2">
+                                <div class="w-[90%] lg:w-[75%] flex flex-col lg:flex-row items-center justify-center lg:justify-start space-y-4 pb-8 lg:pb-0">
+                                    <img class="aspect-square object-cover border-[10px] border-slate-500 max-h-60 lg:max-h-48 rounded-full"
                                         src="/assets/nosotros/Padre Zamora.webp" alt="Fundador Padre Zamora Perez" />
-                                    <h3 class="text-2xl font-titulos font-extrabold text-sky-50">
-                                        Padre Antonio Zamora Perez
-                                    </h3>
-                                    <p class="text-sm font-light text-slate-200 font-cuerpos">
-                                        Fundador del Movimiento Pandillas de la Amistad
-                                    </p>
+                                    <div class="lg:text-left lg:pl-4 lg:space-y-4">
+                                        <h3 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-titulos font-extrabold text-sky-50">
+                                            Padre Antonio Zamora Perez
+                                        </h3>
+                                        <p class="text-sm md:text-lg lg:text-xl font-light text-slate-200 font-cuerpos">
+                                            Fundador del Movimiento Pandillas de la Amistad
+                                        </p>
+                                    </div>
                                 </div>
                 
-                                <a class="w-[80%] button bg-red-400 border-red-300 transition-all hover:scale-110 hover:text-white hover:bg-red-800 hover:border-red-500"
+                                <a class="w-[80%] sm:w-[40%] md:w-[30%] lg:w-[20%] button text-slate-900 sm:text-base md:text-xl lg:pr-4 bg-red-400 border-red-300 transition-all hover:scale-110 hover:text-white hover:bg-red-800 hover:border-red-500"
                                     href="https://www.facebook.com/share/v/ZnM6ig3b5exud4DG/">
                                     Conocer mas
                                 </a>
                             </div>
                 
-                            <div class="font-cuerpos text-sm text-justify px-8 pb-4">
-                                <p>En los años 70, el padre Antonio Zamora en Toluca, Edo. de México, se cuestionó si era suficiente enseñar la fe a los niños sin antes hablarles de Jesucristo. Esto lo llevó a crear un movimiento que buscaba un encuentro personal de los niños con Jesús. En febrero de 1973, realizó un primer retiro con 43 niños, donde comprobó con alegría que su mensaje funcionaba efectivamente.</p>
+                            <div class="bg-white/90 font-cuerpos flex flex-col justify-center items-center text-sm sm:text-base md:text-lg lg:text-xl text-justify px-8 py-4">
+                                <p class="text-gray-950">En los años 70, el padre Antonio Zamora en Toluca, Edo. de México, se cuestionó si era suficiente enseñar la fe a los niños sin antes hablarles de Jesucristo. Esto lo llevó a crear un movimiento que buscaba un encuentro personal de los niños con Jesús. En febrero de 1973, realizó un primer retiro con 43 niños, donde comprobó con alegría que su mensaje funcionaba efectivamente.</p>
 
-                                <div class="w-full grid grid-cols-2 grid-rows-4 gap-4 py-4 justify-center items-center">
-                                    <img id="img-1" class="min-w-[100px] min-h-[100px] aspect-square object-cover" src="/assets/nosotros/galeria/Padre Zamora 3.webp" alt="">
-                                    <img id="img-2" class="min-w-[100px] min-h-[100px] aspect-square object-cover" src="/assets/nosotros/galeria/Padre Zamora 2.webp" alt="">
-                                    <img id="img-3" class="min-w-[100px] min-h-[100px] aspect-square object-cover" src="/assets/nosotros/galeria/Padre Zamora Perez.webp" alt="">
-                                    <img id="img-4" class="min-w-[100px] min-h-[100px] aspect-square object-cover" src="/assets/nosotros/galeria/Portada.webp" alt="">
-                                    <img id="img-5" class="min-w-[100px] min-h-[100px] aspect-square object-cover" src="/assets/nosotros/galeria/Mensaje.webp" alt="">
-                                    <img id="img-6" class="min-w-[100px] min-h-[100px] aspect-square object-cover" src="/assets/nosotros/galeria/Frase.webp" alt="">
-                                    <img id="img-7" class="min-w-[100px] min-h-[100px] aspect-square object-cover" src="/assets/nosotros/galeria/Collage Padre.webp" alt="">
-                                    <img id="img-8" class="min-w-[100px] min-h-[100px] aspect-square object-cover" src="/assets/nosotros/galeria/Primer retiro.webp" alt="">
+                                <div class="w-full grid grid-cols-2 grid-rows-2 lg:grid-cols-4 lg:grid-rows-1 gap-4 py-4 justify-items-center items-center">
+                                    <img id="img-5" class="min-w-[100px] lg:max-w-52 min-h-[100px] lg:max-h-20max-w-52 aspect-square object-cover rounded-md border-[10px] border-orange-200 transition-all hover:scale-110 ease-out duration-200" src="/assets/nosotros/galeria/Mensaje.webp" alt="">
+                                    <img id="img-6" class="min-w-[100px] lg:max-w-52 min-h-[100px] lg:max-h-20max-w-52 aspect-square object-cover rounded-md border-[10px] border-black/50 transition-all hover:scale-110 ease-out duration-200" src="/assets/nosotros/galeria/Frase.webp" alt="">
+                                    <img id="img-7" class="min-w-[100px] lg:max-w-52 min-h-[100px] lg:max-h-20max-w-52 aspect-square object-cover rounded-md border-[10px] border-amber-800/50 transition-all hover:scale-110 ease-out duration-200" src="/assets/nosotros/galeria/Collage Padre.webp" alt="">
+                                    <img id="img-8" class="min-w-[100px] lg:max-w-52 min-h-[100px] lg:max-h-20max-w-52 aspect-square object-cover rounded-md border-[10px] border-yellow-600/30 transition-all hover:scale-110 ease-out duration-200" src="/assets/nosotros/galeria/Primer retiro.webp" alt="">
                                 </div>
                             </div>
                         </div>
@@ -168,33 +164,15 @@
                     </div>
                 </div>
             </div>
-        </section>
-        <!--Fin de Identidad-->
-
-        <section class="w-full mx-auto text-center flex flex-col sm:flex-row justify-center items-center">
-            <div class="w-4/5 my-4 flex flex-col sm:flex-row gap-4 md:gap-16 items-center justify-around md:justify-center rounded-lg shadow-sm shadow-black/70 overflow-hidden">
-                <div class="w-full bg-slate-700 flex flex-col justify-center items-center py-8 w">
-                    <div class="w-[90%] flex flex-col items-center justify-center space-y-4 pb-8">
-                        <img class="aspect-square object-cover border-[10px] border-slate-500 max-h-60 rounded-full"
-                            src="/assets/nosotros/Padre Zamora.webp" alt="Fundador Padre Zamora Perez" />
-                        <h3 class="text-2xl font-titulos font-extrabold text-sky-50">
-                            Padre Antonio Zamora Perez
-                        </h3>
-                        <p class="text-sm font-light text-slate-200 font-cuerpos">
-                            Fundador del Movimiento Pandillas de la Amistad
-                        </p>
-                    </div>
-    
-                    <a class="w-[80%] button bg-red-400 border-red-300 transition-all hover:scale-110 hover:text-white hover:bg-red-800 hover:border-red-500"
-                        href="https://www.facebook.com/share/v/ZnM6ig3b5exud4DG/">
-                        Conocer mas
-                    </a>
-                </div>
-    
-                <div class=""></div>
-            </div>
+        </section> <!--Fin de Identidad-->
         </section>
     </main>
+
+    <div id="lightbox" class="fixed inset-0 bg-black bg-opacity-75 flex flex-col items-center justify-center hidden z-50 pop animate-duration-500">
+        <span id="close-lightbox" class="rounded-[100%] absolute top-4 right-4 text-gray-200 text-center text-3xl cursor-pointer">&times;</span>
+        <img id="lightbox-img" class="max-w-full max-h-full sm:max-h-[85%] object-contain" src="" alt="Expanded Image">
+    </div>
+    
 </body>
 <script src="/src/js/app.js"></script>
 
