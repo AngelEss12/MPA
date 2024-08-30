@@ -11,7 +11,7 @@
     animation-timeline: --image;
     animation-name: appear;
 
-    animation-range: entry 35% cover 50%;
+    animation-range: entry 20% cover 50%;
     animation-fill-mode: both;
 }
 
@@ -70,7 +70,7 @@
 }
 
 .iconosReproductor {
-    @apply h-12 sm:h-16 md:h-20;
+    @apply h-12 sm:h-16 md:h-20 cursor-pointer;
 }
 
 .reproductorHimno {
@@ -87,4 +87,13 @@
 
 .timeSound {
     @apply text-sm text-gray-300;
+}
+
+/* Historia */
+.displayHistoria {
+    @apply rounded-md flex flex-col gap-4 py-2 px-4 cursor-pointer;
+}
+
+.animate-texts {
+    @apply animate-rotate-x animate-once animate-ease-out animate-duration-[800ms];
 }
