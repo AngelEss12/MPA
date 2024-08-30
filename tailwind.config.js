@@ -10,7 +10,7 @@ module.exports = {
 
       keyframes: {
         appear: {
-          '0%': { opacity: '0', transform: 'scale(0.5)' }, // Escala inicial al 25%
+          '0%': { opacity: '0', transform: 'scale(0.85)' }, // Escala inicial al 25%
           '100%': { opacity: '1', transform: 'scale(1)' },   // Escala final al 100%
         },
 
@@ -65,7 +65,7 @@ module.exports = {
         },
       },
       animation: {
-        appear: 'appear 0.2s linear both',  // Define la animación con la duración y timing-function que desees
+        appear: 'appear 0.1s ease-out both',  // Define la animación con la duración y timing-function que desees
         heartbeat: 'heartbeat 2s linear 1s infinite both',
         load: 'load 10s linear forwards',
         marquee: 'marquee 10s linear infinite',
