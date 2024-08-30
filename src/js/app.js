@@ -323,3 +323,17 @@ const galleryImages = document.querySelectorAll('#displayCreador img');
         }
     });
 
+// Historia
+const displayHistorias = document.querySelectorAll('.displayHistoria')
+
+console.log(displayHistorias);
+displayHistorias.forEach(div => {
+    div.addEventListener('click', () => {
+        div.classList.add('animate-texts')
+        setTimeout(() => {
+            const lineaTiempo = div.querySelector('[data-history]');
+            lineaTiempo.classList.toggle('hidden');
+            div.classList.remove('animate-texts');
+        }, 600)
+    });
+    });
