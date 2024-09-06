@@ -11,10 +11,18 @@
     animation-timeline: --image;
     animation-name: appear;
 
-    animation-range: entry 20% cover 50%;
+    animation-range: entry 20% cover 35%;
     animation-fill-mode: both;
 }
 
+/* Index */
+.entrada {
+    @apply animate-jump-in animate-once animate-ease-out animate-normal;
+}
+
+.salida {
+    @apply animate-jump-out animate-once animate-ease-out animate-normal;
+}
 
 .button {
     @apply font-cuerpos font-bold text-center text-sm border-2 rounded-3xl py-2 px-8 transition-all ease-in duration-300;
@@ -49,7 +57,7 @@
     @apply w-[50%] md:w-[40%] lg:w-[30%]  rounded-[100%];
 }
 .textLogo {
-    @apply text-gray-800 text-sm text-justify py-2 px-8 font-cuerpos w-[90%] lg:w-[75%] sm:text-lg md:text-xl lg:text-2xl; 
+    @apply text-gray-900 text-sm text-justify py-2 px-8 font-cuerpos w-[90%] lg:w-[75%] sm:text-lg md:text-xl lg:text-2xl; 
 }
 
 /** Clases Himno */
