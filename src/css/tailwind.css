@@ -33,7 +33,7 @@
 }
 
 .title {
-    @apply text-center text-3xl font-bold font-titulos py-4 sm:text-4xl md:py-8;
+    @apply text-center text-3xl font-extrabold font-titulos py-4 sm:text-4xl md:py-8;
 }
 
 .pop {
@@ -42,6 +42,14 @@
 
 .up {
     @apply animate-fade-up animate-once animate-ease-linear animate-delay-500;
+}
+
+.fade {
+    @apply animate-fade animate-once animate-duration-[2s] animate-ease-out;
+}
+
+.fade-left {
+    @apply animate-fade-left animate-once animate-duration-500 animate-ease-out;
 }
 
 .down {
