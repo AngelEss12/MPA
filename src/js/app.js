@@ -1,14 +1,13 @@
-document.addEventListener("DOMContentLoaded", () => {
-  lineaEspiritual();
-  leyes();
-  moveTextE();
+const avanzar = document.querySelector('#arrow-right');
+const retroceder = document.querySelector('#arrow-left');
+const virtudes = document.querySelector('#virtudes');
+const contVirtudes = document.querySelectorAll('#contendor-virtudes > div');
 
-  const lineas = document.querySelector('#lineas');
-  const divEsp = document.querySelector('#contenedor-lineas');
-  lineas.addEventListener("click", () => {
-    divEsp.classList.toggle('hidden');
-    
-  })
+document.addEventListener("DOMContentLoaded", () => {
+  avanzar.addEventListener('click', changeVirtudRight);
+  leyes();
+  retroceder.addEventListener('click', changeVirtudLeft);
+  leyes();
 });
 
 const leyes = () => {
@@ -45,40 +44,83 @@ const leyes = () => {
   }, 5000); // Cambiar cada 5 segundos
 }
 
-const lineaEspiritual = () => {
-  const divEsp = document.querySelector('#Espiritual');
-  
-  const imgEsp = document.querySelectorAll('#Espiritual img');
-  
-  let index = 0;
+// Variables para el touch
+let touchStartX = 0;
+let touchEndX = 0;
+let touchStartY = 0;
+let touchEndY = 0;
+const umbralTouch = 30; // Umbral mínimo para considerar un deslizamiento
 
-  
-  setInterval(() => {
-    let porcentaje = index * -100;
-    divEsp.style.transform = 'translateX('+ porcentaje +'%)';
-    if (index > imgEsp.length - 1) {
-      index = 0;
-      divEsp.style.transform = 'translateX(0%)';
-    }
-    index++;
-  }, 3000);
+addEventListener("touchstart", (event) => {
+  // Captura la posición inicial del touch
+  touchStartX = event.changedTouches[0].screenX;
+  touchStartY = event.changedTouches[0].screenY;
+});
+
+virtudes.addEventListener("touchend", (event) => {
+  // Captura la posición final del touch
+  touchEndX = event.changedTouches[0].screenX;
+  touchEndY = event.changedTouches[0].screenY;
+
+  // Llama a la función para manejar el movimiento
+  touchMove();
+});
+
+const touchMove = () => {
+  // Calcula las diferencias entre las posiciones de inicio y fin
+  const deltaX = touchEndX - touchStartX;
+  const deltaY = touchEndY - touchStartY;
+
+  // Verifica si el deslizamiento es más horizontal que vertical y si supera el umbral
+  if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > umbralTouch) {
+      // Si el deslizamiento fue hacia la izquierda
+      if (deltaX < 0) {
+        changeVirtudRight();
+      }
+      // Si el deslizamiento fue hacia la derecha
+      else if (deltaX > 0) {
+        changeVirtudLeft();
+      }
+  }
 };
 
-const textEsp = document.querySelectorAll('#text-E > li');
+let index = 0;
 
-const moveTextE = () => {
-  let index = 0; 
-  const textEsp = document.querySelectorAll('#text-E > li');
-  // Mostrar la imagen inicial al cargar
+const changeVirtudRight = () => {
+  if (contVirtudes[index].classList.contains("flex")) {
+    contVirtudes[index].classList.remove("flex");
+    contVirtudes[index].classList.add("hidden");
+    index++;
+    if (index === contVirtudes.length) {
+      index = 0;
+      contVirtudes[index].classList.remove("hidden", "fade-left", "fade-right");
+      contVirtudes[index].classList.add("flex", "fade-left");
+    } else {
+      contVirtudes[index].classList.remove("hidden", "fade-left", "fade-right");
+      contVirtudes[index].classList.add("flex", "fade-left");
+    }
+  } else {
+    contVirtudes[index + contVirtudes.length - 1].classList.remove("flex");
+    contVirtudes[index + contVirtudes.length - 1].classList.add("hidden");
+    contVirtudes[index].classList.remove("hidden", "fade-left", "fade-right");
+    contVirtudes[index].classList.add("flex", "fade-left");
+  }
+}
 
-  setInterval(() => {
-
-    setTimeout(() => {
-      textEsp[index].classList.add("hidden");
-      
-      index = (index + 1) % textEsp.length;
-    }, 7970)
-    textEsp[index].classList.remove("hidden"); 
-  }, 8000);
-  
+const changeVirtudLeft = () => {
+  if (contVirtudes[index].classList.contains("flex")) {
+    contVirtudes[index].classList.remove("flex");
+    contVirtudes[index].classList.add("hidden");
+    index--;
+    if (index < 0) {
+      index = contVirtudes.length - 1;
+    }
+    contVirtudes[index].classList.remove("hidden", "fade-left", "fade-right");
+    contVirtudes[index].classList.add("flex", "fade-right");
+  } else {
+    contVirtudes[index - contVirtudes.length + 1].classList.remove("flex");
+    contVirtudes[index - contVirtudes.length + 1].classList.add("hidden");
+    contVirtudes[index].classList.remove("hidden", "fade-left", "fade-right");
+    contVirtudes[index].classList.add("flex", "fade-right");
+  }
 }
