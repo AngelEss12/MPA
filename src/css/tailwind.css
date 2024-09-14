@@ -49,7 +49,10 @@
 }
 
 .fade-left {
-    @apply animate-fade-left animate-once animate-duration-500 animate-ease-out;
+    @apply animate-fade-left animate-once animate-duration-500 animate-ease-linear;
+}
+.fade-right {
+    @apply animate-fade-right animate-once animate-duration-500 animate-ease-linear;
 }
 
 .down {
