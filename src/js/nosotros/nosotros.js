@@ -75,6 +75,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Ejecutar la función inmediatamente al cargar la página
     contenidoIdentidad();
     updateBubblePositions();
+    mostrarMomento();
 
     // Repetir la ejecución de la función cada 8 segundos
     setInterval(updateBubblePositions, 8000);
@@ -282,46 +283,46 @@ const limpiarCreador = () => {
 // Galeria Creador 
 const galleryImages = document.querySelectorAll('#displayCreador img');
 
-    // Selecciona el contenedor del lightbox y su contenido
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImg = document.getElementById('lightbox-img');
-    const closeLightbox = document.getElementById('close-lightbox');
-    const texLightbox = document.createElement("P");
+// Selecciona el contenedor del lightbox y su contenido
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+const closeLightbox = document.getElementById('close-lightbox');
+const texLightbox = document.createElement("P");
 
-    // Función para mostrar el lightbox
-    galleryImages.forEach(img => {
-        img.addEventListener('click', () => {
-            setTimeout(() => {
-                if(img.id === "img-8") {
-                    texLightbox.classList.add('text-sm', 'text-center', 'text-slate-200', 'font-cuerpos', 'px-8', 'py-2');
-                    texLightbox.textContent = "Fotografía del Primer retiro del Movimiento Pandillas de la Amistad";
-                    lightbox.appendChild(texLightbox);
-                    lightboxImg.src = img.src;
-                    document.body.style.overflow = 'hidden';
-                    lightbox.classList.remove('hidden');
-                } else{
-                    document.body.style.overflow = 'hidden';
-                    texLightbox.textContent = "";
-                    lightboxImg.src = img.src;
-                    lightbox.classList.remove('hidden');
-                }
-            }, 250)
-        });
+// Función para mostrar el lightbox
+galleryImages.forEach(img => {
+    img.addEventListener('click', () => {
+        setTimeout(() => {
+            if (img.id === "img-8") {
+                texLightbox.classList.add('text-sm', 'text-center', 'text-slate-200', 'font-cuerpos', 'px-8', 'py-2');
+                texLightbox.textContent = "Fotografía del Primer retiro del Movimiento Pandillas de la Amistad";
+                lightbox.appendChild(texLightbox);
+                lightboxImg.src = img.src;
+                document.body.style.overflow = 'hidden';
+                lightbox.classList.remove('hidden');
+            } else {
+                document.body.style.overflow = 'hidden';
+                texLightbox.textContent = "";
+                lightboxImg.src = img.src;
+                lightbox.classList.remove('hidden');
+            }
+        }, 250)
     });
+});
 
-    // Función para cerrar el lightbox
-    closeLightbox.addEventListener('click', () => {
+// Función para cerrar el lightbox
+closeLightbox.addEventListener('click', () => {
+    lightbox.classList.add('hidden')
+    document.body.style.overflow = '';
+});
+
+// Cerrar lightbox cuando se haga clic fuera de la imagen
+lightbox.addEventListener('click', (e) => {
+    if (e.target !== lightboxImg) {
         lightbox.classList.add('hidden')
-        document.body.style.overflow = '';
-    });
-
-    // Cerrar lightbox cuando se haga clic fuera de la imagen
-    lightbox.addEventListener('click', (e) => {
-        if (e.target !== lightboxImg) {
-            lightbox.classList.add('hidden')
-            document.body.style.overflow = '';;
-        }
-    });
+        document.body.style.overflow = '';;
+    }
+});
 
 // Historia
 const displayHistorias = document.querySelectorAll('.displayHistoria')
@@ -336,4 +337,35 @@ displayHistorias.forEach(div => {
             div.classList.remove('animate-texts');
         }, 600)
     });
+});
+
+// Momentos
+
+function mostrarMomento() {
+    // Seleccionar todas las opciones
+    const opciones = document.querySelectorAll(".selection");
+
+    // Añadir un EventListener a cada opción
+    opciones.forEach(function (opcion) {
+        opcion.addEventListener("click", function () {
+            // Obtener el valor del atributo data-momento
+            const momentoSeleccionado = this.getAttribute("data-momento");
+
+            // Ocultar todos los momentos
+            document.getElementById("prepandilla").classList.add("hidden");
+            document.getElementById("pandilla").classList.add("hidden");
+            document.getElementById("postpandilla").classList.add("hidden");
+
+            // Mostrar el momento correspondiente
+            document.getElementById(momentoSeleccionado).classList.remove("hidden");
+
+            // Resetear el fondo de todas las opciones a blanco
+            opciones.forEach(function (opcion) {
+                opcion.classList.remove("selected");
+            });
+
+            // Cambiar el fondo de la opción seleccionada a negro
+            this.classList.add("selected");
+        });
     });
+};
