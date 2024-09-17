@@ -10,6 +10,7 @@ module.exports = {
       backgroundImage: {
         'gradiente-inicio': 'linear-gradient(to left top, #efceff, #ffcde5, #ffd7c5, #ffeab3, #ebffbf)',
         'gradiente-v1': 'linear-gradient(to right bottom, #cef3ff, #cef8fa, #d3fbf3, #ddfeeb, #ebffe4)',
+        'gradiente-v2': 'linear-gradient(to left top, #d7f6d7, #ddf7d5, #e2f8d3, #e9f8d1, #eff9d0, #f5f5ce, #fbf2cd, #ffeecd, #ffe6d1, #ffe1dc, #ffdee8, #f9def3)',
         'gradiente-footer': 'linear-gradient(to right bottom, #ffd0c5, #ffd7be, #ffdfba, #f7e8b9, #ebf2be, #d6f7c8, #c1fad7, #affce9, #a2f6fc, #a8ecff, #bde1ff, #d4d5ff)',
       },
       keyframes: {
