@@ -49,10 +49,10 @@
 }
 
 .fade-left {
-    @apply animate-fade-left animate-once animate-duration-500 animate-ease-linear;
+    @apply animate-fade-left animate-once animate-ease-linear;
 }
 .fade-right {
-    @apply animate-fade-right animate-once animate-duration-500 animate-ease-linear;
+    @apply animate-fade-right animate-once animate-ease-linear;
 }
 
 .down {
@@ -68,7 +68,7 @@
     @apply w-[50%] md:w-[40%] lg:w-[30%]  rounded-[100%];
 }
 .textLogo {
-    @apply text-gray-900 text-sm text-justify py-2 px-8 font-cuerpos w-[90%] lg:w-[75%] sm:text-lg md:text-xl lg:text-2xl; 
+    @apply text-gray-900 text-sm text-justify py-2 px-8 font-cuerpos font-medium w-[90%] lg:w-[75%] sm:text-lg md:text-xl lg:text-2xl; 
 }
 
 /** Clases Himno */
@@ -105,7 +105,7 @@
 }
 
 .timeSound {
-    @apply text-sm text-gray-300;
+    @apply text-sm font-medium text-gray-300;
 }
 
 /* Historia */
@@ -115,4 +115,19 @@
 
 .animate-texts {
     @apply animate-rotate-x animate-once animate-ease-out animate-duration-[800ms];
+}
+
+/* Momentos */
+.option {
+    @apply rounded-full border border-black p-1
+}
+
+/* Clase por defecto para las opciones */
+.selection {
+    @apply w-5 h-5 rounded-full cursor-pointer;
+}
+
+/* Clase para la opción seleccionada */
+.selection.selected {
+    background-color: black;
 }
