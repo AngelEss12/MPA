@@ -345,7 +345,16 @@ function mostrarMomento() {
     // Seleccionar todas las opciones
     const opciones = document.querySelectorAll(".selection");
 
-    // Añadir un EventListener a cada opción
+    // Obtener la primera opción con la clase "selected" al cargar la página
+    const primeraSeleccionada = document.querySelector(".selection.selected");
+
+    // Si existe una opción seleccionada inicialmente, mostrar el momento correspondiente
+    if (primeraSeleccionada) {
+        const momentoSeleccionado = primeraSeleccionada.getAttribute("data-momento");
+        document.getElementById(momentoSeleccionado).classList.remove("hidden");
+    }
+
+    // Añadir un EventListener a cada opción para cambiar de momento
     opciones.forEach(function (opcion) {
         opcion.addEventListener("click", function () {
             // Obtener el valor del atributo data-momento
@@ -359,7 +368,7 @@ function mostrarMomento() {
             // Mostrar el momento correspondiente
             document.getElementById(momentoSeleccionado).classList.remove("hidden");
 
-            // Resetear el fondo de todas las opciones a blanco
+            // Resetear el fondo de todas las opciones
             opciones.forEach(function (opcion) {
                 opcion.classList.remove("selected");
             });
