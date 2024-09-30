@@ -29,11 +29,11 @@
 }
 
 .contenedor-principal {
-    @apply flex flex-col justify-center items-center pb-8 md:pb-12;
+    @apply flex flex-col justify-center items-center pb-6 lg:pb-12;
 }
 
 .title {
-    @apply text-center text-3xl font-extrabold font-titulos py-4 sm:text-4xl md:py-8;
+    @apply text-center text-4xl font-extrabold font-titulos py-4 sm:text-5xl md:py-8;
 }
 
 .pop {
@@ -49,10 +49,10 @@
 }
 
 .fade-left {
-    @apply animate-fade-left animate-once animate-ease-linear;
+    @apply animate-fade-left animate-once animate-ease-out animate-duration-300;
 }
 .fade-right {
-    @apply animate-fade-right animate-once animate-ease-linear;
+    @apply animate-fade-right animate-once animate-ease-out animate-duration-300;
 }
 
 .down {
@@ -65,7 +65,7 @@
 
 /*? Logo  */
 .imgLogo {
-    @apply w-[50%] md:w-[40%] lg:w-[30%]  rounded-[100%];
+    @apply w-[55%] md:w-[40%] lg:w-[30%]  rounded-[100%];
 }
 .textLogo {
     @apply text-gray-900 text-sm text-justify py-2 px-8 font-cuerpos font-medium w-[90%] lg:w-[75%] sm:text-lg md:text-xl lg:text-2xl; 
