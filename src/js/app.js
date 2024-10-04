@@ -53,16 +53,19 @@ addEventListener("touchstart", (event) => {
 });
 
 const slider = document.querySelector('.slider');
+const poitns = slider.querySelectorAll('.point')
 const prevBtn = document.getElementById('prevBtn');
 const nextBtn = document.getElementById('nextBtn');
 
 // Variables para rastrear el estado actual del slider
 let currentIndex = 0;
 const totalCards = document.querySelectorAll('.card').length;
+
 // Función para actualizar la posición del slider
 function updateSliderPosition() {
   const slideWidth = document.querySelector('.card').offsetWidth;
   slider.style.transform = `translateX(${-slideWidth * currentIndex}px)`;
+  poitns[currentIndex].classList.add('bg-slate-500');
 }
 
 // Evento para el botón "Siguiente"
