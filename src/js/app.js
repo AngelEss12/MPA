@@ -1,6 +1,10 @@
 const virtudes = document.querySelector('#virtudes');
 const contVirtudes = document.querySelectorAll('#contendor-virtudes > div');
 
+document.addEventListener("DOMContentLoaded", () => {
+  leyes();
+});
+
 const leyes = () => {
   const slides = document.querySelectorAll("#leyes a, #leyOro");
   let currentIndex = 0;
