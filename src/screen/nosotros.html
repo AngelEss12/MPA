@@ -9,11 +9,10 @@
 </head>
 
 <body>
-    <header class="w-full max-h-[750px] relative pop">
-        <div class="bg-black/65 grid grid-rows-[15%,85%] sm:grid-rows-[10%,90%] w-full absolute h-full z-10">
-            <div class="w-full flex items-center px-4 lg:py-0">
-                <nav
-                    class="w-full flex justify-between text-[16px] text-white font-titulos font-extrabold gap-4 sm:text-2xl md:text-3xl lg:text-5xl lg:px-8">
+    <header class="hd">
+        <div class="hd-container">
+            <div class="nv">
+                <nav class="nv-container">
                     <a href="/index.html"
                         class="down hover:border-b-[3px] lg:hover:border-b-[5px] hover:text-red-200 hover:border-red-400 hover:transition-all hover:ease-linear hover:duration-300">Inicio</a>
                     <a href="/src/screen/nosotros.html"
@@ -26,11 +25,10 @@
                 <!--Fin de Navegacion-->
             </div>
 
-            <div
-                class="flex flex-col justify-center items-center text-center text-6xl sm:text-7xl md:text-8xl lg:text-[250px] lg:space-y-12 font-extrabold">
-                <h1 class="text-white font-titulos animate-heartbeat">Nosotros</h1>
+            <div class="hd-body xl:text-[200px]">
+                <h1 class="hd-title">Nosotros</h1>
                 <a href="#"
-                    class="text-white font-titulos text-lg my-4 border-2 rounded-3xl px-8 jump transition-all ease-in duration-300 hover:scale-110 hover:bg-white hover:text-black hover:font-extrabold sm:text-3xl sm:px-16 sm:py-2 md:text-4xl md:px-28 lg:text-6xl lg:m-0 lg:px-40 lg:py-3">Contactanos</a>
+                    class="text-white font-titulos text-xl my-4 border-2 rounded-3xl md:rounded-[36px] lg:rounded-[44px] px-6 jump animate-duration-[.5s] animate-delay-[1.75s] transition-all ease-in duration-300 hover:scale-110 hover:bg-white hover:text-black hover:font-extrabold sm:text-3xl sm:px-12 sm:py-2 md:text-4xl md:px-16 lg:text-5xl lg:m-0 lg:px-20 lg:py-3 xl:px-32 xl:text-6xl">Contactanos</a>
             </div>
         </div>
 
@@ -92,7 +90,8 @@
                         <div id="display-logo" class="flex flex-col items-center">
                             <img id="img" class="imgLogo" src="/assets/nosotros/Logo_MPA-removebg1.png"
                                 alt="Logo del Movimiento" />
-                            <p id="text-identidad" class="text-gray-900 text-sm text-justify py-2 px-8 font-cuerpos font-medium w-[90%] lg:w-[75%] sm:text-lg md:text-xl lg:text-2xl">
+                            <p id="text-identidad"
+                                class="text-gray-900 text-sm text-justify py-2 px-8 font-cuerpos font-medium w-[90%] lg:w-[75%] sm:text-lg md:text-xl lg:text-2xl">
                                 El logo del Movimiento Pandillas de la Amistad muestra un
                                 globo terráqueo con colores vivos que simbolizan la diversidad
                                 y la alegría de la unidad en la fe, reflejando la riqueza
@@ -190,7 +189,8 @@
 
         <section class="bg-slate-900 flex flex-col justify-center items-center py-4 space-y-2">
             <div class="flex flex-col justify-center items-center text-center pb-4 space-y-2">
-                <h2 class="font-titulos font-extrabold text-white py-2 text-5xl sm:text-6xl md:text-7xl lg:text-8xl">Historia
+                <h2 class="font-titulos font-extrabold text-white py-2 text-5xl sm:text-6xl md:text-7xl lg:text-8xl">
+                    Historia
                 </h2>
                 <p class="w-[80%] text-sm font-normal lg:text-3xl text-gray-300 text-justify px-4 ">
                     El Movimiento "Pandillas de la Amistad" nació de la inquietud del presbítero Antonio Zamora de
@@ -320,93 +320,104 @@
 
         <section class="bg-gradiente-v2 relative w-full pb-4">
             <div class="flex flex-col justify-center items-center py-4 space-y-2 z-10">
-                <h2 class="font-titulos font-extrabold text-center text-black py-2 text-5xl sm:text-6xl md:text-7xl lg:text-8xl">
+                <h2
+                    class="font-titulos font-extrabold text-center text-black py-2 text-5xl sm:text-6xl md:text-7xl lg:text-8xl">
                     Momentos</h2>
-                <p class="text-sm sm:text-xl md:text-2xl lg:text-3xl font-cuerpos font-medium text-justify w-[70%]">MPA se estructura en 3 momentos
-                    esenciales los cuales
-                    capturan su esencia y propósito de ser.</p>
+                <p class="text-sm sm:text-xl md:text-2xl lg:text-3xl font-cuerpos font-medium text-justify w-[70%]">MPA
+                    se estructura en 3 momentos esenciales los cuales capturan su esencia y propósito de ser.</p>
             </div>
 
             <!--Momentos descripcion-->
-            <div id="momentos" class="flex flex-col justify-center items-center">
+            <div class="slider-container overflow-hidden relative w-full sm:w-[80%] md:w-[70%] lg:w-[85%] max-w-5xl mx-auto">
+                <div class="slider flex items-center lg:w-[50%] transition-transform duration-300 ease-linear">
+                    <div class="card flex-shrink-0 w-full px-4">
+                        <div class="flex flex-col justify-center items-center animate-fade animate-duration-[1s] animate-ease-linear">
+                            <video autoplay loop muted class="w-full">
+                                <source src="/assets/nosotros/momentos/Banner video.mp4" type="video/mp4">
+                            </video>
 
-                <!-- Prepandilla -->
-                <div id="prepandilla" class="flex flex-col justify-center items-center animate-fade animate-duration-[1s] animate-ease-linear">
-                    <video autoplay loop muted class="w-full">
-                        <source src="/assets/nosotros/momentos/Banner video.mp4" type="video/mp4">
-                    </video>
-
-                    <div class="relative -top-10 w-[90%] flex flex-col items-center text-center space-y-6 bg-[#548733] py-6 rounded-lg shadow-[1px_2px_10px_rgb(63,98,18,0.7)]">
-                        <h3 class="w-[70%] text-sky-50 font-cuerpos text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold animate-heartbeat">
-                            ¡Pre Pandilla, la fase de preparación!
-                        </h3>
-                        <p class="w-[70%] text-green-100 font-cuerpos text-sm sm:text-lg md:text-xl lg:text-2xl text-justify">Aquí comienza todo. Los
-                            equipos se ponen manos a la obra para organizar cada detalle: desde las charlas inspiradoras
-                            hasta los materiales que se usarán durante el retiro. ¡Incluso el equipo de cocina se luce
-                            diseñando el menú perfecto! Todo está pensado para que el retiro sea una <span
-                                class="font-bold">experiencia inolvidable.</span></p>
+                            <div class="relative -top-10 w-[90%] flex flex-col items-center text-center space-y-6 bg-[#548733] py-6 rounded-lg shadow-[1px_2px_10px_rgb(63,98,18,0.7)]">
+                                <h3 class="w-[70%] text-sky-50 font-cuerpos text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold animate-heartbeat">¡Pre Pandilla, la fase de preparación!</h3>
+                                
+                                <p class="w-[70%] text-green-100 font-cuerpos text-sm sm:text-lg md:text-xl lg:text-2xl text-justify">Aquí comienza todo. Los equipos se ponen manos a la obra para organizar cada detalle: desde las charlas inspiradoras hasta los materiales que se usarán durante el retiro. ¡Incluso el equipo de cocina se luce diseñando el menú perfecto! Todo está pensado para que el retiro sea una <span class="font-bold">experiencia inolvidable.</span></p>
+                            </div>
+                        </div>
                     </div>
-                </div>
 
-                <!-- Pandilla -->
-                <div id="pandilla"
-                    class="flex hidden flex-col justify-center items-center animate-fade animate-duration-[1s] animate-ease-linear">
-                    <img class="w-full object-cover" src="/assets/nosotros/momentos/Pandilla.jpeg" alt="Pandilla">
-                    <div class="relative -top-10 w-[90%] flex flex-col items-center text-center space-y-6 bg-[#c17400] py-6 rounded-lg shadow-[1px_2px_10px_rgb(193,116,0,1)]">
-                        <h3 class="w-[70%] text-amber-50 font-cuerpos text-2xl font-semibold animate-heartbeat">¡Pandilla, el momento clave!</h3>
-                        <p class="w-[70%] font-cuerpos text-orange-100/95 text-sm text-justify">El retiro comienza el viernes por la tarde y culmina el domingo. Se lleva a cabo en una casa especial, completamente aislada del mundo exterior. ¡Es una experiencia inmersiva y <span class="font-semibold">transformadora</span> que te desconecta de todo para conectar contigo mismo y con los demás!</p>
+                    <div class="card flex-shrink-0 w-full px-4">
+                        <div class="flex flex-col justify-center items-center animate-fade animate-duration-[1s] animate-ease-linear">
+                            <img class="w-full object-cover" src="/assets/nosotros/momentos/Pandilla.jpeg" alt="Pandilla">
+                            
+                            <div class="relative -top-10 w-[90%] flex flex-col items-center text-center space-y-6 bg-[#c17400] py-6 rounded-lg shadow-[1px_2px_10px_rgb(193,116,0,1)]">
+                                
+                                <h3 class="w-[70%] text-amber-50 font-cuerpos text-2xl font-semibold animate-heartbeat">¡Pandilla, el momento clave!</h3>
+
+                                <p class="w-[70%] font-cuerpos text-orange-100/95 text-sm text-justify">El retiro comienza el viernes por la tarde y culmina el domingo. Se lleva a cabo en una casa especial, completamente aislada del mundo exterior. ¡Es una experiencia inmersiva y <span class="font-semibold">transformadora</span> que te desconecta de todo para conectar contigo mismo y con los demás!</p>
+                            </div>
+                        </div>
                     </div>
-                </div>
 
-                <!-- Postpandilla -->
-                <div id="postpandilla"
-                    class="flex hidden flex-col justify-center items-center animate-fade animate-duration-[1s] animate-ease-linear">
-                    <img src="/assets/nosotros/momentos/Postpandilla.jpeg" alt="Post-Pandilla">
-                    <div
-                        class="relative -top-10 w-[90%] flex flex-col items-center text-center space-y-6 bg-[#c6005c] py-6 rounded-lg shadow-[1px_2px_10px_rgb(198,0,92,1)]">
-                        <h3 class="w-[70%] text-pink-50 font-cuerpos text-2xl font-semibold animate-heartbeat">¡Post
-                            Pandilla, el viaje continúa!</h3>
-                        <p class="text-pink-100 font-cuerpos text-sm text-justify w-[70%]">Después de vivir el retiro,
-                            comienza la verdadera aventura. Los sábados, los niños asisten a talleres llenos de <span
-                                class="font-semibold">charlas dinámicas y actividades especiales</span> que refuerzan
-                            todo lo aprendido. ¡Es la clave para que los valores y enseñanzas sigan presentes en su día
-                            a día!</p>
+                    <div class="card flex-shrink-0 w-full px-4">
+                        <div class="flex flex-col justify-center items-center animate-fade animate-duration-[1s] animate-ease-linear">
+                            <img src="/assets/nosotros/momentos/Postpandilla.jpeg" alt="Post-Pandilla">
+
+                            <div class="relative -top-10 w-[90%] flex flex-col items-center text-center space-y-6 bg-[#c6005c] py-6 rounded-lg shadow-[1px_2px_10px_rgb(198,0,92,1)]">
+
+                                <h3 class="w-[70%] text-pink-50 font-cuerpos text-2xl font-semibold animate-heartbeat">¡Post Pandilla, el viaje continúa!</h3>
+                                
+                                <p class="text-pink-100 font-cuerpos text-sm text-justify w-[70%]">Después de vivir el retiro, comienza la verdadera aventura. Los sábados, los niños asisten a talleres llenos de <span class="font-semibold">charlas dinámicas y actividades especiales</span> que refuerzan todo lo aprendido. ¡Es la clave para que los valores y enseñanzas sigan presentes en su día a día!</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+            
+            <!-- Controles del Slider -->
+            <button id="prevBtn"
+                class="hidden sm:block absolute left-[8%] lg:left-[6%] top-[66%] xl:top-[68%] transform -translate-y-1/2 bg-slate-300 p-2 lg:p-4 rounded-full"><img
+                    class="w-5 lg:w-6" src="/assets/virtudes/icons/flecha izquierda.png" alt="Boton Atras"></button>
+            <button id="nextBtn"
+                class="hidden sm:block absolute right-[8%] lg:right-[6%] top-[66%] xl:top-[68%] transform -translate-y-1/2 bg-slate-300 p-2 lg:p-4 rounded-full"><img
+                    class="w-5 lg:w-6" src="/assets/virtudes/icons/flecha derecha.png" alt="Boton Siguiente"></button>
 
-            <!-- Opciones -->
-            <div class="flex justify-center items-center gap-4">
-                <div class="option">
-                    <div class="selection" data-momento="prepandilla"></div>
+            <div class="flex lg:hidden w-full justify-center lg:pt-8 space-x-2">
+                <div class="bg-slate-300 w-5 h-5 lg:w-7 lg:h-7 flex justify-center items-center rounded-full">
+                    <div class="point w-3 lg:w-5 h-3 lg:h-5 rounded-full bg-slate-500"></div>
                 </div>
-                <div class="option">
-                    <div class="selection" data-momento="pandilla"></div>
+                <div class="bg-slate-300 w-5 h-5 lg:w-7 lg:h-7 flex justify-center items-center rounded-full">
+                    <div class="point w-3 lg:w-5 h-3 lg:h-5 rounded-full"></div>
                 </div>
-                <div class="option">
-                    <div class="selection" data-momento="postpandilla"></div>
+                <div class="bg-slate-300 w-5 h-5 lg:w-7 lg:h-7 flex justify-center items-center rounded-full">
+                    <div class="point w-3 lg:w-5 h-3 lg:h-5 rounded-full"></div>
                 </div>
             </div>
+        </div>
         </section> <!--Fin de Momentos-->
 
         <section class="bg-gradiente-v3 flex flex-col justify-center items-center py-4 space-y-2">
-            <h2 class="font-titulos font-extrabold text-blue-50 text-5xl py-4 sm:text-6xl md:text-7xl lg:text-8xl">Organizacion</h2>
+            <h2 class="font-titulos font-extrabold text-blue-50 text-5xl py-4 sm:text-6xl md:text-7xl lg:text-8xl">
+                Organizacion</h2>
 
             <!-- Estructura de la Organizacion -->
-            <div id="Organizacion" class="w-full flex flex-col justify-center items-center space-y-8 lg:space-y-0 text-center">
-                <div id="Asesor" class="w-[75%] p-4 hover:bg-[#870b61] transition-all ease-out duration-300 cursor-pointer">
+            <div id="Organizacion"
+                class="w-full flex flex-col justify-center items-center space-y-8 lg:space-y-0 text-center">
+                <div id="Asesor"
+                    class="w-[75%] p-4 hover:bg-[#870b61] transition-all ease-out duration-300 cursor-pointer">
                     <h3 class="text-4xl text-white font-cuerpos font-semibold">Asesor</h3>
                 </div>
 
-                <div id="Tios" class="w-[75%] p-4 hover:bg-[#a54b06] transition-all ease-out duration-300 cursor-pointer">
+                <div id="Tios"
+                    class="w-[75%] p-4 hover:bg-[#a54b06] transition-all ease-out duration-300 cursor-pointer">
                     <h3 class="text-4xl text-white font-cuerpos font-semibold">Tios</h3>
                 </div>
 
-                <div id="Papis" class="w-[75%] p-4 hover:bg-[#a38208] transition-all ease-out duration-300 cursor-pointer">
+                <div id="Papis"
+                    class="w-[75%] p-4 hover:bg-[#a38208] transition-all ease-out duration-300 cursor-pointer">
                     <h3 class="text-4xl text-white font-cuerpos font-semibold">Papis</h3>
                 </div>
-                
-                <div id="Niños" class="w-[75%] p-4 hover:bg-[#05578b] transition-all ease-out duration-300 cursor-pointer">
+
+                <div id="Niños"
+                    class="w-[75%] p-4 hover:bg-[#05578b] transition-all ease-out duration-300 cursor-pointer">
                     <h3 class="text-4xl text-white font-cuerpos font-semibold">Niños</h3>
                 </div>
             </div>
@@ -414,10 +425,13 @@
 
         <section class="flex flex-col justify-center items-center relative overflow-hidden">
             <div class="bg-black/70 flex flex-col justify-center items-center space-y-4 absolute z-10 h-full">
-                <h2 class="font-titulos font-extrabold text-center text-white text-4xl sm:text-6xl md:text-7xl lg:text-8xl">Unete</h2>
-                <p class="text-sm text-slate-100/80 font-cuerpos font-medium text-justify w-[70%]">¡Únete a MPA! 🎉 Si tienes entre 10 y 15 años, solo necesitas haber vivido el retiro, el momento clave para conectar espiritualmente con el grupo. ¡Te esperamos! 🙌✨</p>
-                <a href="#"
-                    class="button bg-fuchsia-100 text-fuchsia-900 hover:bg-fuchsia-800 hover:text-fuchsia-100">
+                <h2
+                    class="font-titulos font-extrabold text-center text-white text-4xl sm:text-6xl md:text-7xl lg:text-8xl">
+                    Unete</h2>
+                <p class="text-sm text-slate-100/80 font-cuerpos font-medium text-justify w-[70%]">¡Únete a MPA! 🎉 Si
+                    tienes entre 10 y 15 años, solo necesitas haber vivido el retiro, el momento clave para conectar
+                    espiritualmente con el grupo. ¡Te esperamos! 🙌✨</p>
+                <a href="#" class="button bg-fuchsia-100 text-fuchsia-900 hover:bg-fuchsia-800 hover:text-fuchsia-100">
                     ¡Buscanos!</a>
             </div>
 
