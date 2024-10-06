@@ -39,21 +39,8 @@ const leyes = () => {
   }, 5000); // Cambiar cada 5 segundos
 }
 
-// Variables para el touch
-let touchStartX = 0;
-let touchEndX = 0;
-let touchStartY = 0;
-let touchEndY = 0;
-const umbralTouch = 30; // Umbral mínimo para considerar un deslizamiento
-
-addEventListener("touchstart", (event) => {
-  // Captura la posición inicial del touch
-  touchStartX = event.changedTouches[0].screenX;
-  touchStartY = event.changedTouches[0].screenY;
-});
-
 const slider = document.querySelector('.slider');
-const poitns = slider.querySelectorAll('.point')
+const poitns = document.querySelectorAll('.point')
 const prevBtn = document.getElementById('prevBtn');
 const nextBtn = document.getElementById('nextBtn');
 
@@ -61,15 +48,50 @@ const nextBtn = document.getElementById('nextBtn');
 let currentIndex = 0;
 const totalCards = document.querySelectorAll('.card').length;
 
-// Función para actualizar la posición del slider
-function updateSliderPosition() {
-  const slideWidth = document.querySelector('.card').offsetWidth;
-  slider.style.transform = `translateX(${-slideWidth * currentIndex}px)`;
-  poitns[currentIndex].classList.add('bg-slate-500');
-}
 
-// Evento para el botón "Siguiente"
-nextBtn.addEventListener('click', function () {
+// Variables para el touch
+let touchStartX = 0;
+let touchEndX = 0;
+let touchStartY = 0;
+let touchEndY = 0;
+const umbralTouch = 30; // Umbral mínimo para considerar un deslizamiento
+
+// Listener para eventos touch
+slider.addEventListener("touchstart", (event) => {
+    // Captura la posición inicial del touch
+    touchStartX = event.changedTouches[0].screenX;
+    touchStartY = event.changedTouches[0].screenY;
+});
+
+slider.addEventListener("touchend", (event) => {
+    // Captura la posición final del touch
+    touchEndX = event.changedTouches[0].screenX;
+    touchEndY = event.changedTouches[0].screenY;
+
+    // Llama a la función para manejar el movimiento
+    touchMove();
+});
+
+const touchMove = () => {
+  // Calcula las diferencias entre las posiciones de inicio y fin
+  const deltaX = touchEndX - touchStartX;
+  const deltaY = touchEndY - touchStartY;
+
+  // Verifica si el deslizamiento es más horizontal que vertical y si supera el umbral
+  if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > umbralTouch) {
+      // Si el deslizamiento fue hacia la derecha
+      if (deltaX < 0) {
+          nextVirtud();
+      }
+      // Si el deslizamiento fue hacia la izquierda
+      else if (deltaX > 0) {
+          backVirtud();
+      }
+  }
+};
+
+const nextVirtud = () => {
+  poitns[currentIndex].classList.remove("bg-slate-500");
   if (currentIndex < totalCards - 1) {
     currentIndex++;
     updateSliderPosition();
@@ -77,10 +99,10 @@ nextBtn.addEventListener('click', function () {
     currentIndex = 0;
     updateSliderPosition();
   }
-});
+}
 
-// Evento para el botón "Anterior"
-prevBtn.addEventListener('click', function () {
+const backVirtud = () => {
+  poitns[currentIndex].classList.remove("bg-slate-500");
   if (currentIndex > 0) {
     currentIndex--;
     updateSliderPosition();
@@ -88,4 +110,17 @@ prevBtn.addEventListener('click', function () {
     currentIndex = totalCards - 1;
     updateSliderPosition();
   }
-});
+}
+
+// Función para actualizar la posición del slider
+const updateSliderPosition = () => {
+  const slideWidth = document.querySelector('.card').offsetWidth;
+  slider.style.transform = `translateX(${-slideWidth * currentIndex}px)`;
+  poitns[currentIndex].classList.add('bg-slate-500');
+};
+
+// Evento para el botón "Siguiente"
+nextBtn.addEventListener('click', nextVirtud);
+
+// Evento para el botón "Anterior"
+prevBtn.addEventListener('click',  backVirtud);
