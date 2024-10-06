@@ -9,11 +9,11 @@
 </head>
 
 <body>
-    <header class="w-full max-h-[850px] relative pop">
-        <div class="bg-black/60 grid grid-rows-[15%,85%] sm:grid-rows-[10%,90%] w-full absolute h-full">
+    <header class="hd">
+        <div class="hd-container">
             <!-- Navegacion -->
-            <div class="w-full flex items-center px-4 lg:py-0">
-                <nav class="w-full flex justify-between text-[16px] text-white font-titulos font-extrabold gap-4 sm:text-2xl md:text-3xl lg:text-5xl lg:px-8">
+            <div class="nv">
+                <nav class="nv-container">
                     <a class="down animate-delay-[0.25s] border-b-[3px]  md:border-b-[5px] text-red-200 border-red-400 transition-all">Inicio</a>
                     
                     <a href="src/screen/nosotros.html" class="down animate-delay-[0.5s] hover:border-b-[3px] lg:hover:border-b-[5px] hover:text-yellow-200 hover:border-yellow-400 hover:transition-all hover:ease-linear hover:duration-300">Nosotros</a>
@@ -25,16 +25,16 @@
             </div>
 
             <!-- Titulo -->
-            <div class="flex flex-col justify-center items-center font-extrabold text-center text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl lg:space-y-12">
-                <h2 class="text-white font-titulos animate-heartbeat">Movimiento Pandillas <br>de la Amistad</h2>
+            <div class="hd-body xl:text-[175px]">
+                <h2 class="hd-title">Movimiento Pandillas <br>de la Amistad</h2>
 
-                <a href="#" class="text-white font-titulos text-xl my-4 border-2 rounded-3xl md:rounded-[36px] lg:rounded-[44px] px-10 jump animate-duration-[.5s] animate-delay-[1.75s] transition-all ease-in duration-300 hover:scale-110 hover:bg-white hover:text-black hover:font-extrabold sm:text-3xl sm:px-16 sm:py-2 md:text-4xl md:px-20 lg:text-5xl lg:m-0 lg:px-24 lg:py-3 xl:px-32 xl:text-6xl">Escribenos</a>
+                <a href="#" class="text-white font-titulos text-xl my-4 border-2 rounded-3xl md:rounded-[36px] lg:rounded-[44px] px-6 jump animate-duration-[.5s] animate-delay-[1.75s] transition-all ease-in duration-300 hover:scale-110 hover:bg-white hover:text-black hover:font-extrabold sm:text-3xl sm:px-16 sm:py-2 md:text-4xl md:px-20 lg:text-5xl lg:m-0 lg:px-24 lg:py-3 xl:px-32 xl:text-6xl">Escribenos</a>
             </div>
         </div>
 
         <!-- Fondo -->
         <div>
-            <img class="w-full object-cover aspect-video" src="/assets/banner/Banner-3.webp" alt="banner">
+            <img class="w-full object-cover sm:aspect-video" src="/assets/banner/Banner-3.webp" alt="banner">
         </div>
     </header>
 
@@ -93,7 +93,7 @@
                     </p>
                 </div>
 
-            <div class="slider-container overflow-hidden relative w-full sm:w-[80%] lg:w-full max-w-4xl mx-auto">
+            <div class="slider-container overflow-hidden relative w-full sm:w-[80%] md:w-[70%] lg:w-[85%] max-w-5xl mx-auto">
                 <div class="slider flex items-center lg:w-[50%] transition-transform duration-300 ease-linear">
                     <div class="card flex-shrink-0 w-full px-4">
                         <div class="w-full flex flex-col items-center justify-center bg-teal-300/40 my-4 py-4 space-y-4 rounded-lg border-[6px] border-teal-500/30">
@@ -158,27 +158,27 @@
     
             </div>
             <!-- Controles del Slider -->
-            <button id="prevBtn" class="absolute left-[10%] top-2/3 transform -translate-y-1/2 bg-slate-300 p-2 rounded-full"><img class="w-5" src="/assets/virtudes/icons/flecha izquierda.png" alt="Boton Atras"></button>
-            <button id="nextBtn" class="absolute right-[10%] top-2/3 transform -translate-y-1/2 bg-slate-300 p-2 rounded-full"><img class="w-5" src="/assets/virtudes/icons/flecha derecha.png" alt="Boton Siguiente"></button>
+            <button id="prevBtn" class="hidden sm:block absolute left-[8%] lg:left-[6%] top-[66%] xl:top-[68%] transform -translate-y-1/2 bg-slate-300 p-2 lg:p-4 rounded-full"><img class="w-5 lg:w-6" src="/assets/virtudes/icons/flecha izquierda.png" alt="Boton Atras"></button>
+            <button id="nextBtn" class="hidden sm:block absolute right-[8%] lg:right-[6%] top-[66%] xl:top-[68%] transform -translate-y-1/2 bg-slate-300 p-2 lg:p-4 rounded-full"><img class="w-5 lg:w-6" src="/assets/virtudes/icons/flecha derecha.png" alt="Boton Siguiente"></button>
 
-            <div class="flex w-full justify-center space-x-2">
-                <div class="bg-slate-300 w-5 h-5 flex justify-center items-center rounded-full">
-                    <div class="point w-3 h-3 rounded-full"></div>
+            <div class="flex lg:hidden w-full justify-center lg:pt-8 space-x-2">
+                <div class="bg-slate-300 w-5 h-5 lg:w-7 lg:h-7 flex justify-center items-center rounded-full">
+                    <div class="point w-3 lg:w-5 h-3 lg:h-5 rounded-full bg-slate-500"></div>
                 </div>
-                <div class="bg-slate-300 w-5 h-5 flex justify-center items-center rounded-full">
-                    <div class="point w-3 h-3 rounded-full"></div>
+                <div class="bg-slate-300 w-5 h-5 lg:w-7 lg:h-7 flex justify-center items-center rounded-full">
+                    <div class="point w-3 lg:w-5 h-3 lg:h-5 rounded-full"></div>
                 </div>
-                <div class="bg-slate-300 w-5 h-5 flex justify-center items-center rounded-full">
-                    <div class="point w-3 h-3 rounded-full"></div>
+                <div class="bg-slate-300 w-5 h-5 lg:w-7 lg:h-7 flex justify-center items-center rounded-full">
+                    <div class="point w-3 lg:w-5 h-3 lg:h-5 rounded-full"></div>
                 </div>
-                <div class="bg-slate-300 w-5 h-5 flex justify-center items-center rounded-full">
-                    <div class="point w-3 h-3 rounded-full"></div>
+                <div class="bg-slate-300 w-5 h-5 lg:w-7 lg:h-7 flex justify-center items-center rounded-full">
+                    <div class="point w-3 lg:w-5 h-3 lg:h-5 rounded-full"></div>
                 </div>
-                <div class="bg-slate-300 w-5 h-5 flex justify-center items-center rounded-full">
-                    <div class="point w-3 h-3 rounded-full"></div>
+                <div class="bg-slate-300 w-5 h-5 lg:w-7 lg:h-7 flex justify-center items-center rounded-full">
+                    <div class="point w-3 lg:w-5 h-3 lg:h-5 rounded-full"></div>
                 </div>
-                <div class="bg-slate-300 w-5 h-5 flex justify-center items-center rounded-full">
-                    <div class="point w-3 h-3 rounded-full"></div>
+                <div class="bg-slate-300 w-5 h-5 lg:w-7 lg:h-7 flex justify-center items-center rounded-full">
+                    <div class="point w-3 lg:w-5 h-3 lg:h-5 rounded-full"></div>
                 </div>
             </div>
             </div>
