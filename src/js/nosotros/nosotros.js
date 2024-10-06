@@ -340,41 +340,81 @@ displayHistorias.forEach(div => {
 });
 
 // Momentos
+const slider = document.querySelector('.slider');
+const poitns = document.querySelectorAll('.point')
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
 
-function mostrarMomento() {
-    // Seleccionar todas las opciones
-    const opciones = document.querySelectorAll(".selection");
+// Variables para rastrear el estado actual del slider
+let currentIndex = 0;
+const totalCards = document.querySelectorAll('.card').length;
 
-    // Obtener la primera opción con la clase "selected" al cargar la página
-    const primeraSeleccionada = document.querySelector(".selection.selected");
 
-    // Si existe una opción seleccionada inicialmente, mostrar el momento correspondiente
-    if (primeraSeleccionada) {
-        const momentoSeleccionado = primeraSeleccionada.getAttribute("data-momento");
-        document.getElementById(momentoSeleccionado).classList.remove("hidden");
+// Listener para eventos touch
+slider.addEventListener("touchstart", (event) => {
+    // Captura la posición inicial del touch
+    touchStartX = event.changedTouches[0].screenX;
+    touchStartY = event.changedTouches[0].screenY;
+});
+
+slider.addEventListener("touchend", (event) => {
+    // Captura la posición final del touch
+    touchEndX = event.changedTouches[0].screenX;
+    touchEndY = event.changedTouches[0].screenY;
+
+    // Llama a la función para manejar el movimiento
+    touchMoveMoments();
+});
+
+const touchMoveMoments = () => {
+    // Calcula las diferencias entre las posiciones de inicio y fin
+    const deltaX = touchEndX - touchStartX;
+    const deltaY = touchEndY - touchStartY;
+
+    // Verifica si el deslizamiento es más horizontal que vertical y si supera el umbral
+    if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > umbralTouch) {
+        // Si el deslizamiento fue hacia la derecha
+        if (deltaX < 0) {
+            nextVirtud();
+        }
+        // Si el deslizamiento fue hacia la izquierda
+        else if (deltaX > 0) {
+            backVirtud();
+        }
     }
-
-    // Añadir un EventListener a cada opción para cambiar de momento
-    opciones.forEach(function (opcion) {
-        opcion.addEventListener("click", function () {
-            // Obtener el valor del atributo data-momento
-            const momentoSeleccionado = this.getAttribute("data-momento");
-
-            // Ocultar todos los momentos
-            document.getElementById("prepandilla").classList.add("hidden");
-            document.getElementById("pandilla").classList.add("hidden");
-            document.getElementById("postpandilla").classList.add("hidden");
-
-            // Mostrar el momento correspondiente
-            document.getElementById(momentoSeleccionado).classList.remove("hidden");
-
-            // Resetear el fondo de todas las opciones
-            opciones.forEach(function (opcion) {
-                opcion.classList.remove("selected");
-            });
-
-            // Cambiar el fondo de la opción seleccionada a negro
-            this.classList.add("selected");
-        });
-    });
 };
+
+const nextVirtud = () => {
+    poitns[currentIndex].classList.remove("bg-slate-500");
+    if (currentIndex < totalCards - 1) {
+        currentIndex++;
+        updateSliderPosition();
+    } else {
+        currentIndex = 0;
+        updateSliderPosition();
+    }
+}
+
+const backVirtud = () => {
+    poitns[currentIndex].classList.remove("bg-slate-500");
+    if (currentIndex > 0) {
+        currentIndex--;
+        updateSliderPosition();
+    } else {
+        currentIndex = totalCards - 1;
+        updateSliderPosition();
+    }
+}
+
+// Función para actualizar la posición del slider
+const updateSliderPosition = () => {
+    const slideWidth = document.querySelector('.card').offsetWidth;
+    slider.style.transform = `translateX(${-slideWidth * currentIndex}px)`;
+    poitns[currentIndex].classList.add('bg-slate-500');
+};
+
+// Evento para el botón "Siguiente"
+nextBtn.addEventListener('click', nextVirtud);
+
+// Evento para el botón "Anterior"
+prevBtn.addEventListener('click', backVirtud);
