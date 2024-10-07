@@ -135,7 +135,7 @@
 
 /* Historia */
 .displayHistoria {
-    @apply rounded-md flex flex-col gap-4 py-2 px-4 cursor-pointer;
+    @apply rounded-xl flex flex-col sm:justify-center gap-4 py-2 px-4 cursor-pointer w-full sm:w-[45%] md:w-[30%];
 }
 
 .animate-texts {
