@@ -48,6 +48,26 @@ const nextBtn = document.getElementById('nextBtn');
 let currentIndex = 0;
 const totalCards = document.querySelectorAll('.card').length;
 
+// Creamos una media query para detectar si la pantalla es mayor o igual a 768px
+const mediaQuery = window.matchMedia('(min-width: 768px)');
+
+// Inicializamos el contador
+let contador = 0;
+
+// Función para actualizar el valor del contador según el tamaño de la pantalla
+function actualizarContador(e) {
+    if (e.matches) {
+        contador = 2; // Si la pantalla es 768px o más, el contador es 2
+    } else {
+        contador = 1; // Si la pantalla es menor a 768px, el contador es 1
+    }
+}
+
+// Escuchamos los cambios en el tamaño de la pantalla
+mediaQuery.addListener(actualizarContador);
+
+// Llamamos la función inmediatamente para comprobar el tamaño actual de la pantalla
+actualizarContador(mediaQuery);
 
 // Variables para el touch
 let touchStartX = 0;
@@ -92,7 +112,7 @@ const touchMove = () => {
 
 const nextVirtud = () => {
   poitns[currentIndex].classList.remove("bg-slate-500");
-  if (currentIndex < totalCards - 1) {
+  if (currentIndex < totalCards - contador) {
     currentIndex++;
     updateSliderPosition();
   } else {
@@ -107,7 +127,7 @@ const backVirtud = () => {
     currentIndex--;
     updateSliderPosition();
   } else {
-    currentIndex = totalCards - 1;
+    currentIndex = totalCards - contador;
     updateSliderPosition();
   }
 }
