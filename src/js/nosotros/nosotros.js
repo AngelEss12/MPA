@@ -349,7 +349,7 @@ let currentIndex = 0;
 let totalCards = document.querySelectorAll('.card').length;
 
 // Creamos una media query para detectar si la pantalla es mayor o igual a 768px
-const mediaQuery = window.matchMedia('(min-width: 768px)');
+const mediaQuery = window.matchMedia('(min-width: 640px)');
 
 // Inicializamos el contador
 let contador = 0;
