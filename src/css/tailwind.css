@@ -25,11 +25,27 @@
 }
 
 .nv {
-    @apply w-full flex items-center px-4 lg:py-0;
+    @apply w-full flex items-center px-4 pt-2 lg:py-0;
 }
 
 .nv-container {
     @apply w-full flex justify-between text-[16px] text-white font-titulos font-extrabold gap-4 sm:text-2xl md:text-3xl lg:text-5xl lg:px-8
+}
+
+.nv-i {
+    @apply down hover:border-b-[3px] lg:hover:border-b-[5px] hover:text-red-300 hover:border-red-500 hover:transition-all hover:ease-linear hover:duration-100;
+}
+
+.nv-n {
+    @apply down hover:border-b-[3px] lg:hover:border-b-[5px] hover:text-yellow-300 hover:border-yellow-500 hover:transition-all hover:ease-linear hover:duration-100;
+}
+
+.nv-a {
+    @apply down hover:border-b-[3px] lg:hover:border-b-[5px] hover:text-blue-300 hover:border-blue-500 hover:transition-all hover:ease-linear hover:duration-100;
+}
+
+.nv-t {
+    @apply down hover:border-b-[3px] lg:hover:border-b-[5px] hover:text-purple-300 hover:border-purple-500 hover:transition-all hover:ease-linear hover:duration-100
 }
 
 .hd-body {
@@ -54,11 +70,11 @@
 }
 
 .contenedor-principal {
-    @apply flex flex-col justify-center items-center pb-6 lg:pb-12;
+    @apply flex flex-col justify-center items-center pb-6 xl:py-10;
 }
 
 .title {
-    @apply text-center text-4xl font-extrabold font-titulos py-4 sm:text-5xl md:py-8;
+    @apply text-center text-4xl font-extrabold font-titulos py-4 sm:text-5xl md:py-8 xl:py-0 xl:pb-6;
 }
 
 .pop {
@@ -135,7 +151,7 @@
 
 /* Historia */
 .displayHistoria {
-    @apply rounded-xl flex flex-col sm:justify-center gap-4 py-2 px-4 cursor-pointer w-full sm:w-[45%] md:w-[30%];
+    @apply rounded-xl flex flex-col sm:justify-between cursor-pointer w-full sm:w-[45%] lg:w-[30%];
 }
 
 .animate-texts {
