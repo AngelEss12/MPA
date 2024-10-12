@@ -78,6 +78,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Repetir la ejecución de la función cada 8 segundos
     setInterval(updateBubblePositions, 8000);
+    
 });
 
 // EventListener para screen Nosotros
@@ -439,3 +440,36 @@ nextBtn.addEventListener('click', nextVirtud);
 
 // Evento para el botón "Anterior"
 prevBtn.addEventListener('click', backVirtud);
+
+const divNiños = document.querySelector('#Organizacion > #Niños');
+const pNiños = document.querySelector('#Niños > div > p');
+
+const divAsesor = document.querySelector('#Organizacion > #Asesor');
+const pAsesor = document.querySelector('#Asesor > div > p');
+
+const divTios = document.querySelector('#Organizacion > #Tios');
+const pTios = document.querySelector('#Tios > div > p');
+
+divNiños.addEventListener('click', () => {
+    mostrarTexto(pNiños);
+});
+
+divAsesor.addEventListener('click', () => {
+    mostrarTexto(pAsesor);
+});
+
+divTios.addEventListener('click', () => {
+    mostrarTexto(pTios);
+});
+
+let estado = 0;
+function mostrarTexto(p) { 
+    if (estado === 0) {
+        estado = 1
+        p.classList.remove('hidden');
+    }
+    else {
+        estado = 0
+        p.classList.add('hidden');
+    }
+}
