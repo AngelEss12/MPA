@@ -17,11 +17,11 @@
 
 /* Clases */
 .hd {
-    @apply w-full max-h-[850px] relative pop;
+    @apply relative w-full max-h-[850px] pop;
 }
 
 .hd-container {
-    @apply bg-black/60 grid grid-rows-[10%,85%] sm:grid-rows-[10%,90%] w-full absolute h-full z-10;
+    @apply bg-black/60 absolute w-full h-full grid grid-rows-[10%,85%] sm:grid-rows-[10%,90%] z-10;
 }
 
 .nv {
