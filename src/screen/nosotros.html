@@ -14,8 +14,7 @@
             <div class="nv">
                 <nav class="nv-container">
                     <a href="/index.html" class="nv-i">Inicio</a>
-                    <a href="/src/screen/nosotros.html"
-                        class="down text-yellow-200 border-b-[3px] md:border-b-[5px] border-yellow-400 transition-all">Nosotros</a>
+                    <a href="/src/screen/nosotros.html" class="down text-yellow-200 border-b-[3px] md:border-b-[5px] border-yellow-400 transition-all">Nosotros</a>
                     <a href="#" class="nv-a">Actividades</a>
                     <a href="#" class="nv-t">Testimonios</a>
                 </nav>
@@ -278,13 +277,13 @@
             </div>
 
             <!--Momentos descripcion-->
-            <div class="slider-container overflow-hidden relative w-[90%] lg:w-full py-2 mx-auto lg:mx-0">
-                <div class="slider flex items-stretch lg:justify-center lg:items-start lg:w-full xl:justify-center transition-transform duration-300 ease-linear">
+            <div class="slider-container flex overflow-hidden relative w-[90%] lg:w-full py-2 mx-auto lg:mx-0">
+                <div class="slider w-full flex items-stretch lg:justify-center lg:items-start lg:w-full xl:justify-center transition-transform duration-300 ease-linear">
                     <div class="card flex justify-center flex-shrink-0 w-full sm:w-[50%] lg:w-[30%] lg:h-full px-4">
                         <div class="lg:w-full flex flex-col items-center rounded-2xl overflow-hidden shadow-[1px_0px_5px_rgb(0,0,0)] bg-[#548733] animate-fade animate-duration-[1s] animate-ease-linear">
                             <video autoplay loop muted class="w-full"><source src="/assets/nosotros/momentos/Banner video.mp4" type="video/mp4"></video>
                             <div class="flex flex-col items-center text-center">
-                                <h3 class="w-[85%] text-green-50 font-cuerpos text-xl py-6 md:text-2xl font-bold animate-heartbeat">¡Pre Pandilla, la fase de preparación!</h3>
+                                <h3 class="w-[85%] text-slate-200 font-cuerpos text-xl py-6 md:text-2xl font-bold animate-heartbeat">¡Pre Pandilla, la fase de preparación!</h3>
                                 <p class="w-[70%] text-lime-50/90 pb-6 font-cuerpos font-medium text-sm md:text-base text-justify">Aquí comienza todo. Los equipos se ponen manos a la obra para organizar cada detalle: desde las charlas inspiradoras hasta los materiales que se usarán durante el retiro. ¡Incluso el equipo de cocina se luce diseñando el menú perfecto! Todo está pensado para que el retiro sea una <span class="font-extrabold">experiencia inolvidable.</span></p>
                             </div>
                         </div>
@@ -295,7 +294,7 @@
                             <img class="w-full aspect-video object-cover" src="/assets/nosotros/momentos/Pandilla.jpeg" alt="Pandilla">
                             
                             <div class="flex flex-col items-center text-center">
-                                <h3 class="w-[85%] text-amber-50 py-6 font-cuerpos text-xl md:text-2xl font-bold animate-heartbeat">¡Pandilla, el momento clave!</h3>
+                                <h3 class="w-[85%] text-slate-200 py-6 font-cuerpos text-xl md:text-2xl font-bold animate-heartbeat">¡Pandilla, el momento clave!</h3>
 
                                 <p class="w-[70%] font-cuerpos font-medium pb-6 text-orange-50 text-sm md:text-base text-justify">El retiro comienza el viernes por la tarde y culmina el domingo. Se lleva a cabo en una casa especial, completamente aislada del mundo exterior. ¡Es una experiencia inmersiva y <span class="font-extrabold">transformadora</span> que te desconecta de todo para conectar contigo mismo y con los demás!</p>
                             </div>
@@ -308,7 +307,7 @@
 
                             <div class="flex flex-col items-center text-center">
 
-                                <h3 class="w-[85%] text-pink-50 font-cuerpos py-6 text-xl md:text-2xl font-bold animate-heartbeat">¡Post Pandilla, el viaje continúa!</h3>
+                                <h3 class="w-[85%] text-slate-200 font-cuerpos py-6 text-xl md:text-2xl font-bold animate-heartbeat">¡Post Pandilla, el viaje continúa!</h3>
                                 
                                 <p class="text-pink-50 font-cuerpos font-medium text-sm md:text-base pb-6 text-justify w-[70%]">Después de vivir el retiro, comienza la verdadera aventura. Los sábados, los niños asisten a talleres llenos de <span class="font-extrabold">charlas dinámicas y actividades especiales</span> que refuerzan todo lo aprendido. ¡Es la clave para que los valores y enseñanzas sigan presentes en su día a día!</p>
                             </div>
@@ -339,14 +338,80 @@
         </div>
         </section> <!--Fin de Momentos-->
 
+        <section class="bg-gradiente-v3 flex flex-col justify-center items-center py-4 space-y-2">
+            <h2 class="font-titulos font-extrabold text-blue-50 text-5xl py-4 sm:text-6xl md:text-7xl lg:text-8xl">Equipo</h2>
+    
+            <p class="w-[90%] font-cuerpos font-medium text-sm text-slate-100 text-justify xl:text-2xl py-3">
+                Aquí te presentamos a las personas que hacen posible que Pandillas de la Amistad sea lo que es 💥. El corazón que nos conecta con la fe 🙏. ¡Y juntos formamos un Mundo mejor!
+            </p>
+    
+            <!-- Estructura de la Organizacion -->
+            <div class="w-[90%] flex justify-center items-center">
+                <div id="Organizacion" class="w-full min-h-[500px] xl:min-h-[700px] grid grid-cols-6 grid-rows-12 xl:grid-cols-10 xl:grid-rows-6 gap-4 place-content-stretch rounded-2xl">
+
+                    <!-- Primer div: Niños -->
+                    <div id="Niños" class="w-full col-span-7 row-span-3 xl:col-span-4 xl:row-span-6 relative cursor-pointer hover:shadow-[0_0_30px_15px_rgba(245,75,188,0.7)] transition-all ease-linear duration-200 overflow-hidden">
+                        <!-- Imagen de fondo -->
+                        <img src="/assets/team/Niños.jpeg" alt="Niños"
+                            class="absolute inset-0 w-full h-full object-cover z-0" />
+    
+                        <!-- Fondo opaco y texto -->
+                        <div class="relative z-10 bg-black/70 hover:bg-fuchsia-950/60 transition-all ease-linear duration-300 flex flex-col items-center justify-center h-full">
+                            <h3 class="text-lg xl:text-5xl text-white font-cuerpos font-semibold mt-3">Niños</h3>
+                            <p class="hidden bg-black/30 xl:bg-black/5 text-sm xl:text-2xl text-slate-200 text-justify font-cuerpos font-semibold p-3 xl:px-10 up">¡Ellos son la esencia del movimiento! 🙌 Son el corazón de todo lo que hacemos. Los niños no solo aprenden, sino que están llamados a compartir lo que viven en Pandillas de la Amistad y evangelizar a otros como ellos. Con su energía, inocencia y fe, son el motor que impulsa a toda la comunidad a seguir creciendo. ¡Son el futuro del movimiento! 🌟</p>
+                        </div>
+                    </div>
+    
+                    <!-- Segundo div: Asesor -->
+                    <div id="Asesor" class="w-full col-span-7 row-start-4 row-span-3 xl:col-start-5 xl:col-span-3 xl:row-span-3 relative cursor-pointer hover:shadow-[0_0_30px_15px_rgba(10,200,50,0.7)] transition-all ease-linear duration-200 overflow-hidden">
+                        <!-- Imagen de fondo -->
+                        <img src="/assets/nosotros/Padre Zamora.webp" alt="Asesor"
+                            class="absolute inset-0 w-full h-full object-cover z-0" />
+    
+                        <!-- Fondo opaco y texto -->
+                        <div class="relative z-10 bg-black/70 hover:bg-green-950/60 transition-all ease-linear duration-200 flex flex-col items-center justify-center h-full">
+                            <h3 class="text-lg xl:text-5xl text-white font-cuerpos font-semibold mt-3">Asesor</h3>
+                            <p class="hidden bg-black/30 xl:bg-black/5 text-sm xl:text-2xl text-slate-200 text-justify font-cuerpos font-semibold p-3 xl:px-10 fade-right">¡Ellos son la esencia del movimiento! 🙌 Son el corazón de todo lo que hacemos. Los niños no solo aprenden, sino que están llamados a compartir lo que viven en Pandillas de la Amistad y evangelizar a otros como ellos. Con su energía, inocencia y fe, son el motor que impulsa a toda la comunidad a seguir creciendo. ¡Son el futuro del movimiento! 🌟</p>
+                        </div>
+                    </div>
+    
+                    <!-- Tercer div: Tios -->
+                    <div id="Tios" class="w-full col-span-7 row-start-7 row-span-3 xl:col-start-8 xl:col-span-3 xl:row-span-3 relative cursor-pointer hover:shadow-[0_0_30px_15px_rgba(255,215,0,0.7)] transition-all ease-linear duration-200 overflow-hidden">
+                        <!-- Imagen de fondo -->
+                        <img src="/assets/team/Tios.jpeg" alt="Tios"
+                            class="absolute inset-0 w-full h-full object-cover z-0" />
+    
+                        <!-- Fondo opaco y texto -->
+                        <div class="relative z-10 bg-black/70 hover:bg-yellow-950/60 transition-all ease-linear duration-200 flex flex-col items-center justify-center h-full">
+                            <h3 class="text-lg xl:text-5xl text-white font-cuerpos font-semibold">Tios</h3>
+                            <p class="hidden bg-black/30 xl:bg-black/5 text-sm xl:text-2xl text-slate-200 text-justify font-cuerpos font-semibold p-3 xl:px-10 fade-left">¡Los protectores y sabios del grupo! 💪👨‍👩‍👧‍👦 Son quienes cuidan tanto a los niños como a los papis. Con su experiencia y sabiduría, siempre están ahí para guiar con valentía en la vida diaria y ofrecer compañía en los momentos más importantes. Los tíos nos enseñan con su ejemplo a ser mejores personas, a superar los obstáculos y a vivir con un propósito más grande. ¡Siempre listos para apoyar y acompañar en el camino! 🚀</p>
+                        </div>
+                    </div>
+    
+                    <!-- Cuarto div: Papis -->
+                    <div id="Papis" class="w-full col-span-7 row-start-10 row-span-3 xl:col-start-5 xl:col-span-6 xl:row-start-4 xl:row-span-3 relative cursor-pointer hover:shadow-[0_0_30px_15px_rgba(0,50,255,0.7)] transition-all ease-linear duration-200">
+                        <!-- Imagen de fondo -->
+                        <!-- Imagen de fondo -->
+                        <img src="/assets/team/Papis.jpeg" alt="Papis"
+                            class="absolute inset-0 w-full h-full object-cover z-0" />
+    
+                        <!-- Fondo opaco y texto -->
+                        <div class="relative z-10 bg-black/70 hover:bg-blue-950/60 transition-all ease-linear duration-200 p-4 flex items-center justify-center h-full">
+                            <h3 class="text-lg xl:text-4xl text-white font-cuerpos font-semibold">Papis</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> <!--Fin de Organizacion-->
+
         <section class="w-full flex flex-col justify-center items-center relative overflow-hidden">
-            <div class="bg-black/75 text-white w-full flex flex-col justify-center items-center space-y-4 md:space-y-8 absolute z-10 h-full">
-                <h2 class="font-titulos font-extrabold text-center text-4xl sm:text-6xl md:text-7xl lg:text-8xl">¡Únete a MPA!<br>🎉</h2>
+            <div class="bg-black/40 text-white w-full flex flex-col justify-center items-center space-y-4 md:space-y-8 absolute z-10 h-full">
+                <h2 class="font-titulos font-extrabold text-center text-4xl sm:text-6xl md:text-7xl lg:text-8xl">¡Únete a MPA!</h2>
                 <a href="#" class="button sm:font-titulos sm:text-3xl sm:px-20 md:text-4xl lg:rounded-[44px] xl:rounded-[68px] lg:font-titulos lg:text-6xl lg:px-40 lg:py-6 hover:bg-purple-500 hover:text-purple-100 hover:border-[5px] lg:hover:border-[10px] transition-all ease-out">¡Buscanos!</a>
             </div>
 
             <div class="-z-10 w-full">
-                <img class="w-full object-cover aspect-video" src="/assets/nosotros/momentos/Prepandilla.jpeg" alt="Banner final">
+                <img class="w-full object-cover aspect-video" src="/assets/nosotros/momentos/Banner invitacion.jpeg" alt="Banner final">
             </div>
         </section> <!--Fin de invitacion-->
     </main>
@@ -359,7 +424,7 @@
                 class="text-xl lg:text-5xl text-slate-900 font-titulos font-extrabold flex justify-evenly gap-4 sm:text-2xl sm:space-x-6 sm:pr-4 md:text-3xl lg:space-x-4">
                 <a href="index.html" class="nv-i">Inicio</a>
                 <a href="/src/screen/nosotros.html" class="nv-n">Nosotros</a>
-                <a href="#" class="nv-a">Actividades</a>
+                <a href="/src/screen/actividades.html" class="nv-a">Actividades</a>
                 <a href="#" class="nv-t">Testimonios</a>
             </nav> <!--Fin de Navegacion-->
         </div>
