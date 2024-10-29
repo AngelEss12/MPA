@@ -435,41 +435,42 @@ const updateSliderPosition = () => {
     poitns[currentIndex].classList.add('bg-slate-500');
 };
 
-// Evento para el botón "Siguiente"
-nextBtn.addEventListener('click', nextVirtud);
+const teamSelector = document.querySelectorAll('#equipo > div');
+const teamNinos = document.querySelector('#niños');
+const teamAsesor = document.querySelector('#asesor');
+const teamTios = document.querySelector('#tios');
+const teamPapis = document.querySelector('#papis');
 
-// Evento para el botón "Anterior"
-prevBtn.addEventListener('click', backVirtud);
-
-const divNiños = document.querySelector('#Organizacion > #Niños');
-const pNiños = document.querySelector('#Niños > div > p');
-
-const divAsesor = document.querySelector('#Organizacion > #Asesor');
-const pAsesor = document.querySelector('#Asesor > div > p');
-
-const divTios = document.querySelector('#Organizacion > #Tios');
-const pTios = document.querySelector('#Tios > div > p');
-
-divNiños.addEventListener('click', () => {
-    mostrarTexto(pNiños);
+teamNinos.addEventListener('click', () => {
+    mostarTeam(0);
 });
 
-divAsesor.addEventListener('click', () => {
-    mostrarTexto(pAsesor);
+teamAsesor.addEventListener('click', () => {
+    mostarTeam(1);
 });
 
-divTios.addEventListener('click', () => {
-    mostrarTexto(pTios);
+teamTios.addEventListener('click', () => {
+    mostarTeam(2);
 });
 
-let estado = 0;
-function mostrarTexto(p) { 
-    if (estado === 0) {
-        estado = 1
-        p.classList.remove('hidden');
-    }
-    else {
-        estado = 0
-        p.classList.add('hidden');
+teamPapis.addEventListener('click', () => {
+    mostarTeam(3);
+});
+
+function mostarTeam(n) {
+    teamSelector.forEach(team => team.classList.add('hidden'));
+    switch (n) {
+        case 0:
+            teamSelector[n].classList.remove('hidden');
+            break;
+        case 1:
+            teamSelector[n].classList.remove('hidden');
+            break;
+        case 2:
+            teamSelector[n].classList.remove('hidden');
+            break;
+        case 3:
+            teamSelector[n].classList.remove('hidden');
+            break;
     }
 }
