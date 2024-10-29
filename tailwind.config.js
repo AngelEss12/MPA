@@ -51,7 +51,7 @@ module.exports = {
         },
         bubbledown: {
           '0%': { transform: 'translateY(0) scale(1)' },
-          '100%': { transform: 'translateY(1150px) scale(1.4)' },
+          '100%': { transform: 'translateY(1150px) scale(1)' },
         },
 
         positionSwap: {
