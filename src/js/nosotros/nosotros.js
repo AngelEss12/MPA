@@ -1,130 +1,38 @@
-import { updateBubblePositions } from '../animaciones/animaciones.js'; 
 import { nosotros } from './variables.js';
-import { logoActions, himnoActions, creadorActions } from './identidad.js'
-
-// Variables para screen Nosotros
-const identidadContenido = document.querySelector("#c-identidad");
-const identidadTitulo = document.querySelector("#t-identidad");
-const arrowLeft = document.querySelector("#l-arrow");
-const arrowRight = document.querySelector("#r-arrow");
-
-// Variables para el touch
-let touchStartX = 0;
-let touchEndX = 0;
-let touchStartY = 0;
-let touchEndY = 0;
-const umbralTouch = 30; // Umbral mínimo para considerar un deslizamiento
-
-// Listener para eventos touch
-identidadContenido.addEventListener("touchstart", (event) => {
-    // Captura la posición inicial del touch
-    touchStartX = event.changedTouches[0].screenX;
-    touchStartY = event.changedTouches[0].screenY;
-});
-
-identidadContenido.addEventListener("touchend", (event) => {
-    // Captura la posición final del touch
-    touchEndX = event.changedTouches[0].screenX;
-    touchEndY = event.changedTouches[0].screenY;
-
-    // Llama a la función para manejar el movimiento
-    touchMove();
-});
-
-const touchMove = () => {
-    // Calcula las diferencias entre las posiciones de inicio y fin
-    const deltaX = touchEndX - touchStartX;
-    const deltaY = touchEndY - touchStartY;
-
-    // Verifica si el deslizamiento es más horizontal que vertical y si supera el umbral
-    if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > umbralTouch) {
-        // Si el deslizamiento fue hacia la izquierda
-        if (deltaX < 0) {
-            if (identidadTitulo.textContent === "Logo") {
-                identidadTitulo.innerHTML = "Himno";
-                logoActions.limpiarLogo();
-                himnoActions.init();
-            } else if (identidadTitulo.textContent === "Himno") {
-                identidadTitulo.innerHTML = "Creador";
-                himnoActions.limpiarHimno();
-                creadorActions.init();
-            } else {
-                identidadTitulo.innerHTML = "Logo";
-                creadorActions.limpiarCreador();
-                logoActions.init();
-            }
-        }
-        // Si el deslizamiento fue hacia la derecha
-        else if (deltaX > 0) {
-            if (identidadTitulo.textContent === "Logo") {
-                identidadTitulo.innerHTML = "Creador";
-                logoActions.limpiarLogo();
-                creadorActions.init();
-            } else if (identidadTitulo.textContent === "Creador") {
-                identidadTitulo.innerHTML = "Himno";
-                creadorActions.limpiarCreador();
-                himnoActions.init();
-            } else {
-                identidadTitulo.innerHTML = "Logo";
-                himnoActions.limpiarHimno();
-                logoActions.init();
-            }
-        }
-    }
-};
+import { updateBubblePositions } from '../animaciones/animaciones.js';
+import { moveLeft, moveRight } from './navegacionIdentidad.js'
+import { initTouchListeners } from './touchListeners.js';
+import { logoActions, himnoActions, creadorActions } from './identidad.js';
+import { animacionHistory } from './historia.js'
 
 //  Cuando el documento carga
 document.addEventListener("DOMContentLoaded", () => {
+    // Inicializa los listeners touch
+    initTouchListeners();
+
     // Ejecutar la función inmediatamente al cargar la página
     logoActions.init();
     updateBubblePositions();
 
     // Repetir la ejecución de la función cada 8 segundos
     setInterval(updateBubblePositions, 10000);
-    
 });
 
-// EventListener para screen Nosotros
+const { arrowLeft, arrowRight } = nosotros.identidad;
+
 // Izquierda
 arrowLeft.addEventListener("click", () => {
-    if (identidadTitulo.textContent === "Logo") {
-        identidadTitulo.innerHTML = "Creador";
-        logoActions.limpiarLogo();
-        creadorActions.init();
-    } else if (identidadTitulo.textContent === "Creador") {
-        identidadTitulo.innerHTML = "Himno";
-        creadorActions.limpiarCreador();
-        himnoActions.init();
-    } else {
-        identidadTitulo.innerHTML = "Logo";
-        himnoActions.limpiarHimno();
-        logoActions.init();
-    }
+    moveLeft();
 });
 
 // Derecha
 arrowRight.addEventListener("click", () => {
-    if (identidadTitulo.textContent === "Logo") {
-        identidadTitulo.innerHTML = "Himno";
-        logoActions.limpiarLogo();
-        himnoActions.init();
-    } else if (identidadTitulo.textContent === "Himno") {
-        identidadTitulo.innerHTML = "Creador";
-        himnoActions.limpiarHimno();
-        creadorActions.init();
-    } else {
-        identidadTitulo.innerHTML = "Logo";
-        creadorActions.limpiarCreador();
-        logoActions.init();
-    }
+    moveRight();
 });
 
-// Funciones para el Nosotros
-
 // Logo
-// Evento de la barra del progreso cuando termine la animacion
 nosotros.identidad.progressDiv.addEventListener("animationend", () => {
-    logoActions.updateText();
+    logoActions.updateText(); // Evento de la barra del progreso cuando termine la animacion
 });
 
 // Himno
@@ -137,32 +45,24 @@ next.addEventListener("click", himnoActions.mas5sg);
 // Creador
 const { closeBtn, container } = nosotros.creador.lightbox;
 
-// Función para mostrar el lightbox
 nosotros.creador.gallery.forEach(imagen => {
     imagen.addEventListener('click', () => {
-        creadorActions.visualizarImg(imagen);
+        creadorActions.visualizarImg(imagen); // Función para mostrar el lightbox
     });
 });
 
-// Función para cerrar el lightbox
 closeBtn.addEventListener('click', () => {
-    creadorActions.cerrarImg();
+    creadorActions.cerrarImg(); // Función para cerrar el lightbox
 });
 
-// Cerrar lightbox cuando se haga clic fuera de la imagen
 container.addEventListener('click', (e) => {
-    creadorActions.lightbox(e);
+    creadorActions.lightbox(e); // Cerrar lightbox cuando se haga clic fuera de la imagen
 });
 
 // Historia
 nosotros.historia.displayHistorias.forEach(div => {
     div.addEventListener('click', () => {
-        div.classList.add('animate-texts')
-        setTimeout(() => {
-            const lineaTiempo = div.querySelector('[data-history]');
-            lineaTiempo.classList.toggle('hidden');
-            div.classList.remove('animate-texts');
-        }, 600)
+        animacionHistory(div);
     });
 });
 
@@ -252,8 +152,6 @@ const backVirtud = () => {
         updateSliderPosition();
     }
 }
-
-
 
 // Función para actualizar la posición del slider
 const updateSliderPosition = () => {
