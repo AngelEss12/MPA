@@ -1,5 +1,14 @@
 // Selección de variables del DOM
 export const nosotros = {
+    touch: {
+        // Variables para el touch
+        touchStartX: 0,
+        touchEndX: 0,
+        touchStartY: 0,
+        touchEndY: 0,
+        umbralTouch: 30,
+    },
+
     // Variables para la seccion de Identidad especificamente su contenedor e iconos de movimiento
     identidad: {
         contenido: document.querySelector("#c-identidad"),
@@ -14,6 +23,7 @@ export const nosotros = {
         displayLogo: document.querySelector("#display-logo"),
         img: document.querySelector("#img"),
     },
+    // Variables para la seccion de Identidad del 'himno'
     himno: {
         himnoAudio: new Audio("/assets/audio/Himno Movimiento Pandillas De La Amistad.mp3"),
         displayHimno: document.querySelector("#display-himno"),
@@ -26,6 +36,7 @@ export const nosotros = {
         time: document.querySelector("#timeSound"),
         duration: document.querySelector("#durationSound"),
     },
+    // Variables para la seccion de Identidad del 'creador'
     creador: {
         displayCreador: document.querySelector("#displayCreador"),
         gallery: document.querySelectorAll("#displayCreador img"),
@@ -40,5 +51,18 @@ export const nosotros = {
     // Variables para la seccion de Historia
     historia: {
         displayHistorias: document.querySelectorAll('.displayHistoria'),
+    },
+
+    momentos: {
+        slider: document.querySelector('.slider'),
+        points: document.querySelectorAll('.point'),
+        prevBtn: document.getElementById('prevBtn'),
+        nextBtn: document.getElementById('nextBtn'),
+        // Variables para rastrear el estado actual del slider
+        currentIndex: 0,
+        totalCards: document.querySelectorAll('.card').length,
+        // Creamos una media query para detectar si la pantalla es mayor o igual a 768px
+        mediaQuery: window.matchMedia('(min-width: 640px)'),
+        contador: 0,
     }
 }
