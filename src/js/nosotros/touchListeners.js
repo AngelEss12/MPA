@@ -1,44 +1,28 @@
-// Importaciones necesarias
 import { nosotros } from './variables.js';
-import { moveLeft, moveRight, nextVirtud, backVirtud } from './navegacionIdentidad.js';
 
-// Función principal para configurar los listeners
 export function initTouchListeners(contenedor, left, right) {
+    let touchStartX = 0;
+    let touchStartY = 0;
 
-    // Listener para eventos touchstart
-    contenedor.addEventListener(
-        "touchstart",
-        (event) => {
-            nosotros.touch.touchStartX = event.changedTouches[0].screenX;
-            nosotros.touch.touchStartY = event.changedTouches[0].screenY;
-        },
-        { passive: false }
-    );
+    // Modificar el manejo de eventos touch
+    contenedor.addEventListener("touchstart", function(event) {
+        touchStartX = event.touches[0].clientX;
+        touchStartY = event.touches[0].clientY;
+    }, { passive: true }); // Añadir passive: true
 
-    // Listener para eventos touchend
-    contenedor.addEventListener(
-        "touchend",
-        (event) => {
-            nosotros.touch.touchEndX = event.changedTouches[0].screenX;
-            nosotros.touch.touchEndY = event.changedTouches[0].screenY;
+    contenedor.addEventListener("touchend", function(event) {
+        const touchEndX = event.changedTouches[0].clientX;
+        const touchEndY = event.changedTouches[0].clientY;
+        
+        const deltaX = touchEndX - touchStartX;
+        const deltaY = touchEndY - touchStartY;
 
-            touchMove(left, right);
-        },
-        { passive: false }
-    );
-}
-
-// Función para manejar el movimiento del toque
-function touchMove(left, right) {
-    const deltaX = nosotros.touch.touchEndX - nosotros.touch.touchStartX;
-    const deltaY = nosotros.touch.touchEndY - nosotros.touch.touchStartY;
-
-    // Detecta el tipo de movimiento
-    if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > nosotros.touch.umbralTouch) {
-        if (deltaX < 0) {
-            left(); // Movimiento hacia la izquierda
-        } else if (deltaX > 0) {
-            right(); // Movimiento hacia la derecha
+        if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > nosotros.touch.umbralTouch) {
+            if (deltaX < 0) {
+                left();
+            } else {
+                right();
+            }
         }
-    }
+    }, { passive: true }); // Añadir passive: true
 }
