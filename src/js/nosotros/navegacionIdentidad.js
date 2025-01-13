@@ -37,25 +37,25 @@ export function moveRight() {
 }
 
 export const nextVirtud = () => {
-    let { currentIndex, totalCards, poitns, contador } = nosotros.momentos;
-    poitns[currentIndex].classList.remove("bg-slate-500");
-    if (currentIndex < totalCards - contador) {
-        currentIndex++;
+    
+    nosotros.momentos.points[nosotros.momentos.currentIndex].classList.remove("bg-slate-500");
+    if (nosotros.momentos.currentIndex < nosotros.momentos.totalCards - nosotros.momentos.contador) {
+        nosotros.momentos.currentIndex++;
         updateSliderPosition();
     } else {
-        currentIndex = 0;
+        nosotros.momentos.currentIndex = 0;
         updateSliderPosition();
     }
 }
 
 export const backVirtud = () => {
-    let { currentIndex, totalCards, poitns, contador } = nosotros.momentos;
-    poitns[currentIndex].classList.remove("bg-slate-500");
-    if (currentIndex > 0) {
-        currentIndex--;
+    
+    nosotros.momentos.points[nosotros.momentos.currentIndex].classList.remove("bg-slate-500");
+    if (nosotros.momentos.currentIndex > 0) {
+        nosotros.momentos.currentIndex--;
         updateSliderPosition();
     } else {
-        currentIndex = totalCards - contador;
+        nosotros.momentos.currentIndex = nosotros.momentos.totalCards - nosotros.momentos.contador;
         updateSliderPosition();
     }
 }
