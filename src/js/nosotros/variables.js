@@ -2,10 +2,6 @@
 export const nosotros = {
     touch: {
         // Variables para el touch
-        touchStartX: 0,
-        touchEndX: 0,
-        touchStartY: 0,
-        touchEndY: 0,
         umbralTouch: 30,
     },
 
@@ -64,5 +60,13 @@ export const nosotros = {
         // Creamos una media query para detectar si la pantalla es mayor o igual a 768px
         mediaQuery: window.matchMedia('(min-width: 640px)'),
         contador: 0,
+    },
+
+    equipo: {
+        teamSelector: document.querySelectorAll('#equipo > div'),
+        teamNinos: document.querySelector('#niños'),
+        teamAsesor: document.querySelector('#asesor'),
+        teamTios: document.querySelector('#tios'),
+        teamPapis: document.querySelector('#papis'),
     }
 }
