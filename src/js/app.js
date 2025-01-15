@@ -40,6 +40,7 @@ const leyes = () => {
 }
 
 const slider = document.querySelector('.slider');
+const cards = document.querySelectorAll('.card');
 const poitns = document.querySelectorAll('.point')
 const prevBtn = document.getElementById('prevBtn');
 const nextBtn = document.getElementById('nextBtn');
@@ -48,26 +49,8 @@ const nextBtn = document.getElementById('nextBtn');
 let currentIndex = 0;
 const totalCards = document.querySelectorAll('.card').length;
 
-// Creamos una media query para detectar si la pantalla es mayor o igual a 768px
-const mediaQuery = window.matchMedia('(min-width: 768px)');
-
 // Inicializamos el contador
-let contador = 0;
-
-// Función para actualizar el valor del contador según el tamaño de la pantalla
-function actualizarContador(e) {
-    if (e.matches) {
-        contador = 2; // Si la pantalla es 768px o más, el contador es 2
-    } else {
-        contador = 1; // Si la pantalla es menor a 768px, el contador es 1
-    }
-}
-
-// Escuchamos los cambios en el tamaño de la pantalla
-mediaQuery.addListener(actualizarContador);
-
-// Llamamos la función inmediatamente para comprobar el tamaño actual de la pantalla
-actualizarContador(mediaQuery);
+let contador = 1;
 
 // Variables para el touch
 let touchStartX = 0;
@@ -112,22 +95,32 @@ const touchMove = () => {
 
 const nextVirtud = () => {
   poitns[currentIndex].classList.remove("bg-slate-500");
+  cards[currentIndex].classList.add("hidden");
   if (currentIndex < totalCards - contador) {
     currentIndex++;
+    cards[currentIndex].classList.remove("hidden");
+    cards[currentIndex].classList.add("flex", "fade-left", "animate-duration-700");
     updateSliderPosition();
   } else {
     currentIndex = 0;
+    cards[currentIndex].classList.remove("hidden");
+    cards[currentIndex].classList.add("flex", "fade-left", "animate-duration-700");
     updateSliderPosition();
   }
 }
 
 const backVirtud = () => {
   poitns[currentIndex].classList.remove("bg-slate-500");
+  cards[currentIndex].classList.add("hidden");
   if (currentIndex > 0) {
     currentIndex--;
+    cards[currentIndex].classList.remove("hidden");
+    cards[currentIndex].classList.add("flex", "fade-right", "animate-duration-1000");
     updateSliderPosition();
   } else {
     currentIndex = totalCards - contador;
+    cards[currentIndex].classList.remove("hidden");
+    cards[currentIndex].classList.add("flex", "fade-right", "animate-duration-1000");
     updateSliderPosition();
   }
 }
@@ -135,7 +128,6 @@ const backVirtud = () => {
 // Función para actualizar la posición del slider
 const updateSliderPosition = () => {
   const slideWidth = document.querySelector('.card').offsetWidth;
-  slider.style.transform = `translateX(${-slideWidth * currentIndex}px)`;
   poitns[currentIndex].classList.add('bg-slate-500');
 };
 
