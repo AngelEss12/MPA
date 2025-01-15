@@ -9,7 +9,7 @@ module.exports = {
       },
       backgroundImage: {
         'gradiente-inicio': 'linear-gradient(to left top, #efceff, #ffcde5, #ffd7c5, #ffeab3, #ebffbf)',
-        'gradiente-v1': 'linear-gradient(to right bottom, #dde6f5, #dcecf6, #dff1f6, #e4f5f5, #ecf9f5)',
+        'gradiente-v1': 'linear-gradient(to bottom, #ffffff, #f5f5f5, #ebebeb, #e1e1e1, #d7d7d7, #c2c2c2, #adadad, #999999, #767676, #555555, #363636, #1a1a1a)',
         'gradiente-v2': 'linear-gradient(to left top, #f6dfed, #fedfe6, #ffe1de, #ffe4d8, #fde8d3, #f8ebd2, #f3edd2, #ecf0d4, #e7f1d6, #e3f2d8, #def3db, #daf4de)',
         'gradiente-v3': 'linear-gradient(to right bottom, #151515, #1b1a1b, #202020, #262526, #2c2b2b)',
         'gradiente-u': 'linear-gradient(to right bottom, #122a4a, #1c2852, #2c2357, #401a58, #530754)',
