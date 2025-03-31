@@ -1,3 +1,6 @@
+import { inicio } from "./inicio/variables.js";
+import { leyes } from "./inicio/leyes.js";
+
 const virtudes = document.querySelector('#virtudes');
 const contVirtudes = document.querySelectorAll('#contendor-virtudes > div');
 
@@ -16,39 +19,39 @@ menuBurger.addEventListener('click', () => {
   body.classList.toggle('overflow-hidden');
 });
 
-const leyes = () => {
-  const slides = document.querySelectorAll("#leyes a, #leyOro");
-  let currentIndex = 0;
+// const leyes = () => {
+//   const slides = document.querySelectorAll("#leyes a, #leyOro");
+//   let currentIndex = 0;
 
-  // Mostrar el primer slide al cargar
-  slides[currentIndex].classList.remove("hidden");
-  slides[currentIndex].classList.add("entrada");
+//   // Mostrar el primer slide al cargar
+//   slides[currentIndex].classList.remove("hidden");
+//   slides[currentIndex].classList.add("entrada");
 
-  setInterval(() => {
-    // Animar el slide actual para desaparecer (fade out)
-    slides[currentIndex].classList.remove("entrada");
-    slides[currentIndex].classList.add("salida");
+//   setInterval(() => {
+//     // Animar el slide actual para desaparecer (fade out)
+//     slides[currentIndex].classList.remove("entrada");
+//     slides[currentIndex].classList.add("salida");
 
-    // Después de 1 segundo (duración de la animación fade out), ocultar el slide actual
-    setTimeout(() => {
-      slides[currentIndex].classList.add("hidden");
-      slides[currentIndex].classList.remove("salida");
+//     // Después de 1 segundo (duración de la animación fade out), ocultar el slide actual
+//     setTimeout(() => {
+//       slides[currentIndex].classList.add("hidden");
+//       slides[currentIndex].classList.remove("salida");
 
-      // Pasar al siguiente slide
-      currentIndex = (currentIndex + 1) % slides.length;
+//       // Pasar al siguiente slide
+//       currentIndex = (currentIndex + 1) % slides.length;
 
-      // Si estamos en el slide 6 (último slide), volver al slide 1
-      if (currentIndex === slides.length - 1) {
-        currentIndex = 0; // Volver al slide 1 cuando llegamos al último slide
-      }
+//       // Si estamos en el slide 6 (último slide), volver al slide 1
+//       if (currentIndex === slides.length - 1) {
+//         currentIndex = 0; // Volver al slide 1 cuando llegamos al último slide
+//       }
 
-      // Mostrar el siguiente slide con fade in
-      slides[currentIndex].classList.remove("hidden");
-      slides[currentIndex].classList.add("entrada");
+//       // Mostrar el siguiente slide con fade in
+//       slides[currentIndex].classList.remove("hidden");
+//       slides[currentIndex].classList.add("entrada");
 
-    }, 700); // Tiempo de fade out (1s)
-  }, 5000); // Cambiar cada 5 segundos
-}
+//     }, 700); // Tiempo de fade out (1s)
+//   }, 5000); // Cambiar cada 5 segundos
+// }
 
 const slider = document.querySelector('.slider');
 const cards = document.querySelectorAll('.card');
