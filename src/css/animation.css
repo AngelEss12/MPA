@@ -1,0 +1,14 @@
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.fade-transition {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Evitar saltos de layout */
+html {
+    scroll-behavior: smooth;
+    scrollbar-gutter: stable;
+}

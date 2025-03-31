@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/css/estilos.css">
+    <link rel="stylesheet" href="/src/css/animation.css">
+    <title>Actividades</title>
+</head>
+
+<body>
+    <header class="hd">
+        <div class="hd-container">
+            <!-- Navegacion -->
+            <div class="sm:hidden flex items-start justify-end relative h-screen">
+                <button id="menuButton"
+                    class="mr-3 mt-3 rounded-lg text-white focus:outline-none focus:border-2 focus:border-gray-300 absolute z-50">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+
+                <div id="navMobile"
+                    class="hidden fixed overflow-hidden h-full w-full z-40 animate-flip-down animate-once animate-ease-out">
+                    <nav class="w-full h-full flex flex-col justify-between items-center">
+                        <nav class="w-full h-full flex flex-col justify-between items-center">
+                            <a class="bg-rose-500 hover:bg-rose-400 hover:text-3xl hover:text-rose-950 hover:font-semibold transition-all ease-out h-1/4 w-full text-center flex items-center justify-center text-rose-50 text-2xl font-cuerpos font-medium"
+                                href="/">Inicio</a>
+
+                            <a class="bg-yellow-500 hover:bg-yellow-400 hover:text-3xl hover:text-yellow-950 hover:font-semibold transition-all ease-out h-1/4 w-full text-center flex items-center justify-center text-yellow-50 text-2xl font-cuerpos font-medium"
+                                href="/src/screen/nosotros.html">Nosotros</a>
+
+                            <a class="bg-blue-500 hover:bg-blue-400 hover:text-3xl hover:text-blue-950 hover:font-semibold transition-all ease-out h-1/4 w-full text-center flex items-center justify-center text-blue-50 text-2xl font-cuerpos font-medium"
+                                href="/src/screen/actividades.html">Actividades</a>
+
+                            <a class="bg-green-500 hover:bg-green-400 hover:text-3xl hover:text-green-950 hover:font-semibold transition-all ease-out h-1/4 w-full text-center flex items-center justify-center text-green-50 text-2xl font-cuerpos font-medium"
+                                href="/src/screen/testimonios.html">Testimonios</a>
+                        </nav> <!--Fin de Navegacion-->
+                </div>
+            </div>
+
+            <div class="hidden sm:flex sm:w-full sm:items-center sm:px-4 sm:pt-2 lg:py-0">
+                <nav class="nv-container">
+                    <a class="nv-i" href="/">Inicio</a>
+
+                    <a class="nv-n" href="/src/screen/nosotros.html">Nosotros</a>
+
+                    <a class="down border-b-[3px] md:border-b-[5px] text-blue-400 border-blue-500"
+                        href="/src/screen/actividades.html">Actividades</a>
+
+                    <a class="nv-t" href="/src/screen/testimonios.html">Testimonios</a>
+                </nav> <!--Fin de Navegacion-->
+            </div>
+
+            <div class="hd-body xl:text-[240px]">
+                <h1 class="hd-title">Actividades</h1>
+            </div>
+        </div>
+
+        <div class="h-screen inset-0 w-full -z-10">
+            <img class="w-full h-full object-cover sm:aspect-video absolute inset-0"
+                src="/assets/actividades/header/Banner Header.jpeg" alt="" loading="lazy" />
+        </div>
+    </header>
+
+    <main>
+        <section class="relative contenedor-principal overflow-hidden px-8">
+            <div class="w-full flex flex-col justify-center items-center z-10 up">
+                <div class="w-full h-screen flex flex-col justify-center items-center border-slate-600/45 border-b-2">
+                    <h2
+                        class="font-titulos font-black text-center text-4xl sm:text-5xl text-slate-800 md:text-6xl lg:text-8xl pb-4">
+                        Nuestras Actividades</h2>
+                    <p
+                        class="text-center text-slate-800/90 text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-cuerpos font-semibold sm:px-4 md:px-8 lg:px-10 pt-4">
+                        En Pandillas de la Amistad, cada experiencia te conecta, te divierte y te llena de energía. 🌟
+                        ¿Estás listo para ser parte de la acción? ¡Ven y descubre lo que tenemos preparado para ti! 💥
+                    </p>
+                </div> <!--Titulo Principal-->
+
+                <div id="container-actividades" class="relative w-full flex flex-col justify-center items-center pt-8">
+                    <div id="Humanas"
+                        class="w-full flex flex-col justify-center items-center space-y-4 py-8 md:py-12 lg:py-14 xl:py-16 animate-fade-right animate-ease-out animate-duration-500">
+                        <h3
+                            class="text-slate-800 text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-center font-semibold font-titulos pb-8 overflow-hidden whitespace-nowrap animate-typing animate-infinite">
+                            Humanas</h3>
+                        <p
+                            class="text-slate-800/90 text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl text-justify font-cuerpos font-semibold pb-4 sm:pb-8 md:pb-10 sm:px-8 md:px-12 lg:px-16">
+                            Exploramos temas que nos hacen reflexionar y crecer. ¡Es hora de descubrir lo mejor de
+                            nosotros mismos y nuestra comunidad!</p>
+
+                        <div id="body-actividades"
+                            class="w-full flex flex-col justify-center items-center space-y-8 sm:space-y-12 md:space-y-16">
+
+                            <div
+                                class="flex flex-col lg:w-[90%] lg:flex-row justify-center items-center space-y-4 sm:space-y-6 card">
+                                <div
+                                    class="max-w-[300px] xl:min-w-[400px] rounded-3xl flex justify-center items-center overflow-hidden shadow-slate-950 shadow">
+                                    <img class="w-full aspect-square object-cover"
+                                        src="/assets/actividades/humanas/Humanos-1.jpg" alt="Hora Santa">
+                                </div>
+
+                                <div class="px-2 sm:px-8 space-y-4 lg:space-y-8">
+                                    <h3
+                                        class="w-full text-lg sm:text-xl md:text-2xl lg:text-3xl text-center font-bold font-cuerpos">
+                                        Historias que Marcan 📅.</h3>
+                                    <p
+                                        class="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-slate-800 text-justify sm:text-center lg:text-justify font-cuerpos font-medium ">
+                                        Descubre el origen y significado de fechas importantes, y cómo podemos vivir su
+                                        esencia en nuestro día a día. ¡Mucho por aprender del pasado para inspirarnos
+                                        hoy!</p>
+                                </div>
+                            </div>
+
+                            <div
+                                class="flex flex-col lg:w-[90%] lg:flex-row-reverse justify-center items-center space-y-4 sm:space-y-6 card">
+                                <div
+                                    class="max-w-[300px] xl:min-w-[400px] rounded-3xl flex justify-center items-center overflow-hidden shadow-slate-950 shadow">
+                                    <img class="w-full aspect-square object-cover"
+                                        src="/assets/actividades/humanas/Humanos-2.jpg" alt="Hora Santa">
+                                </div>
+
+                                <div class="px-2 sm:px-8 space-y-4 lg:space-y-8">
+                                    <h3
+                                        class="w-full text-lg sm:text-xl md:text-2xl lg:text-3xl text-center font-bold font-cuerpos">
+                                        Conéctate Contigo 💭</h3>
+                                    <p
+                                        class="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-slate-800 text-justify sm:text-center lg:text-justify font-cuerpos font-medium">
+                                        Hablemos sobre temas actuales como amor, redes sociales, autoestima y más.
+                                        Encuentra un espacio seguro para expresar, escuchar y crecer.</p>
+                                </div>
+                            </div>
+
+                            <div
+                                class="flex flex-col lg:w-[90%] lg:flex-row justify-center items-center space-y-4 sm:space-y-6 card">
+                                <div
+                                    class="max-w-[300px] xl:min-w-[400px] rounded-3xl flex justify-center items-center overflow-hidden shadow-slate-950 shadow">
+                                    <img class="w-full aspect-square object-cover"
+                                        src="/assets/actividades/humanas/Humanos-3.jpg" alt="Hora Santa">
+                                </div>
+
+                                <div class="px-2 sm:px-8 space-y-4 lg:space-y-8">
+                                    <h3
+                                        class="w-full text-lg sm:text-xl md:text-2xl lg:text-3xl text-center font-bold font-cuerpos">
+                                        Valores que Inspiran ✨</h3>
+                                    <p
+                                        class="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-slate-800 text-justify sm:text-center lg:text-justify font-cuerpos font-medium ">
+                                        Aprende a aplicar valores cristianos en cada paso de tu vida cotidiana. Descubre
+                                        cómo la fe se convierte en acciones que nos transforman y mejoran el mundo.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="Espirituales"
+                        class="hidden w-full flex flex-col justify-center items-center space-y-4 py-8 md:py-12 lg:py-14 xl:py-16 animate-fade-right animate-ease-out animate-duration-500">
+                        <h3
+                            class="text-slate-800 text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-center font-semibold font-titulos pb-8 overflow-hidden whitespace-nowrap animate-typing animate-infinite">
+                            Espirituales</h3>
+                        <p
+                            class="text-slate-800/90 text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl text-justify font-cuerpos font-semibold pb-4 sm:pb-8 md:pb-10 sm:px-8 md:px-12 lg:px-16">
+                            ¡Prepárate para fortalecer tu espíritu y conectar con Dios de una forma especial! ✨ Las
+                            experiencias que avivan la fe y nos unen como grupo.</p>
+
+                        <div id="body-espirituales" class="w-full flex flex-col justify-center items-center space-y-8">
+
+                            <div
+                                class="flex flex-col lg:w-[90%] lg:flex-row-reverse justify-center items-center space-y-4 sm:space-y-6 card">
+                                <div
+                                    class="max-w-[300px] xl:min-w-[400px] rounded-3xl flex justify-center items-center overflow-hidden shadow-slate-950 shadow">
+                                    <img class="w-full aspect-square object-cover"
+                                        src="/assets/actividades/espirutales/Espritual-1.jpeg" alt="Hora Santa">
+                                </div>
+
+                                <div class="px-2 sm:px-8 space-y-4 lg:space-y-8">
+                                    <h3
+                                        class="w-full text-lg sm:text-xl md:text-2xl lg:text-3xl text-center font-bold font-cuerpos">
+                                        Festivales de Fe 🎉🙏</h3>
+                                    <p
+                                        class="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-slate-800 text-justify sm:text-center lg:text-justify font-cuerpos font-medium ">
+                                        Celebramos las fechas importantes del calendario litúrgico. ¡Momentos llenos de
+                                        significado y alegría para vivir la espiritualidad en comunidad!</p>
+                                </div>
+                            </div>
+
+                            <div
+                                class="flex flex-col lg:w-[90%] lg:flex-row justify-center items-center space-y-4 sm:space-y-6 card">
+                                <div
+                                    class="max-w-[300px] xl:min-w-[400px] rounded-3xl flex justify-center items-center overflow-hidden shadow-slate-950 shadow">
+                                    <img class="w-full aspect-square object-cover"
+                                        src="/assets/actividades/espirutales/Espritual-2.jpeg" alt="Hora Santa">
+                                </div>
+
+                                <div class="px-2 sm:px-8 space-y-4 lg:space-y-8">
+                                    <h3
+                                        class="w-full text-lg sm:text-xl md:text-2xl lg:text-3xl text-center font-bold font-cuerpos">
+                                        Conexión Divina ✨</h3>
+                                    <p
+                                        class="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-slate-800 text-justify sm:text-center lg:text-justify font-cuerpos font-medium ">
+                                        La oracion y la Hora Santa es nuestro momento de tranquilidad espiritual en
+                                        compañía de todos, para fortalecer una conexion más estrecha con Dios.</p>
+                                </div>
+                            </div>
+
+                            <div
+                                class="flex flex-col lg:w-[90%] lg:flex-row-reverse justify-center items-center space-y-4 sm:space-y-6 card">
+                                <div
+                                    class="max-w-[300px] xl:min-w-[400px] rounded-3xl flex justify-center items-center overflow-hidden shadow-slate-950 shadow">
+                                    <img class="w-full aspect-square object-cover"
+                                        src="/assets/actividades/espirutales/Espritual-3.jpeg" alt="Hora Santa">
+                                </div>
+
+                                <div class="px-2 sm:px-8 space-y-4 lg:space-y-8">
+                                    <h3
+                                        class="w-full text-lg sm:text-xl md:text-2xl lg:text-3xl text-center font-bold font-cuerpos">
+                                        Catequesis 📜</h3>
+                                    <p
+                                        class="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-slate-800 text-justify sm:text-center lg:text-justify font-cuerpos font-medium ">
+                                        Descubrir juntos la historia de Dios y sus apóstoles ¡Es un viaje emocionante a
+                                        través de enseñanzas, historias y valores que nos guían día a día!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="Apostolicas"
+                        class="hidden w-full flex flex-col justify-center items-center space-y-4 py-8 md:py-12 lg:py-14 xl:py-16 animate-fade-right animate-ease-out animate-duration-500">
+                        <h3
+                            class="text-slate-800 text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-center font-semibold font-titulos pb-8 overflow-hidden whitespace-nowrap animate-typing animate-infinite">
+                            Apostolicas</h3>
+                        <p
+                            class="text-slate-800/90 text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl text-justify font-cuerpos font-semibold pb-4 sm:pb-8 md:pb-10 sm:px-8 md:px-12 lg:px-16">
+                            ¡Transformamos la fe en acción! 🌟 Cada integrante del grupo tiene la oportunidad de ser luz
+                            para otros, llevando la palabra de Dios y su amor a quienes más lo necesitan.</p>
+
+                        <div id="body-apostolicas" class="w-full flex flex-col justify-center items-center space-y-8">
+
+                            <div
+                                class="flex flex-col lg:w-[90%] lg:flex-row justify-center items-center space-y-4 sm:space-y-6 card">
+                                <div
+                                    class="max-w-[300px] xl:min-w-[400px] rounded-3xl flex justify-center items-center overflow-hidden shadow-slate-950 shadow">
+                                    <img class="w-full aspect-square object-cover"
+                                        src="/assets/actividades/apostolicas/Apostolicas 1.jpeg" alt="Hora Santa">
+                                </div>
+
+                                <div class="px-2 sm:px-8 space-y-4 lg:space-y-8">
+                                    <h3
+                                        class="w-full text-lg sm:text-xl md:text-2xl lg:text-3xl text-center font-bold font-cuerpos">
+                                        Unidos en el Cuidado 🌈</h3>
+                                    <p
+                                        class="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-slate-800 text-justify sm:text-center lg:text-justify font-cuerpos font-medium ">
+                                        ¡Vamos a hacer sonreír! Visitamos a personas que necesitan un poquito de amor y
+                                        compañía, llevándoles alimentos y compartiendo momentos que alegran el corazón.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div
+                                class="flex flex-col lg:w-[90%] lg:flex-row-reverse justify-center items-center space-y-4 sm:space-y-6 card">
+                                <div
+                                    class="max-w-[300px] xl:min-w-[400px] rounded-3xl flex justify-center items-center overflow-hidden shadow-slate-950 shadow">
+                                    <img class="w-full aspect-square object-cover"
+                                        src="/assets/actividades/apostolicas/Apostilicas 2.jpeg" alt="Hora Santa">
+                                </div>
+
+                                <div class="px-2 sm:px-8 space-y-4 lg:space-y-8">
+                                    <h3
+                                        class="w-full text-lg sm:text-xl md:text-2xl lg:text-3xl text-center font-bold font-cuerpos">
+                                        Amor Animal 🐶🐱</h3>
+                                    <p
+                                        class="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-slate-800 text-justify sm:text-center lg:text-justify font-cuerpos font-medium ">
+                                        Sabemos que los animalitos también son criaturas de Dios, así que los apoyamos
+                                        con alimento y cariño para que se sientan protegidos y queridos.</p>
+                                </div>
+                            </div>
+
+                            <div
+                                class="flex flex-col lg:w-[90%] lg:flex-row justify-center items-center space-y-4 sm:space-y-6 card">
+                                <div
+                                    class="max-w-[300px] xl:min-w-[400px] rounded-3xl flex justify-center items-center overflow-hidden shadow-slate-950 shadow">
+                                    <img class="w-full aspect-square object-cover"
+                                        src="/assets/actividades/apostolicas/Apostolicas 3.jpeg" alt="Hora Santa">
+                                </div>
+
+                                <div class="px-2 sm:px-8 space-y-4 lg:space-y-8">
+                                    <h3
+                                        class="w-full text-lg sm:text-xl md:text-2xl lg:text-3xl text-center font-bold font-cuerpos">
+                                        Hermanos de Fe 🌍✨</h3>
+                                    <p
+                                        class="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-slate-800 text-justify sm:text-center lg:text-justify font-cuerpos font-medium ">
+                                        Salimos a la comunidad para compartir mensajes llenos de esperanza y amor.
+                                        Charlamos con nuestros hermanos sobre el mensaje de Dios, ¡haciendo que todos
+                                        puedan reflexionar y sentir su presencia!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- <div id="Convivencia"></div> -->
+
+                    <div
+                        class="absolute inset-0 flex flex-row justify-between items-start py-16 sm:px-8 md:py-20 md:px-14 lg:py-24 lg:px-20 xl:py-28 z-40">
+                        <img id="l-arrow" class="w-7 h-7 sm:w-10 md:w-12 lg:w-14 sm:h-10 md:h-12 lg:h-14"
+                            src="/assets/nosotros/icons/atras.png" alt="Siguiente">
+
+                        <img id="r-arrow" class="w-7 h-7w-7 sm:w-10 md:w-12 lg:w-14 sm:h-10 md:h-12 lg:h-14"
+                            src="/assets/nosotros/icons/adelante.png" alt="Siguiente">
+                    </div>
+                </div> <!--Contenedor de las Actividades-->
+            </div>
+
+            <div id="burbujas" class="absolute inset-0 z-0 overflow-hidden">
+                <div class="w-[180px] lg:w-[280px] h-[180px] lg:h-[280px] bg-purple-400 rounded-full filter animate-bubbledown blur-3xl absolute left-10 -top-[300px]"
+                    style="position: absolute; bottom: -392px; left: auto; right: 257px;">
+                </div>
+                <div class="w-[180px] lg:w-[280px] h-[180px] lg:h-[280px] bg-red-400 rounded-full filter animate-bubbledown-delayed-1 blur-3xl absolute -left-3 -top-[50px]"
+                    style="position: absolute; bottom: -381px; right: auto; left: 20px;">
+                </div>
+                <div class="w-[180px] lg:w-[280px] h-[180px] lg:h-[280px] bg-fuchsia-400 rounded-full filter animate-bubbledown-delayed-1 blur-3xl absolute -left-32 -top-[100px]"
+                    style="position: absolute; bottom: -1298px; left: auto; right: 17px;">
+                </div>
+                <div class="w-[180px] lg:w-[280px] h-[180px] lg:h-[280px] bg-yellow-300 rounded-full filter animate-bubbledown-delayed-2 blur-3xl absolute -top-[150px] -right-10"
+                    style="position: absolute; bottom: -498px; left: 763px; right: auto;">
+                </div>
+                <div class="w-[180px] lg:w-[280px] h-[180px] lg:h-[280px] bg-amber-500 rounded-full filter animate-bubbledown-delayed-2 blur-3xl absolute -top-[550px] -right-72"
+                    style="position: absolute; bottom: -1265px; left: auto; right: 230px;">
+                </div>
+                <div class="w-[180px] lg:w-[280px] h-[180px] lg:h-[280px] bg-slate-400 rounded-full filter animate-bubbledown-delayed-3 blur-3xl absolute -top-[350px]"
+                    style="position: absolute; bottom: -968px; left: 272px; right: auto;">
+                </div>
+                <div class="w-[180px] lg:w-[280px] h-[180px] lg:h-[280px] bg-indigo-400 rounded-full filter animate-bubbledown-delayed-4 blur-3xl absolute right-52 -top-[200px]"
+                    style="position: absolute; bottom: -1430px; left: 564px; right: auto;">
+                </div>
+                <div class="w-[180px] lg:w-[280px] h-[180px] lg:h-[280px] bg-pink-400 rounded-full filter animate-bubbledown-delayed-4 blur-3xl absolute right-0 -top-[400px]"
+                    style="position: absolute; bottom: -963px; left: 669px; right: auto;">
+                </div>
+                <div class="w-[180px] lg:w-[280px] h-[180px] lg:h-[280px] bg-lime-300 rounded-full filter animate-bubbledown-delayed-5 blur-3xl absolute left-44 -top-[200px]"
+                    style="position: absolute; bottom: -951px; left: 46px; right: auto;">
+                </div>
+                <div class="w-[180px] lg:w-[280px] h-[180px] lg:h-[280px] bg-cyan-300 rounded-full filter animate-bubbledown-delayed-6 blur-3xl absolute -right-16 -top-[250px]"
+                    style="position: absolute; bottom: -1022px; right: 516px; left: auto;">
+                </div>
+                <div class="w-[180px] lg:w-[280px] h-[180px] lg:h-[280px] bg-orange-300 rounded-full filter animate-bubbledown-delayed-7 blur-3xl absolute right-20 -top-[100px]"
+                    style="position: absolute; bottom: -747px; right: 785px; left: auto;">
+                </div>
+            </div>
+        </section>
+
+        <section class="contenedor-principal bg-slate-950/90">
+            <h2
+                class="font-titulos font-black text-center text-4xl sm:text-5xl text-white md:text-6xl lg:text-8xl px-8 pb-4">
+                Viajes</h2>
+            <p
+                class="text-justify text-slate-200/90 text-lg lg:text-2xl xl:text-3xl font-cuerpos font-semibold py-4 px-9 md:px-12 lg:px-24">
+                En MPA, los viajes son mucho más que simples salidas. Son aventuras llenas de fe, amistad y momentos
+                inolvidables que nos acercan como comunidad. ¡Prepárate para vivir algo único!</p>
+
+
+            <div class="w-[90%] md:hidden p-1 bg-white/5 grid grid-cols-6 grid-rows-15 gap-2 rounded-md overflow-hidden">
+                <div class="col-span-6 row-span-3">
+                    <img loading="lazy" class="gallery hover:scale-110 transition-all ease-linear object-cover rounded-md" src="/assets/actividades/viajes/Viajes 6.jpeg" alt="">
+                </div>
+                <div class="col-span-2 row-start-4">
+                    <img loading="lazy" class="gallery hover:scale-110 transition-all ease-linear aspect-video object-cover rounded-md" src="/assets/actividades/viajes/Viajes 24.jpeg"
+                        alt="">
+                </div>
+                <div class="col-span-2 col-start-3 row-start-4">
+                    <img loading="lazy" class="gallery hover:scale-110 transition-all ease-linear aspect-video object-cover rounded-md" src="/assets/actividades/viajes/Viajes 10.jpeg"
+                        alt="">
+                </div>
+                <div class="col-span-2 col-start-5 row-start-4">
+                    <img loading="lazy" class="gallery hover:scale-110 transition-all ease-linear aspect-video object-cover rounded-md" src="/assets/actividades/viajes/Viajes 22.jpg"
+                        alt="">
+                </div>
+                <div class="col-span-3 row-span-6 row-start-5">
+                    <img loading="lazy" class="gallery hover:scale-110 transition-all ease-linear object-cover rounded-md h-full" src="/assets/actividades/viajes/Viajes 1.jpg" alt="">
+                </div>
+                <div class="col-span-3 row-span-3 col-start-4 row-start-5">
+                    <img loading="lazy" class="gallery hover:scale-110 transition-all ease-linear aspect-video object-cover rounded-md" src="/assets/actividades/viajes/Viajes 19.jpg"
+                        alt="">
+                </div>
+                <div class="col-span-3 row-span-3 col-start-1 row-start-11">
+                    <img loading="lazy" class="gallery hover:scale-110 transition-all ease-linear aspect-video object-cover rounded-md" src="/assets/actividades/viajes/Viajes 14.jpg"
+                        alt="">
+                </div>
+                <div class="col-span-3 row-span-6 col-start-4 row-start-8">
+                    <img loading="lazy" class="gallery hover:scale-110 transition-all ease-linear object-cover rounded-md" src="/assets/actividades/viajes/Viajes 5.jpg" alt="">
+                </div>
+                <div class="col-span-6 row-span-2 row-start-14">
+                    <img loading="lazy" class="gallery hover:scale-110 transition-all ease-linear aspect-video object-cover rounded-md" src="/assets/actividades/viajes/Viajes 23.jpeg"
+                        alt="">
+                </div>
+            </div>
+
+            <div class="w-[90%] h-[90vh] hidden md:grid p-1 bg-white/5 grid-cols-12 grid-rows-6 gap-2 rounded-md overflow-hidden">
+                <div class="col-span-5 row-span-2">
+                    <img loading="lazy" class="gallery hover:scale-110 hover:cursor-pointer transition-all ease-linear w-full h-full object-cover rounded-md" src="/assets/actividades/viajes/Viajes 6.jpeg" alt="">
+                </div>
+                <div class="col-span-5 row-span-2 col-start-8 row-start-5">
+                    <img loading="lazy" class="gallery hover:scale-110 hover:cursor-pointer transition-all ease-linear w-full h-full object-cover rounded-md" src="/assets/actividades/viajes/Viajes 23.jpeg"
+                        alt="">
+                </div>
+                <div class="col-span-2 row-span-2 col-start-6 row-start-1">
+                    <img loading="lazy" class="gallery hover:scale-110 hover:cursor-pointer transition-all ease-linear w-full h-full object-cover rounded-md" src="/assets/actividades/viajes/Viajes 24.jpeg"
+                        alt="">
+                </div>
+                <div class="col-span-2 row-span-2 col-start-6 row-start-3">
+                    <img loading="lazy" class="gallery hover:scale-110 hover:cursor-pointer transition-all ease-linear w-full h-full object-cover rounded-md" src="/assets/actividades/viajes/Viajes 10.jpeg"
+                        alt="">
+                </div>
+                <div class="col-span-2 row-span-2 col-start-6 row-start-5">
+                    <img loading="lazy" class="gallery hover:scale-110 hover:cursor-pointer transition-all ease-linear w-full h-full object-cover rounded-md" src="/assets/actividades/viajes/Viajes 22.jpg"
+                        alt="">
+                </div>
+                <div class="col-span-3 row-span-4 col-start-3 row-start-3">
+                    <img loading="lazy" class="gallery hover:scale-110 hover:cursor-pointer transition-all ease-linear w-full h-full object-cover rounded-md" src="/assets/actividades/viajes/Viajes 1.jpg" alt="">
+                </div>
+                <div class="col-span-3 row-span-4 col-start-8 row-start-1">
+                    <img loading="lazy" class="gallery hover:scale-110 hover:cursor-pointer transition-all ease-linear w-full h-full object-cover rounded-md" src="/assets/actividades/viajes/Viajes 5.jpg" alt="">
+                </div>
+                <div class="col-span-2 row-span-2 col-start-11 row-start-1">
+                    <img loading="lazy" class="gallery hover:scale-110 hover:cursor-pointer transition-all ease-linear w-full h-full object-cover rounded-md" src="/assets/actividades/viajes/Viajes 14.jpg"
+                        alt="">
+                </div>
+                <div class="col-span-2 row-span-2 col-start-11 row-start-3">
+                    <img loading="lazy" class="gallery hover:scale-110 hover:cursor-pointer transition-all ease-linear w-full h-full object-cover rounded-md" src="/assets/actividades/viajes/Viajes 19.jpg"
+                        alt="">
+                </div>
+                <div class="col-span-2 row-span-2 col-start-1 row-start-3">
+                    <img loading="lazy" class="gallery hover:scale-110 hover:cursor-pointer transition-all ease-linear w-full h-full object-cover rounded-md" src="/assets/actividades/viajes/Viajes 2.jpg"
+                        alt="">
+                </div>
+                <div class="col-span-2 row-span-2 col-start-1 row-start-5">
+                    <img loading="lazy" class="gallery hover:scale-110 hover:cursor-pointer transition-all ease-linear w-full h-full object-cover rounded-md" src="/assets/actividades/viajes/Viajes 15.jpg"
+                        alt="">
+                </div>
+            </div>
+
+        </section> <!-- Fin de los viajes -->
+
+        <section class="w-full flex flex-col justify-center items-center relative overflow-hidden">
+            <div
+                class="bg-black/40 text-white w-full flex flex-col justify-center items-center space-y-4 md:space-y-8 absolute z-10 h-full">
+                <h2 class="font-titulos font-extrabold text-center text-4xl sm:text-6xl md:text-7xl lg:text-8xl">¡La fe es un regalo de Dios que puedes compartir! ❤️</h2>
+                <a href="#"
+                    class="button sm:font-titulos sm:text-3xl sm:px-20 md:text-4xl lg:rounded-[44px] xl:rounded-[68px] lg:font-titulos lg:text-6xl lg:px-40 lg:py-6 hover:bg-sky-500 hover:text-sky-50 hover:border-[5px] lg:hover:border-[10px] transition-all ease-out">¡Conocenos!</a>
+            </div>
+
+            <div class="-z-10 w-full">
+                <img class="w-full object-cover aspect-video" src="/assets/actividades/viajes/Viajes 3.jpg"
+                    alt="Banner final">
+            </div>
+        </section> <!--Fin de invitacion-->
+    </main>
+
+    <footer class="bg-gray-50 flex flex-col justify-center items-center">
+        <div
+            class="w-[90%] border-b-2 border-b-black/20 flex flex-row justify-center items-center sm:justify-between py-6 lg:py-8">
+            <a href="#" class="flex justify-center">
+                <img class="w-[30%] sm:w-[50%] block" src="/assets/nosotros/Logo_MPA-removebg.png" alt="Logo">
+            </a>
+            <nav
+                class="hidden sm:flex text-xl lg:text-5xl text-slate-900 font-titulos font-extrabold justify-evenly gap-4 sm:text-2xl sm:space-x-6 sm:pr-4 md:text-3xl lg:space-x-4">
+                <a href="/index.html" class="nv-i">Inicio</a>
+                <a href="/src/screen/nosotros.html" class="nv-n">Nosotros</a>
+                <a href="/src/screen/actividades.html" class="nv-a">Actividades</a>
+                <a href="#" class="nv-t">Testimonios</a>
+            </nav> <!--Fin de Navegacion-->
+        </div>
+
+        <div class="py-8 flex justify-between items-center">
+            <h4 class="text-5xl md:text-6xl font-titulos font-extrabold">MPA®</h4>
+        </div>
+    </footer>
+
+    <div id="lightbox"
+        class="fixed inset-0 bg-black bg-opacity-85 flex flex-col items-center justify-center hidden z-50 pop animate-duration-500">
+        <span id="close-lightbox"
+            class="rounded-[100%] absolute top-4 right-4 text-gray-300 text-center text-3xl cursor-pointer">&times;</span>
+        <img id="lightbox-img" class="max-w-full max-h-[90%] sm:max-h-[80%] object-contain" src="" alt="Expanded Image">
+    </div>
+</body>
+<script type="module" src="/src/js/actividades/actividades.js"></script>
+
+</html>

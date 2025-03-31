@@ -4,6 +4,171 @@
 @tailwind components;
 @tailwind utilities;
 
+.animate-appear {
+    view-timeline-name: --image;
+    view-timeline-axis: block;
+
+    animation-timeline: --image;
+    animation-name: appear;
+
+    animation-range: entry 20% cover 35%;
+    animation-fill-mode: both;
+}
+
+/* Clases */
+.hd {
+    @apply relative w-full h-screen overflow-hidden;
+}
+
+.hd-container {
+    @apply bg-black/65 absolute w-full h-full grid grid-rows-[7%,85%] sm:grid-rows-[10%,90%] z-10;
+}
+
+.nv {
+    @apply w-full flex items-center px-4;
+}
+
+.nv-container {
+    @apply w-full flex justify-between text-[16px] text-white font-titulos font-extrabold gap-4 sm:text-2xl md:text-3xl lg:text-5xl lg:px-8
+}
+
+.nv-i {
+    @apply down hover:border-b-[3px] lg:hover:border-b-[5px] hover:text-rose-400 hover:border-rose-500 hover:transition-all hover:ease-linear hover:duration-200;
+}
+
+.nv-n {
+    @apply down hover:border-b-[3px] lg:hover:border-b-[5px] hover:text-yellow-400 hover:border-yellow-500 hover:transition-all hover:ease-linear hover:duration-200;
+}
+
+.nv-a {
+    @apply down hover:border-b-[3px] lg:hover:border-b-[5px] hover:text-blue-400 hover:border-blue-500 hover:transition-all hover:ease-linear hover:duration-200;
+}
+
+.nv-t {
+    @apply down hover:border-b-[3px] lg:hover:border-b-[5px] hover:text-green-400 hover:border-green-500 hover:transition-all hover:ease-linear hover:duration-200
+}
+
+.hd-body {
+    @apply flex flex-col justify-center items-center font-extrabold text-center text-5xl sm:text-7xl md:text-8xl lg:text-9xl lg:space-y-12;
+}
+
+.hd-title {
+    @apply text-white font-titulos animate-heartbeat;
+}
+
+/* Index */
+.entrada {
+    @apply animate-jump-in animate-once animate-ease-out animate-normal;
+}
+
+.salida {
+    @apply animate-jump-out animate-once animate-ease-out animate-normal;
+}
+
 .button {
-    @apply font-cuerpos font-bold text-center text-sm border-2 rounded-3xl py-2 px-8 transition-all ease-in duration-300 hover:scale-110;
+    @apply font-cuerpos font-bold text-center text-base border-2 rounded-3xl py-2 px-8 transition-all ease-in duration-300;
+}
+
+.contenedor-principal {
+    @apply w-full flex flex-col justify-center items-center py-8 md:py-12;
+}
+
+.title {
+    @apply text-center text-5xl font-black font-titulos sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl xl:py-0 xl:pb-6;
+}
+
+.pop {
+    @apply animate-fade animate-once animate-ease-in;
+}
+
+.up {
+    @apply animate-fade-up animate-once animate-ease-linear animate-delay-500;
+}
+
+.fade {
+    @apply animate-fade animate-once animate-duration-[2s] animate-ease-linear;
+}
+
+.fade-left {
+    @apply animate-fade-left animate-once animate-ease-out animate-duration-300;
+}
+.fade-right {
+    @apply animate-fade-right animate-once animate-ease-out animate-duration-300;
+}
+
+.down {
+    @apply animate-fade-down animate-once animate-ease-linear animate-delay-500;
+}
+
+.pulse {
+    @apply animate-pulse animate-once animate-ease-linear animate-delay-500;
+}
+
+/*? Logo  */
+.imgLogo {
+    @apply w-[55%] md:w-[40%] lg:w-[28%] xl:w-[25%] rounded-[100%];
+}
+.textLogo {
+    @apply text-gray-900 text-sm text-justify py-2 px-8 font-cuerpos font-medium w-[90%] lg:w-[75%] sm:text-lg md:text-xl lg:text-2xl; 
+}
+
+/** Clases Himno */
+.displayHimno {
+    @apply w-4/5 md:w-[90%] py-8 flex-col md:flex-row gap-4 md:gap-16 items-center justify-around md:justify-center rounded-lg shadow-sm shadow-black/70;
+}
+
+.imgHimno {
+    @apply max-w-[50%] max-h-[50%] mb-4 md:w-2/6 rounded-full shadow-[0_0_10px_rgb(0,0,0,0.75)] animate-spinright;
+}
+
+.divConHimno {
+    @apply w-4/5 md:w-[50%] md:h-full flex flex-col md:justify-center gap-4 overflow-hidden whitespace-nowrap box-border
+}
+
+.textHimno {
+    @apply text-lg md:text-2xl lg:text-4xl font-bold text-gray-50 font-cuerpos animate-marquee;
+}
+
+.iconosReproductor {
+    @apply h-12 sm:h-16 md:h-20 cursor-pointer;
+}
+
+.reproductorHimno {
+    @apply w-full flex items-center justify-center gap-8;
+}
+
+.barraHimno {
+    @apply relative h-3 md:h-4 w-full border bg-fuchsia-100/50 border-fuchsia-300 rounded-md;
+}
+
+.progresoHimno {
+    @apply absolute h-full w-[0%] bg-fuchsia-700 rounded-md;
+}
+
+.timeSound {
+    @apply text-sm font-medium text-gray-300;
+}
+
+/* Historia */
+.displayHistoria {
+    @apply rounded-xl flex flex-col sm:justify-between cursor-pointer w-full sm:w-[45%] lg:w-[30%];
+}
+
+.animate-texts {
+    @apply animate-rotate-x animate-once animate-ease-out animate-duration-[800ms];
+}
+
+/* Momentos */
+.option {
+    @apply rounded-full border border-black p-1
+}
+
+/* Clase por defecto para las opciones */
+.selection {
+    @apply w-5 h-5 rounded-full cursor-pointer;
+}
+
+/* Clase para la opción seleccionada */
+.selection.selected {
+    background-color: black;
 }

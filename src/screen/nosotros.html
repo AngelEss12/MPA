@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/css/estilos.css" />
+    <link rel="stylesheet" href="/src/css/animation.css">
+    <title>Nosotros</title>
+</head>
+
+<body>
+    <header class="hd">
+        <div class="hd-container">
+            <!-- Navegacion -->
+            <div class="sm:hidden flex items-start justify-end relative h-screen">
+                <button id="menuButton" class="mr-3 mt-3 rounded-lg text-white focus:outline-none focus:border-2 focus:border-gray-300 absolute z-50">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+
+                <div id="navMobile" class="hidden fixed overflow-hidden h-full w-full z-40 animate-flip-down animate-once animate-ease-out">
+                    <nav class="w-full h-full flex flex-col justify-between items-center">
+                        <a class="bg-rose-500 hover:bg-rose-400 hover:text-3xl hover:text-rose-950 hover:font-semibold transition-all ease-out h-1/4 w-full text-center flex items-center justify-center text-rose-50 text-2xl font-cuerpos font-medium" href="/">Inicio</a>
+    
+                        <a class="bg-yellow-500 hover:bg-yellow-400 hover:text-3xl hover:text-yellow-950 hover:font-semibold transition-all ease-out h-1/4 w-full text-center flex items-center justify-center text-yellow-50 text-2xl font-cuerpos font-medium" href="/src/screen/nosotros.html">Nosotros</a>
+    
+                        <a class="bg-blue-500 hover:bg-blue-400 hover:text-3xl hover:text-blue-950 hover:font-semibold transition-all ease-out h-1/4 w-full text-center flex items-center justify-center text-blue-50 text-2xl font-cuerpos font-medium" href="/src/screen/actividades.html">Actividades</a>
+    
+                        <a class="bg-green-500 hover:bg-green-400 hover:text-3xl hover:text-green-950 hover:font-semibold transition-all ease-out h-1/4 w-full text-center flex items-center justify-center text-green-50 text-2xl font-cuerpos font-medium" href="/src/screen/testimonios.html">Testimonios</a>
+                    </nav> <!--Fin de Navegacion-->                               
+                </div>
+            </div>
+
+            <div class="hidden sm:flex sm:w-full sm:items-center sm:px-4 sm:pt-2 lg:py-0">
+                <nav class="nv-container">
+                    <a class="nv-i" href="/">Inicio</a>
+
+                    <a class="down border-b-[3px] md:border-b-[5px] text-yellow-400 border-yellow-500" href="/src/screen/nosotros.html">Nosotros</a>
+
+                    <a class="nv-a" href="/src/screen/actividades.html">Actividades</a>
+
+                    <a class="nv-t" href="/src/screen/testimonios.html">Testimonios</a>
+                </nav> <!--Fin de Navegacion-->
+            </div>
+
+            <div class="hd-body xl:text-[240px]">
+                <h1 class="hd-title">Nosotros</h1>
+                <a href="#"
+                    class="text-white font-titulos text-xl my-4 border-2 rounded-3xl md:rounded-[36px] lg:rounded-[44px] xl:rounded-[68px] px-6 jump animate-duration-[.5s] animate-delay-[1.75s] transition-all ease-in duration-300 hover:scale-110 hover:bg-white hover:text-black hover:font-extrabold sm:text-3xl sm:px-12 sm:py-2 md:text-4xl md:px-16 lg:text-5xl lg:m-0 lg:px-20 lg:py-3 xl:px-32 xl:text-6xl z-10">Escribenos</a>
+            </div>
+        </div>
+
+        <div class="h-screen inset-0 w-full -z-10">
+            <img class="w-full h-full object-cover sm:aspect-video absolute inset-0"
+                src="/assets/nosotros/Banner Us.webp" alt="banner nosotros" loading="lazy" />
+        </div>
+    </header>
+
+    <main>
+        <section class="bg-white relative w-full">
+            <div id="burbujas" class="absolute inset-0 z-0 overflow-hidden">
+                <div
+                    class="w-[220px] h-[220px] bg-purple-400 rounded-full filter animate-bubbleup blur-3xl absolute left-10 -bottom-[300px]">
+                </div>
+                <div
+                    class="w-[220px] h-[220px] bg-red-400 rounded-full filter animate-bubbleup-delayed-1 blur-3xl absolute -left-3 -bottom-[50px]">
+                </div>
+                <div
+                    class="w-[220px] h-[220px] bg-yellow-300 rounded-full filter animate-bubbleup-delayed-2 blur-3xl absolute -bottom-[150px] -right-10">
+                </div>
+                <div
+                    class="w-[220px] h-[220px] bg-slate-400 rounded-full filter animate-bubbleup-delayed-3 blur-3xl absolute -bottom-[350px]">
+                </div>
+                <div
+                    class="w-[220px] h-[220px] bg-pink-400 rounded-full filter animate-bubbleup-delayed-4 blur-3xl absolute right-0 -bottom-[400px]">
+                </div>
+                <div
+                    class="w-[220px] h-[220px] bg-lime-300 rounded-full filter animate-bubbleup-delayed-5 blur-3xl absolute left-44 -bottom-[200px]">
+                </div>
+                <div
+                    class="w-[220px] h-[220px] bg-cyan-300 rounded-full filter animate-bubbleup-delayed-6 blur-3xl absolute -right-16 -bottom-[250px]">
+                </div>
+                <div
+                    class="w-[220px] h-[220px] bg-orange-300 rounded-full filter animate-bubbleup-delayed-7 blur-3xl absolute right-20 -bottom-[100px]">
+                </div>
+            </div>
+
+            <div id="container-identidad"
+                class="w-full flex flex-col justify-center items-center z-10 up py-6 space-y-4 md:space-y-6">
+                <h2 class="font-titulos font-extrabold text-5xl sm:text-6xl md:text-7xl lg:text-8xl pt-4">Identidad</h2>
+
+                <div id="h-identidad" class="w-full flex justify-around items-center">
+                    <img id="l-arrow"
+                        class="w-7 h-7 sm:w-10 md:w-12 lg:w-14 sm:h-10 md:h-12 lg:h-14 animate-pulse animate-infinite cursor-pointer"
+                        src="/assets/nosotros/icons/atras.png" alt="Siguiente" />
+
+                    <h3 id="t-identidad"
+                        class="font-titulos font-extrabold text-4xl sm:text-5xl md:text-6xl lg:text-7xl pb-2">Logo</h3>
+
+                    <img id="r-arrow"
+                        class="w-7 h-7w-7 sm:w-10 md:w-12 lg:w-14 sm:h-10 md:h-12 lg:h-14 animate-pulse animate-infinite cursor-pointer"
+                        src="/assets/nosotros/icons/adelante.png" alt="Siguiente" />
+                </div>
+
+                <!-- Contenido identidad adicional aquí Logo - Himno - Creador -->
+                <div class="w-full flex flex-col justify-center items-center">
+                    <div id="c-identidad"
+                        class="w-full mx-auto text-center flex flex-col sm:flex-row justify-center items-center">
+                        <!-- Aqui empieza el logo -->
+                        <div id="display-logo"
+                            class="flex flex-col items-center space-y-4 md:space-y-8 animate-fade-up animate-ease-linear animate-duration-200">
+                            <img id="img" class="imgLogo" src="/assets/nosotros/Logo_MPA-removebg1.png"
+                                alt="Logo del Movimiento">
+
+                            <p id="text-identidad"
+                                class="text-slate-900/95 text-base text-justify lg:text-center px-8 sm:px-16 md:px-20 lg:px-28 font-cuerpos font-semibold sm:text-lg md:text-xl lg:text-2xl xl:text-3xl animate-fade-left animate-ease-linear animate-duration-100">
+                                El logo del Movimiento Pandillas de la Amistad muestra un globo terráqueo con colores
+                                vivos que simbolizan la diversidad y la alegría de la unidad en la fe, reflejando la
+                                riqueza cultural de las distintas regiones del mundo.</p>
+
+                            <p
+                                class="text-slate-900/95 text-base text-justify lg:text-center px-8 sm:px-16 md:px-20 lg:px-28 font-cuerpos font-semibold sm:text-lg md:text-xl lg:text-2xl xl:text-3xl animate-fade-left animate-ease-linear animate-duration-100 hidden">
+                                Sobre el globo, una cruz destaca como símbolo central del cristianismo, recordando que
+                                la fe es fundamental para el movimiento. Alrededor, un grupo de niños tomados de la mano
+                                representa la unión y la amistad que Pandillas de la Amistad busca fomentar en los
+                                jóvenes.
+                            </p>
+
+                            <p
+                                class="text-slate-900/95 text-base text-justify lg:text-center px-8 sm:px-16 md:px-20 lg:px-28 font-cuerpos font-semibold sm:text-lg md:text-xl lg:text-2xl xl:text-3xl animate-fade-left animate-ease-linear animate-duration-100 hidden">
+                                El lema "Unidos Todos... Para Formar un Mundo Mejor" rodea el globo, junto al nombre
+                                "Pandillas de la Amistad". Este mensaje refleja la esencia del movimiento: un llamado a
+                                los jóvenes a unirse en amistad y fe para construir un futuro lleno de esperanza y amor.
+                            </p>
+
+                            <!-- Barra de tiempo para cambiar texto -->
+                            <div
+                                class="w-20 sm:w-28 md:w-32 lg:w-36 xl:w-40 h-2 sm:h-3 md:h-4 bg-slate-700/30 relative flex flex-row justify-center rounded-lg">
+                                <div id="pogress-identidad"
+                                    class="absolute w-full h-2 sm:h-3 md:h-4 bg-slate-700/80 rounded-lg animate-load">
+                                </div>
+                            </div>
+                        </div> <!-- Aqui termina el logo-->
+                        <!-- Aqui empieza el himno -->
+                        <div id="display-himno"
+                            class="displayHimno bg-black/40 hidden animate-fade-up animate-ease-linear animate-duration-200">
+                            <img class="imgHimno" src="/assets/banner/Logo MPA.jpg" alt="Caratula de la cancion">
+
+                            <div id="divConHimno" class="divConHimno">
+                                <p id="textHimno" class="textHimno">Movimiento Pandillas de la amistad <span
+                                        class="ml-[50%]">Movimiento Pandillas de la amistad</span> </p>
+
+                                <div id="barra" class="barraHimno">
+                                    <div id="progresoHimno" class="progresoHimno">
+                                    </div>
+                                </div>
+
+                                <div id="divTime" class="flex justify-between">
+                                    <p class="timeSound" id="timeSound"></p>
+                                    <p class="timeSound" id="durationSound"></p>
+                                </div>
+
+                                <div id="reproductorHimno" class="reproductorHimno">
+                                    <img id="backIcon" class="iconosReproductor"
+                                        src="/assets/nosotros/icons/iconBack.png" alt="Regresar 5s Icono">
+                                    <img id="playIcon" class="iconosReproductor"
+                                        src="/assets/nosotros/icons/iconPlay.png" alt="Reproducir Icono">
+                                    <img id="nextIcon" class="iconosReproductor"
+                                        src="/assets/nosotros/icons/iconNext.png" alt="Adelantar 5s Icono">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Aqui empieza el creador -->
+                        <div id="displayCreador"
+                            class="w-4/5 lg:w-[90%] my-4 lg:my-0 hidden flex-col lg:gap-0 items-center justify-around md:justify-center rounded-lg shadow-sm shadow-black/70 overflow-hidden animate-fade-up animate-ease-linear animate-duration-200">
+
+                            <div
+                                class="w-full bg-slate-700 flex flex-col lg:flex-row justify-center lg:justify-around items-center py-8 lg:py-2">
+
+                                <div
+                                    class="w-[90%] lg:w-[75%] flex flex-col lg:flex-row items-center justify-center lg:justify-start space-y-4 pb-5 lg:pb-0">
+
+                                    <img class="aspect-square object-cover border-[10px] border-slate-500 max-h-60 lg:max-h-48 rounded-full cursor-pointer"
+                                        src="/assets/nosotros/Padre Zamora.webp" alt="Fundador Padre Zamora Perez" />
+
+                                    <div class="lg:text-left lg:pl-4 lg:space-y-4">
+                                        <h3
+                                            class="text-3xl mb-4  md:text-4xl lg:text-5xl font-titulos font-extrabold text-sky-50">
+                                            Padre Antonio Zamora Perez</h3>
+
+                                        <p
+                                            class="text-sm px-4 md:px-0 md:text-lg lg:text-xl font-medium text-slate-200 font-cuerpos">
+                                            Fundador del Movimiento Pandillas de la Amistad</p>
+                                    </div>
+                                </div>
+
+                                <a class="w-[80%] sm:w-[40%] md:w-[30%] lg:w-[20%] button text-slate-900 sm:text-base md:text-xl lg:pr-4 bg-red-400 border-red-300 transition-all hover:scale-110 hover:text-white hover:bg-red-800 hover:border-red-500"
+                                    href="https://www.facebook.com/share/v/ZnM6ig3b5exud4DG/">
+                                    Conocer mas
+                                </a>
+                            </div>
+
+                            <div
+                                class="bg-white/90 font-cuerpos font-semibold flex flex-col justify-center items-center text-base sm:text-lg md:text-xl lg:text-2xl text-justify px-4 md:px-6 lg:px-8 py-4">
+                                <p class="text-gray-950">En los años 70, el padre Antonio Zamora en Toluca, Edo. de
+                                    México, se cuestionó si era suficiente enseñar la fe a los niños sin antes hablarles
+                                    de Jesucristo. Esto lo llevó a crear un movimiento que buscaba un encuentro personal
+                                    de los niños con Jesús. En febrero de 1973, realizó un primer retiro con 43 niños,
+                                    donde comprobó con alegría que su mensaje funcionaba efectivamente.</p>
+                                <div
+                                    class="w-full grid grid-cols-2 grid-rows-2 lg:grid-cols-4 lg:grid-rows-1 gap-4 py-4 justify-items-center items-center">
+                                    <img id="img-5"
+                                        class="min-w-[100px] lg:max-w-52 min-h-[100px] lg:max-h-20max-w-52 aspect-square object-cover rounded-md border-[10px] border-orange-200 transition-all hover:scale-110 ease-out duration-200 cursor-pointer"
+                                        src="/assets/nosotros/galeria/Mensaje.webp" alt="">
+
+                                    <img id="img-6"
+                                        class="min-w-[100px] lg:max-w-52 min-h-[100px] lg:max-h-20max-w-52 aspect-square object-cover rounded-md border-[10px] border-black/50 transition-all hover:scale-110 ease-out duration-200 cursor-pointer"
+                                        src="/assets/nosotros/galeria/Frase.webp" alt="">
+
+                                    <img id="img-7"
+                                        class="min-w-[100px] lg:max-w-52 min-h-[100px] lg:max-h-20max-w-52 aspect-square object-cover rounded-md border-[10px] border-amber-800/50 transition-all hover:scale-110 ease-out duration-200 cursor-pointer"
+                                        src="/assets/nosotros/galeria/Collage Padre.webp" alt="">
+
+                                    <img id="img-8"
+                                        class="min-w-[100px] lg:max-w-52 min-h-[100px] lg:max-h-20max-w-52 aspect-square object-cover rounded-md border-[10px] border-yellow-600/30 transition-all hover:scale-110 ease-out duration-200 cursor-pointer"
+                                        src="/assets/nosotros/galeria/Primer retiro.webp" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> <!--Fin de Identidad-->
+
+        <section class="bg-gray-800 flex flex-col justify-center items-center py-4 space-y-2">
+
+            <div class="flex flex-col justify-center items-center text-center pb-4 space-y-2">
+                <h2 class="font-titulos font-extrabold text-white py-2 text-5xl sm:text-6xl md:text-7xl lg:text-8xl">
+                    Historia</h2>
+
+                <p
+                    class="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-gray-300/90 font-semibold text-justify px-8 sm:px-16 md:px-20 lg:px-28">
+                    El Movimiento "Pandillas de la Amistad" nació de la inquietud del presbítero Antonio Zamora de
+                    evangelizar a los niños, ayudándolos a tener un encuentro personal con Jesucristo. A continuación,
+                    te presentamos los hitos más importantes en la historia de este inspirador movimiento.</p>
+            </div>
+
+            <!--Aqui contenido-->
+            <div id="c-history"
+                class="flex flex-wrap w-[90%] xl:w-full xl:max-h-[1700px] justify-center items-stretch pb-2 lg:pb-8 gap-4">
+                <div class="bg-red-500/85 displayHistoria shadow-[0px_0px_4px_1px_rgba(36,_36,_36,_0.8)]">
+                    <div class="flex flex-row sm:flex-col px-4 md:px-8 py-2 items-center justify-between">
+                        <div class="flex flex-row sm:flex-col sm:space-x-0 sm:space-y-2 items-center space-x-2">
+                            <img class="max-w-16 sm:max-w-20 rounded-full lg:max-w-24 border-[3px]"
+                                src="/assets/nosotros/galeria/Primer retiro.webp" alt="Primer Retiro de niños">
+                            <h3
+                                class="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-titulos font-extrabold text-slate-950/90">
+                                1970</h3>
+                        </div>
+                        <p
+                            class="text-sm text-wrap sm:text-base lg:text-lg xl:text-xl text-slate-950/90 text-right sm:text-center font-semibold">
+                            Idea del Movimiento</p>
+                    </div>
+                    <p class="hidden md:h-[50%] xl:h-[65%] rounded-b-lg px-4 md:px-8 xl:px-10 xl:py-3 py-2 bg-white/80 text-sm md:text-base lg:text-lg xl:text-xl text-justify text-slate-800 font-medium"
+                        data-history>Principios de los 70s: El presbítero Antonio Zamora, sirviendo en Toluca, se
+                        pregunta si es suficiente catequizar a los niños sin antes evangelizarlos.</p>
+                </div>
+
+                <div class="bg-orange-500/85 displayHistoria shadow-[0px_0px_4px_1px_rgba(36,_36,_36,_0.8)]">
+                    <div class="flex flex-row sm:flex-col px-4 md:px-8 py-2 items-center justify-between">
+                        <div class="flex flex-row sm:flex-col sm:space-x-0 sm:space-y-2 items-center space-x-2">
+                            <img class="max-w-16 sm:max-w-20 rounded-full lg:max-w-24 border-[3px]"
+                                src="/assets/nosotros/galeria/Primer retiro.webp" alt="Primer Retiro de niños">
+                            <h3
+                                class="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-titulos font-extrabold text-slate-950/90">
+                                1973</h3>
+                        </div>
+                        <p
+                            class="text-sm sm:text-base lg:text-lg xl:text-xl text-slate-950/90 text-right sm:text-center font-semibold">
+                            Creación del Movimiento</p>
+                    </div>
+
+                    <p class="hidden md:h-[50%] xl:h-[65%] rounded-b-lg px-4 md:px-8 xl:px-10 xl:py-3 py-2 bg-white/80 text-sm md:text-base lg:text-lg xl:text-xl text-justify text-slate-800 font-medium"
+                        data-history>Febrero 13-15, 1973: Primer retiro organizado por el Padre Zamora con 43 niños en
+                        Toluca. El resultado fue exitoso, comprobando que los niños respondían bien al mensaje.</p>
+                </div>
+
+                <div class="bg-yellow-500/85 displayHistoria shadow-[0px_0px_4px_1px_rgba(36,_36,_36,_0.8)]">
+                    <div class="flex flex-row sm:flex-col px-4 md:px-8 py-2 items-center justify-between">
+                        <div class="flex flex-row sm:flex-col sm:space-x-0 sm:space-y-2 items-center space-x-2">
+                            <img class="max-w-16 sm:max-w-20 rounded-full lg:max-w-24 border-[3px]"
+                                src="/assets/nosotros/galeria/Primer retiro.webp" alt="Primer Retiro de niños">
+                            <h3
+                                class="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-titulos font-extrabold text-slate-950/90">
+                                1974</h3>
+                        </div>
+
+                        <p
+                            class="text-sm sm:text-base lg:text-lg xl:text-xl text-slate-950/90 text-right sm:text-center font-semibold">
+                            Definición del Movimiento</p>
+                    </div>
+
+                    <p class="hidden md:h-[50%] xl:h-[65%] rounded-b-lg px-4 md:px-8 xl:px-10 xl:py-3 py-2 bg-white/80 text-sm md:text-base lg:text-lg xl:text-xl text-justify text-slate-800 font-medium"
+                        data-history>Se lleva a cabo un segundo retiro con niñas de entre 10 y 13 años. Se decide
+                        nombrar al movimiento "Pandillas de la Amistad", enfocándose en crear grupos que construyan en
+                        lugar de destruir.</p>
+                </div>
+
+                <div class="bg-lime-500/85 displayHistoria shadow-[0px_0px_4px_1px_rgba(36,_36,_36,_0.8)]">
+                    <div class="flex flex-row sm:flex-col px-4 md:px-8 py-2 items-center justify-between">
+                        <div class="flex flex-row sm:flex-col sm:space-x-0 sm:space-y-2 items-center space-x-2">
+                            <img class="max-w-16 sm:max-w-20 rounded-full lg:max-w-24 border-[3px]"
+                                src="/assets/nosotros/galeria/Primer retiro.webp" alt="Primer Retiro de niños">
+                            <h3
+                                class="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-titulos font-extrabold text-slate-950/90">
+                                1980s</h3>
+                        </div>
+
+                        <p
+                            class="text-sm sm:text-base lg:text-lg xl:text-xl text-slate-950/90 text-right sm:text-center font-semibold">
+                            Expansión Regional</p>
+                    </div>
+
+                    <p class="hidden md:h-[50%] xl:h-[65%] rounded-b-lg px-4 md:px-8 xl:px-10 xl:py-3 py-2 bg-white/80 text-sm md:text-base lg:text-lg xl:text-xl text-justify text-slate-800 font-medium"
+                        data-history> El movimiento se expande rápidamente en Veracruz, llegando a Huatusco, Córdoba,
+                        Coscomatepec, y otros lugares. Se realiza el Primer Encuentro Nacional, promoviendo la
+                        unificación del movimiento.</p>
+                </div>
+
+                <div class="bg-blue-500/85 displayHistoria shadow-[0px_0px_4px_1px_rgba(36,_36,_36,_0.8)]">
+                    <div class="flex flex-row sm:flex-col px-4 md:px-8 py-2 items-center justify-between">
+                        <div class="flex flex-row sm:flex-col sm:space-x-0 sm:space-y-2 items-center space-x-2">
+                            <img class="max-w-16 sm:max-w-20 rounded-full lg:max-w-24 border-[3px]"
+                                src="/assets/nosotros/galeria/Primer retiro.webp" alt="Primer Retiro de niños">
+                            <h3
+                                class="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-titulos font-extrabold text-slate-950/90">
+                                1996</h3>
+                        </div>
+
+                        <p
+                            class="text-sm sm:text-base lg:text-lg xl:text-xl text-slate-950/90 text-right sm:text-center font-semibold">
+                            Reconocimiento Oficial</p>
+                    </div>
+
+                    <p class="hidden md:h-[50%] xl:h-[65%] rounded-b-lg px-4 md:px-8 xl:px-10 xl:py-3 py-2 bg-white/80 text-sm md:text-base lg:text-lg xl:text-xl text-justify text-slate-800 font-medium"
+                        data-history>15 de enero de 1996: La Iglesia Católica reconoce oficialmente al movimiento
+                        "Pandillas de la Amistad" como una Asociación Católica Privada y Nacional, dedicada a la
+                        evangelización de niños. Se nombra el primer Secretariado Nacional.</p>
+                </div>
+
+                <div class="bg-purple-500/85 displayHistoria shadow-[0px_0px_4px_1px_rgba(36,_36,_36,_0.8)]">
+                    <div class="flex flex-row sm:flex-col px-4 md:px-8 py-2 items-center justify-between">
+                        <div class="flex flex-row sm:flex-col sm:space-x-0 sm:space-y-2 items-center space-x-2">
+                            <img class="max-w-16 sm:max-w-20 rounded-full lg:max-w-24 border-[3px]"
+                                src="/assets/nosotros/galeria/Primer retiro.webp" alt="Primer Retiro de niños">
+                            <h3
+                                class="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-titulos font-extrabold text-slate-950/90">
+                                1996</h3>
+                        </div>
+
+                        <p
+                            class="text-sm sm:text-base lg:text-lg xl:text-xl text-slate-950/90 text-right sm:text-center font-semibold">
+                            Consolidación y Renovación</p>
+                    </div>
+                    <p class="hidden md:h-[50%] xl:h-[65%] rounded-b-lg px-4 md:px-8 xl:px-10 xl:py-3 py-2 bg-white/80 text-sm md:text-base lg:text-lg xl:text-xl text-justify text-slate-800 font-medium"
+                        data-history>Desde 1996: El Secretariado Nacional se renueva cada tres años, asegurando la
+                        continuidad y evolución del movimiento. El legado del Padre Zamora sigue vivo, con antiguos
+                        participantes ahora sirviendo como líderes dentro del movimiento.</p>
+                </div>
+            </div>
+        </section> <!--Fin de la Historia-->
+
+        <section class="bg-gradiente-v2 relative w-full pb-4">
+            <div class="flex flex-col justify-center items-center py-4 space-y-2 z-10">
+                <h2
+                    class="font-titulos font-extrabold text-center text-black py-2 text-5xl sm:text-6xl md:text-7xl lg:text-8xl">
+                    Momentos</h2>
+
+                <p
+                    class="text-slate-900/90 text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-cuerpos font-semibold text-justify px-8 sm:px-16 md:px-20 lg:px-28">
+                    ¡En Pandillas de la Amistad, vivimos tres momentos únicos! 🌟 Cada uno está diseñado para que la
+                    experiencia sea inolvidable: desde la preparación y el retiro hasta las actividades que mantienen
+                    viva la enseñanza. ¡Es un camino lleno de conexión, aprendizaje y diversión! 🚀</p>
+            </div>
+
+            <!--Momentos descripcion-->
+            <div class="slider-container flex overflow-hidden relative w-[90%] lg:w-full py-2 mx-auto lg:mx-0">
+                <div
+                    class="slider w-full flex items-stretch lg:justify-center lg:items-start lg:w-full xl:justify-center transition-transform duration-300 ease-linear">
+                    <div
+                        class="card flex justify-center flex-shrink-0 w-full sm:w-[50%] lg:w-[32%] lg:h-full px-2 sm:px-4">
+                        <div
+                            class="lg:w-full flex flex-col items-center rounded-2xl overflow-hidden shadow-[1px_0px_5px_rgb(0,0,0)] bg-[#548733] animate-fade animate-duration-[1s] animate-ease-linear">
+                            <video autoplay loop muted class="w-full">
+                                <source src="/assets/nosotros/momentos/Banner video.mp4" type="video/mp4">
+                            </video>
+
+                            <div class="flex flex-col items-center text-center">
+                                <h3
+                                    class="w-[90%] text-slate-200 font-cuerpos text-2xl py-6 lg:text-3xl font-extrabold animate-heartbeat">
+                                    ¡Pre Pandilla, la fase de preparación!</h3>
+                                <p
+                                    class="w-[80%] text-lime-50 pb-6 font-cuerpos font-medium text-base md:text-lg lg:text-xl text-justify">
+                                    Aquí comienza todo. Los equipos se ponen manos a la obra para organizar cada detalle: desde las charlas inspiradoras hasta los materiales que se usarán durante el retiro. Todo está pensado para que el retiro sea una <span class="font-extrabold">experiencia
+                                        inolvidable.</span></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="card flex justify-center flex-shrink-0 w-full sm:w-[50%] lg:w-[32%] lg:h-full px-2 sm:px-4">
+                        <div
+                            class="lg:w-full flex flex-col items-center rounded-2xl overflow-hidden shadow-[1px_0px_5px_rgb(0,0,0)] bg-[#c17400] animate-fade animate-duration-[1s] animate-ease-linear">
+                            <img class="w-full aspect-video object-cover" src="/assets/nosotros/momentos/Pandilla.jpeg"
+                                alt="Pandilla">
+
+                            <div class="flex flex-col items-center text-center">
+                                <h3
+                                    class="w-[90%] text-slate-200 lgpx-4 py-6 font-cuerpos text-2xl lg:text-3xl font-extrabold animate-heartbeat">
+                                    ¡Pandilla, el momento clave!</h3>
+
+                                <p
+                                    class="w-[80%] font-cuerpos font-medium pb-6 text-orange-50 text-base md:text-lg lg:text-xl text-justify">
+                                    El retiro comienza el viernes por la tarde y culmina el domingo. Se lleva a cabo en
+                                    una casa especial, completamente aislada del mundo exterior. ¡Es una experiencia
+                                    inmersiva y <span class="font-extrabold">transformadora</span> que te desconecta de
+                                    todo para conectar contigo mismo y con los demás!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="card flex justify-center flex-shrink-0 w-full sm:w-[50%] lg:w-[32%] lg:h-full px-2 sm:px-4">
+                        <div
+                            class="lg:w-full flex flex-col items-center rounded-2xl overflow-hidden shadow-[1px_0px_5px_rgb(0,0,0)] bg-[#c6005c] animate-fade animate-duration-[1s] animate-ease-linear">
+                            <img class="w-full aspect-video object-cover"
+                                src="/assets/nosotros/momentos/Postpandilla.jpeg" alt="Post-Pandilla">
+
+                            <div class="flex flex-col items-center text-center">
+
+                                <h3
+                                    class="w-[90%] text-slate-200 font-cuerpos py-6 text-2xl lg:text-3xl font-extrabold animate-heartbeat">
+                                    ¡Post Pandilla, el viaje continúa!</h3>
+
+                                <p
+                                    class="w-[80%] text-pink-50 font-cuerpos font-medium text-base md:text-lg lg:text-xl pb-6 text-justify">
+                                    Después de vivir el retiro, comienza la verdadera aventura. Los sábados, los niños
+                                    asisten a talleres llenos de <span class="font-extrabold">charlas dinámicas y
+                                        actividades especiales</span> que refuerzan todo lo aprendido. ¡Es la clave para
+                                    que los valores y enseñanzas sigan presentes en su día a día!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Controles del Slider -->
+            <button id="prevBtn"
+                class="hidden sm:block lg:hidden absolute left-[4%] lg:left-[6%] top-[60%] xl:top-[68%] transform -translate-y-1/2 bg-slate-300 p-2 lg:p-4 rounded-full"><img
+                    class="w-5 lg:w-6" src="/assets/virtudes/icons/flecha izquierda.png" alt="Boton Atras"></button>
+            <button id="nextBtn"
+                class="hidden sm:block lg:hidden absolute right-[4%] lg:right-[6%] top-[60%] xl:top-[68%] transform -translate-y-1/2 bg-slate-300 p-2 lg:p-4 rounded-full"><img
+                    class="w-5 lg:w-6" src="/assets/virtudes/icons/flecha derecha.png" alt="Boton Siguiente"></button>
+
+            <div class="flex sm:hidden w-full justify-center lg:pt-8 space-x-2">
+                <div class="bg-slate-300 w-5 h-5 lg:w-7 lg:h-7 flex justify-center items-center rounded-full">
+                    <div class="point w-3 lg:w-5 h-3 lg:h-5 rounded-full bg-slate-500"></div>
+                </div>
+                <div class="bg-slate-300 w-5 h-5 lg:w-7 lg:h-7 flex justify-center items-center rounded-full">
+                    <div class="point w-3 lg:w-5 h-3 lg:h-5 rounded-full"></div>
+                </div>
+                <div class="bg-slate-300 w-5 h-5 lg:w-7 lg:h-7 flex justify-center items-center rounded-full">
+                    <div class="point w-3 lg:w-5 h-3 lg:h-5 rounded-full"></div>
+                </div>
+            </div>
+            </div>
+        </section> <!--Fin de Momentos-->
+
+        <section class="bg-gradiente-v3 flex flex-col justify-center items-center py-4 lg:py-6 space-y-4">
+            <h2 class="font-titulos font-extrabold text-blue-50 text-5xl sm:text-6xl md:text-7xl lg:text-8xl">Equipo
+            </h2>
+
+            <p
+                class="font-cuerpos font-semibold text-base text-slate-100/80 text-justify md:text-lg lg:text-center lg:text-xl xl:text-2xl py-3 md:py-4 lg:py-6 px-8 sm:px-16 md:px-20 lg:px-28">
+                Aquí te presentamos a las personas que hacen posible que Pandillas de la Amistad sea lo que es 💥. El
+                corazón que nos conecta con la fe 🙏. ¡Y juntos formamos un Mundo mejor!
+            </p>
+
+            <div id="equipo"
+                class="w-[90%] xl:w-full flex flex-col lg:flex-row lg:flex-wrap justify-center items-center lg:items-stretch lg:space-x-4">
+                <!--Contendor de Niños-->
+                <div
+                    class="max-w-[400px] md:max-w-[512px] lg:w-[47%] xl:w-[23%] flex flex-col justify-center items-center xl:place-content-stretch space-y-4 pb-2 lg:pb-8 animate-fade-up duration-1000 ease-out">
+                    <div class="relative flex justify-center items-center z-10">
+                        <div
+                            class="absolute m-auto flex justify-center w-[80%] h-[100%] items-center -z-10 bg-blue-300 rounded-full animate-pulse duration-100 animate-infinite">
+                            <div
+                                class="absolute m-auto flex justify-center w-[95%] h-[95%] items-center -z-10 bg-blue-400 rounded-full animate-pulse duration-100 animate-infinite">
+                                <div
+                                    class="absolute m-auto flex justify-center w-[95%] h-[95%] items-center -z-10 bg-blue-500 rounded-full animate-pulse duration-100 animate-infinite">
+                                </div>
+                            </div>
+                        </div>
+                        <img class="aspect-square rounded-full object-cover w-[70%] m-4 animate-heartbeat"
+                            src="/assets/team/Niños.jpeg" alt="Niños">
+                    </div>
+                    <div class="w-full bg-white/10 rounded-xl flex flex-col justify-center 
+                    lg:justify-start items-center h-full my-2 overflow-hidden">
+                        <h3
+                            class="bg-blue-900/60 w-full py-2 text-3xl sm:text-4xl md:text-5xl font-titulos text-center text-white font-bold">
+                            Niños</h3>
+                        <p
+                            class="w-full px-8 py-3 lg:px-8 lg:py-8 text-white font-cuerpos font-medium text-justify text-base md:text-lg lg:text-xl">
+                            ¡Los niños son la esencia y el corazón de Pandillas de la Amistad! 🙌 Con su energía y fe,
+                            están llamados a compartir lo que aprenden y llevar el mensaje a otros. ¡Son el motor y el
+                            futuro del movimiento! 🌟</p>
+                    </div>
+                </div>
+
+                <!--Contendor de Asesores Espirituales-->
+                <div
+                    class="hidden lg:flex max-w-[400px] md:max-w-[512px] lg:w-[47%] xl:w-[23%] flex flex-col justify-center items-center xl:place-content-stretch space-y-4 pb-2 lg:pb-8 animate-fade-up duration-1000 ease-out">
+                    <div class="relative flex justify-center items-center z-10">
+                        <div
+                            class="absolute m-auto flex justify-center w-[80%] h-[100%] items-center -z-10 bg-lime-300 rounded-full animate-pulse duration-100 animate-infinite">
+                            <div
+                                class="absolute m-auto flex justify-center w-[95%] h-[95%] items-center -z-10 bg-lime-400 rounded-full animate-pulse duration-100 animate-infinite">
+                                <div
+                                    class="absolute m-auto flex justify-center w-[95%] h-[95%] items-center -z-10 bg-lime-500 rounded-full animate-pulse duration-100 animate-infinite">
+                                </div>
+                            </div>
+                        </div>
+                        <img class="aspect-square rounded-full object-cover w-[70%] m-4 animate-heartbeat"
+                            src="/assets/nosotros/Padre Zamora.webp" alt="Asesor Espiritual">
+                    </div>
+                    <div class="w-full bg-white/10 rounded-xl flex flex-col justify-center 
+                    lg:justify-start items-center h-full my-2 overflow-hidden">
+                        <h3
+                            class="bg-lime-900/60 w-full py-2 text-3xl sm:text-4xl md:text-5xl font-titulos text-center text-white font-bold">
+                            Asesor Espiritual</h3>
+                        <p
+                            class="w-full px-8 py-3 lg:px-8 lg:py-8 text-white font-cuerpos font-medium text-justify text-base md:text-lg lg:text-xl">
+                            El guía espiritual ✨ es nuestro faro en el camino hacia Dios 🙏, siempre dispuesto a aclarar
+                            dudas y fortalecer nuestra fe. Su presencia nos inspira a seguir el ejemplo de Jesús y a
+                            vivir con amor y servicio.</p>
+                    </div>
+                </div>
+
+                <!--Contendor de Tios-->
+                <div
+                    class="hidden lg:flex max-w-[400px] md:max-w-[512px] lg:w-[47%] xl:w-[23%] flex flex-col justify-center items-center xl:place-content-stretch space-y-4 pb-2 lg:pb-8 animate-fade-up duration-1000 ease-out">
+                    <div class="relative flex justify-center items-center z-10">
+                        <div
+                            class="absolute m-auto flex justify-center w-[80%] h-[100%] items-center -z-10 bg-yellow-300 rounded-full animate-pulse duration-100 animate-infinite">
+                            <div
+                                class="absolute m-auto flex justify-center w-[95%] h-[95%] items-center -z-10 bg-yellow-400 rounded-full animate-pulse duration-100 animate-infinite">
+                                <div
+                                    class="absolute m-auto flex justify-center w-[95%] h-[95%] items-center -z-10 bg-yellow-500 rounded-full animate-pulse duration-100 animate-infinite">
+                                </div>
+                            </div>
+                        </div>
+                        <img class="aspect-square rounded-full object-cover w-[70%] m-4 animate-heartbeat"
+                            src="/assets/team/Tios.jpeg" alt="Asesor Espiritual">
+                    </div>
+                    <div class="w-full bg-white/10 rounded-xl flex flex-col justify-center 
+                    lg:justify-start items-center h-full my-2 overflow-hidden">
+                        <h3
+                            class="bg-yellow-900/60 w-full py-2 text-3xl sm:text-4xl md:text-5xl font-titulos text-center text-white font-bold">
+                            Tios</h3>
+                        <p
+                            class="w-full px-8 py-3 lg:px-8 lg:py-8 text-white font-cuerpos font-medium text-justify text-base md:text-lg lg:text-xl">
+                            ¡Los protectores y guías del grupo! 💪👨‍👩‍👧‍👦 Los tíos cuidan a todos con sabiduría y
+                            valentía, siempre listos para acompañar y apoyar. Con su ejemplo, nos enseñan a enfrentar
+                            desafíos y a vivir con propósito. ¡Son nuestro apoyo constante! 🚀</p>
+                    </div>
+                </div>
+
+                <!--Contendor de Papis-->
+                <div
+                    class="hidden lg:flex max-w-[400px] md:max-w-[512px] lg:w-[47%] xl:w-[23%] flex flex-col justify-center items-center xl:place-content-stretch space-y-4 pb-2 lg:pb-8 animate-fade-up duration-1000 ease-out">
+                    <div class="relative flex justify-center items-center z-10">
+                        <div
+                            class="absolute m-auto flex justify-center w-[80%] h-[100%] items-center -z-10 bg-fuchsia-300 rounded-full animate-pulse duration-100 animate-infinite">
+                            <div
+                                class="absolute m-auto flex justify-center w-[95%] h-[95%] items-center -z-10 bg-fuchsia-400 rounded-full animate-pulse duration-100 animate-infinite">
+                                <div
+                                    class="absolute m-auto flex justify-center w-[95%] h-[95%] items-center -z-10 bg-fuchsia-500 rounded-full animate-pulse duration-100 animate-infinite">
+                                </div>
+                            </div>
+                        </div>
+                        <img class="aspect-square rounded-full object-cover w-[70%] m-4 animate-heartbeat"
+                            src="/assets/team/Papis.jpeg" alt="Asesor Espiritual">
+                    </div>
+                    <div class="w-full bg-white/10 rounded-xl flex flex-col justify-center 
+                    lg:justify-start items-center h-full my-2 overflow-hidden">
+                        <h3
+                            class="bg-fuchsia-900/60 w-full py-2 text-3xl sm:text-4xl md:text-5xl font-titulos text-center text-white font-bold">
+                            Papis</h3>
+                        <p
+                            class="w-full px-8 py-3 lg:px-8 lg:py-8 text-white font-cuerpos font-medium text-justify text-base md:text-lg lg:text-xl">
+                            ¡El enlace entre niños y tíos! 🌉 Con su carisma y energía, los papis son ejemplos a seguir
+                            y crean un ambiente positivo en el movimiento. Ellos inspiran a los niños a crecer en amor y
+                            responsabilidad hacia Dios y la comunidad.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Seleccion de Integrante -->
+            <div id="Integrantes" class="flex lg:hidden items-center justify-center space-x-8 px-4 py-4">
+                <div id="niños"
+                    class="text-center text-white cursor-pointer hover:text-blue-400 hover:scale-125 transition-all ease-linear duration-200">
+                    <img class="max-w-12 sm:max-w-16 object-cover rounded-full aspect-square"
+                        src="/assets/team/Niños.jpeg" alt="Seleccionar Info Niños">
+                    <h3 class="font-semibold font-cuerpos text-base mt-2">Niños</h3>
+                </div>
+
+                <div id="asesor"
+                    class="text-center text-white cursor-pointer hover:text-green-400 hover:scale-125 transition-all ease-linear duration-200">
+                    <img class="max-w-12 sm:max-w-16 object-cover rounded-full aspect-square"
+                        src="/assets/nosotros/Padre Zamora.webp" alt="Seleccionar Info Asesor Espiritual">
+                    <h3 class="font-semibold font-cuerpos text-base mt-2">Asesor</h3>
+                </div>
+
+                <div id="tios"
+                    class="text-center text-white cursor-pointer hover:text-yellow-400 hover:scale-125 transition-all ease-linear duration-200">
+                    <img class="max-w-12 sm:max-w-16 object-cover rounded-full aspect-square"
+                        src="/assets/team/Tios.jpeg" alt="Seleccionar Info Tios">
+                    <h3 class="font-semibold font-cuerpos text-base mt-2">Tios</h3>
+                </div>
+
+                <div id="papis"
+                    class="text-center text-white cursor-pointer hover:text-fuchsia-400 hover:scale-125 transition-all ease-linear duration-200">
+                    <img class="max-w-12 sm:max-w-16 object-cover rounded-full aspect-square"
+                        src="/assets/team/Papis.jpeg" alt="Seleccionar Info Papis">
+                    <h3 class="font-semibold font-cuerpos text-base mt-2">Papis</h3>
+                </div>
+            </div>
+        </section> <!--Fin de Organizacion-->
+
+        <section class="w-full flex flex-col justify-center items-center relative overflow-hidden">
+            <div
+                class="bg-black/40 text-white w-full flex flex-col justify-center items-center space-y-4 md:space-y-8 absolute z-10 h-full">
+                <h2 class="font-titulos font-extrabold text-center text-4xl sm:text-6xl md:text-7xl lg:text-8xl">¡Únete
+                    a MPA!</h2>
+                <a href="#"
+                    class="button sm:font-titulos sm:text-3xl sm:px-20 md:text-4xl lg:rounded-[44px] xl:rounded-[68px] lg:font-titulos lg:text-6xl lg:px-40 lg:py-6 hover:bg-amber-500 hover:text-amber-50 hover:border-[5px] lg:hover:border-[10px] transition-all ease-out">¡Buscanos!</a>
+            </div>
+
+            <div class="-z-10 w-full">
+                <img class="w-full object-cover aspect-video" src="/assets/nosotros/momentos/Banner invitacion.jpeg"
+                    alt="Banner final">
+            </div>
+        </section> <!--Fin de invitacion-->
+    </main>
+
+    <footer class="bg-gray-50 flex flex-col justify-center items-center">
+        <div
+            class="w-[90%] border-b-2 border-b-black/20 flex flex-row justify-center items-center sm:justify-between py-6 lg:py-8">
+            <a href="#" class="flex justify-center">
+                <img class="w-[30%] sm:w-[50%] block" src="/assets/nosotros/Logo_MPA-removebg.png" alt="Logo">
+            </a>
+            <nav
+                class="hidden sm:flex text-xl lg:text-5xl text-slate-900 font-titulos font-extrabold justify-evenly gap-4 sm:text-2xl sm:space-x-6 sm:pr-4 md:text-3xl lg:space-x-4">
+                <a href="/index.html" class="nv-i">Inicio</a>
+                <a href="/src/screen/nosotros.html" class="nv-n">Nosotros</a>
+                <a href="/src/screen/actividades.html" class="nv-a">Actividades</a>
+                <a href="#" class="nv-t">Testimonios</a>
+            </nav> <!--Fin de Navegacion-->
+        </div>
+
+        <div class="py-8 flex justify-between items-center">
+            <h4 class="text-5xl md:text-6xl font-titulos font-extrabold">MPA®</h4>
+        </div>
+    </footer>
+
+    <div id="lightbox"
+        class="fixed inset-0 bg-black bg-opacity-75 flex flex-col items-center justify-center hidden z-50 pop animate-duration-500">
+        <span id="close-lightbox"
+            class="rounded-[100%] absolute top-4 right-4 text-gray-300 text-center text-3xl cursor-pointer">&times;</span>
+        <img id="lightbox-img" class="max-w-full max-h-full sm:max-h-[85%] object-contain" src="" alt="Expanded Image">
+    </div>
+
+</body>
+
+<script type="module" src="/src/js/nosotros/nosotros.js"></script>
+
+</html>

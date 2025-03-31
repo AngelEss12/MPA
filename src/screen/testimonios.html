@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/css/estilos.css">
+    <title>Testimonios</title>
+</head>
+
+<body>
+    <header class="hd">
+        <div class="hd-container">
+            <!-- Navegacion -->
+            <div class="sm:hidden flex items-start justify-end relative h-screen">
+                <button id="menuButton" class="mr-3 mt-3 rounded-lg text-white focus:outline-none focus:border-2 focus:border-gray-300 absolute z-50">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+
+                <div id="navMobile" class="hidden fixed overflow-hidden h-full w-full z-40 animate-flip-down animate-once animate-ease-out">
+                    <nav class="w-full h-full flex flex-col justify-between items-center">
+                        <a class="bg-rose-500 hover:bg-rose-400 hover:text-3xl hover:text-rose-950 hover:font-semibold transition-all ease-out h-1/4 w-full text-center flex items-center justify-center text-rose-50 text-2xl font-cuerpos font-medium" href="/">Inicio</a>
+    
+                        <a class="bg-yellow-500 hover:bg-yellow-400 hover:text-3xl hover:text-yellow-950 hover:font-semibold transition-all ease-out h-1/4 w-full text-center flex items-center justify-center text-yellow-50 text-2xl font-cuerpos font-medium" href="/src/screen/nosotros.html">Nosotros</a>
+    
+                        <a class="bg-blue-500 hover:bg-blue-400 hover:text-3xl hover:text-blue-950 hover:font-semibold transition-all ease-out h-1/4 w-full text-center flex items-center justify-center text-blue-50 text-2xl font-cuerpos font-medium" href="/src/screen/actividades.html">Actividades</a>
+    
+                        <a class="bg-green-500 hover:bg-green-400 hover:text-3xl hover:text-green-950 hover:font-semibold transition-all ease-out h-1/4 w-full text-center flex items-center justify-center text-green-50 text-2xl font-cuerpos font-medium" href="/src/screen/testimonios.html">Testimonios</a>
+                    </nav> <!--Fin de Navegacion-->                               
+                </div>
+            </div>
+
+            <div class="hidden sm:flex sm:w-full sm:items-center sm:px-4 sm:pt-2 lg:py-0">
+                <nav class="nv-container">
+                    <a class="nv-i" href="/">Inicio</a>
+
+                    <a class="nv-n" href="/src/screen/nosotros.html">Nosotros</a>
+
+                    <a class="nv-a" href="/src/screen/actividades.html">Actividades</a>
+
+                    <a class="down border-b-[3px] md:border-b-[5px] text-green-400 border-green-500" href="/src/screen/testimonios.html">Testimonios</a>
+                </nav> <!--Fin de Navegacion-->
+            </div>
+
+            <div class="hd-body xl:text-[240px]">
+                <h1 class="hd-title">Testimonios</h1>
+            </div>
+        </div>
+
+        <div class="h-screen inset-0 w-full -z-10">
+            <img class="w-full h-full object-cover sm:aspect-video absolute inset-0"
+                src="/assets/testimonios/Testimonios.jpg" alt="banner nosotros" loading="lazy" />
+        </div>
+    </header>
+</body>
+<script src="/src/js/testimonios/testimonio.js"></script>
+
+</html>
