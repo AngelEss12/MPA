@@ -9,27 +9,24 @@ document.addEventListener("DOMContentLoaded", () => {
   initTouchListeners(inicio.virtudes.slider, nextVirtud, backVirtud)
 });
 
-// Función para mostrar el menú mobile
+// Header
+const { mediaQueryImg } = inicio.header;
+let sliderInterval = setInterval(() => actualizarBGIMG(mediaQueryImg), 4500); // Configurar intervalo
+
+// Manejar resize correctamente
+mediaQueryImg.addEventListener('change', actualizarBGIMG);
+
+// Menú mobile
 const { menuBurger, navMobile, body } = inicio.menu
 menuBurger.addEventListener('click', () => {
   navMobile.classList.toggle('hidden');
   body.classList.toggle('overflow-hidden');
 });
 
-// Funciones para la seccion de virtudes
-// Evento para el botón "Siguiente"
-inicio.virtudes.nextBtn.addEventListener('click', nextVirtud);
+// Virtudes
+inicio.virtudes.nextBtn.addEventListener('click', nextVirtud); // Evento para el botón "Siguiente"
 
-// Evento para el botón "Anterior"
-inicio.virtudes.prevBtn.addEventListener('click',  backVirtud);
-
-// Header
-// Configurar intervalo
-const { mediaQueryImg } = inicio.header;
-let sliderInterval = setInterval(() => actualizarBGIMG(mediaQueryImg), 4500);
-
-// Manejar resize correctamente
-mediaQueryImg.addEventListener('change', actualizarBGIMG);
+inicio.virtudes.prevBtn.addEventListener('click',  backVirtud); // Evento para el botón "Anterior"
 
 // Pausar con un boton al interactuar
 // document.querySelectorAll('a, button').forEach(element => {
