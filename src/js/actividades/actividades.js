@@ -33,7 +33,7 @@ moveright();
 })
 
 // Seccion de Viajes
-const { galleryViajes, closeBtn } = actividades.viajes;
+const { galleryViajes, closeBtn, container } = actividades.viajes;
 
 galleryViajes.forEach(img => {
   mostrarImg(img);
