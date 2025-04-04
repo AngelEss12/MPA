@@ -984,14 +984,6 @@ video {
   height: 100vh;
 }
 
-.h-\[90\%\]{
-  height: 90%;
-}
-
-.h-\[50\%\]{
-  height: 50%;
-}
-
 .max-h-60{
   max-height: 15rem;
 }
@@ -2453,6 +2445,11 @@ video {
 .text-yellow-50{
   --tw-text-opacity: 1;
   color: rgb(254 252 232 / var(--tw-text-opacity, 1));
+}
+
+.text-slate-100{
+  --tw-text-opacity: 1;
+  color: rgb(241 245 249 / var(--tw-text-opacity, 1));
 }
 
 .opacity-0{
@@ -4150,6 +4147,10 @@ video {
     left: 6%;
   }
 
+  .lg\:right-10{
+    right: 2.5rem;
+  }
+
   .lg\:right-\[6\%\]{
     right: 6%;
   }
@@ -4525,12 +4526,20 @@ video {
     top: 68%;
   }
 
+  .xl\:aspect-auto{
+    aspect-ratio: auto;
+  }
+
   .xl\:aspect-video{
     aspect-ratio: 16 / 9;
   }
 
   .xl\:h-\[65\%\]{
     height: 65%;
+  }
+
+  .xl\:h-screen{
+    height: 100vh;
   }
 
   .xl\:max-h-\[1700px\]{
@@ -4549,16 +4558,16 @@ video {
     width: 30%;
   }
 
+  .xl\:w-\[85\%\]{
+    width: 85%;
+  }
+
   .xl\:w-full{
     width: 100%;
   }
 
   .xl\:min-w-\[400px\]{
     min-width: 400px;
-  }
-
-  .xl\:max-w-7xl{
-    max-width: 80rem;
   }
 
   .xl\:flex-wrap{
@@ -4643,6 +4652,10 @@ video {
   .xl\:text-9xl{
     font-size: 8rem;
     line-height: 1;
+  }
+
+  .xl\:text-\[155px\]{
+    font-size: 155px;
   }
 
   .xl\:text-\[180px\]{
