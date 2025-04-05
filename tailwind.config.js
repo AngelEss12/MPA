@@ -101,6 +101,17 @@ module.exports = {
           from: { width: "0" },
           to: { width: "100%" },
         },
+        backgroundMove: {
+          '0%': { backgroundColor: "#ffe4e6 " },
+          '12%': { backgroundColor: "#ffedd5" },
+          '25%': { backgroundColor: "#fef9c3" },
+          '37%': { backgroundColor: "#dcfce7 " },
+          '50%': { backgroundColor: "#e0f2fe " },
+          '62%': { backgroundColor: "#e0e7ff " },
+          '75%': { backgroundColor: "#f3e8ff " },
+          '87%': { backgroundColor: "#fae8ff" },
+          '100%': { backgroundColor: "#ffe4e6" },
+        }
       },
       animation: {
         appear: 'appear 0.1s ease-out both',  // Define la animación con la duración y timing-function que desees
@@ -132,6 +143,7 @@ module.exports = {
         rainbow: 'rainbow 5s infinite linear',
         typing: "typing 4s steps(40) forwards",
         gradient: "gradient 5s linear infinite",
+        backgroundMove: "backgroundMove 15s linear infinite",
       },
       
     },

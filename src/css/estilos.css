@@ -960,6 +960,10 @@ video {
   height: 100%;
 }
 
+.h-\[140px\]{
+  height: 140px;
+}
+
 .h-\[180px\]{
   height: 180px;
 }
@@ -996,10 +1000,6 @@ video {
   max-height: 100%;
 }
 
-.max-h-screen{
-  max-height: 100vh;
-}
-
 .min-h-\[100px\]{
   min-height: 100px;
 }
@@ -1026,6 +1026,10 @@ video {
 
 .w-8{
   width: 2rem;
+}
+
+.w-\[140px\]{
+  width: 140px;
 }
 
 .w-\[180px\]{
@@ -1662,6 +1666,10 @@ video {
   border-width: 3px;
 }
 
+.border-\[7px\]{
+  border-width: 7px;
+}
+
 .border-b-2{
   border-bottom-width: 2px;
 }
@@ -1695,6 +1703,10 @@ video {
 .border-cyan-700{
   --tw-border-opacity: 1;
   border-color: rgb(14 116 144 / var(--tw-border-opacity, 1));
+}
+
+.border-gray-800\/5{
+  border-color: rgb(31 41 55 / 0.05);
 }
 
 .border-green-500{
@@ -1961,6 +1973,11 @@ video {
 .bg-red-600{
   --tw-bg-opacity: 1;
   background-color: rgb(220 38 38 / var(--tw-bg-opacity, 1));
+}
+
+.bg-rose-400{
+  --tw-bg-opacity: 1;
+  background-color: rgb(251 113 133 / var(--tw-bg-opacity, 1));
 }
 
 .bg-rose-500{
@@ -2371,6 +2388,11 @@ video {
   color: rgb(240 249 255 / 0.9);
 }
 
+.text-slate-100{
+  --tw-text-opacity: 1;
+  color: rgb(241 245 249 / var(--tw-text-opacity, 1));
+}
+
 .text-slate-100\/80{
   color: rgb(241 245 249 / 0.8);
 }
@@ -2447,11 +2469,6 @@ video {
   color: rgb(254 252 232 / var(--tw-text-opacity, 1));
 }
 
-.text-slate-100{
-  --tw-text-opacity: 1;
-  color: rgb(241 245 249 / var(--tw-text-opacity, 1));
-}
-
 .opacity-0{
   opacity: 0;
 }
@@ -2498,6 +2515,11 @@ video {
 .shadow-slate-950{
   --tw-shadow-color: #020617;
   --tw-shadow: var(--tw-shadow-colored);
+}
+
+.blur-2xl{
+  --tw-blur: blur(40px);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
 .blur-3xl{
@@ -2634,6 +2656,10 @@ video {
 }
 
 /* Clases */
+
+h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, p:hover{
+  cursor: default;
+}
 
 .hd{
   position: relative;
@@ -3500,6 +3526,22 @@ video {
 
 .selection.selected {
   background-color: black;
+}
+
+.burbuja{
+  position: absolute;
+  height: 180px;
+  width: 180px;
+  border-radius: 9999px;
+  --tw-blur: blur(64px);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+@media (min-width: 1024px){
+  .burbuja{
+    height: 280px;
+    width: 280px;
+  }
 }
 
 .hover\:scale-110:hover{
@@ -4617,6 +4659,10 @@ video {
   .xl\:py-3{
     padding-top: 0.75rem;
     padding-bottom: 0.75rem;
+  }
+
+  .xl\:pb-6{
+    padding-bottom: 1.5rem;
   }
 
   .xl\:text-2xl{

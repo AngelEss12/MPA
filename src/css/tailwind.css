@@ -16,6 +16,9 @@
 }
 
 /* Clases */
+h1, h2, h3, h4, h5, p {
+    @apply hover:cursor-default
+}
 .hd {
     @apply relative w-full h-screen overflow-hidden;
 }
@@ -171,4 +174,8 @@
 /* Clase para la opción seleccionada */
 .selection.selected {
     background-color: black;
+}
+
+.burbuja {
+    @apply w-[180px] lg:w-[280px] h-[180px] lg:h-[280px] rounded-full filter blur-3xl absolute
 }
