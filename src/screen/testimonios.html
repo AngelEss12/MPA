@@ -17,7 +17,7 @@
                     class="mr-3 mt-3 rounded-lg text-white focus:outline-none focus:border-2 focus:border-gray-300 absolute z-50">
                     <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M4 6h16M4 12h16M4 18h16"></path>
+                            d="M4 6h16Mw-[25%] 4 12h16M4 18h16"></path>
                     </svg>
                 </button>
 
@@ -117,8 +117,22 @@
                 </div>
             </div>
         </section>
+
+        <section class="animate-gradientcycle contenedor-principal lg:h-screen overflow-hidden lg:space-y-8">
+            <h3 class="font-titulos font-black text-center text-3xl sm:text-4xl text-slate-900 md:text-5xl lg:text-7xl pb-6 xl:pb-0">Mensaje del Fundador</h3>
+            <lite-youtube videoid="tziayBHHJxo" class="w-[85%] sm:h-[40vh] lg:h-[70vh] sm:w-[80%] xl:w-[60%] rounded-lg shadow-sm shadow-black/80"></lite-youtube>
+        </section>
+
+        <section>
+            <div id="fondo" class="w-full flex items-stretch h-[50vh]">
+                <div class="w-full h-full flex-shrink-0 animate-fade bg-gradient-1"></div>
+                <div class="hidden w-full h-full flex-shrink-0 animate-fade bg-gradient-2"></div>
+                <div class="hidden w-full h-full flex-shrink-0 animate-fade bg-gradient-3"></div>
+                <div class="hidden w-full h-full flex-shrink-0 animate-fade bg-gradient-4"></div>
+            </div>
+        </section>
     </main>
 </body>
 <script src="/src/js/testimonios/testimonio.js" type="module"></script>
-
+<script type="module" src="https://cdn.jsdelivr.net/npm/@justinribeiro/lite-youtube@1/lite-youtube.min.js"></script>
 </html>

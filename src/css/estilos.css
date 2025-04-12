@@ -972,6 +972,10 @@ video {
   height: 220px;
 }
 
+.h-\[50vh\]{
+  height: 50vh;
+}
+
 .h-\[90vh\]{
   height: 90vh;
 }
@@ -1040,6 +1044,10 @@ video {
   width: 220px;
 }
 
+.w-\[25\%\]{
+  width: 25%;
+}
+
 .w-\[30\%\]{
   width: 30%;
 }
@@ -1050,6 +1058,10 @@ video {
 
 .w-\[80\%\]{
   width: 80%;
+}
+
+.w-\[85\%\]{
+  width: 85%;
 }
 
 .w-\[90\%\]{
@@ -1405,6 +1417,32 @@ video {
 
 .animate-flip-down{
   animation: flip-down var(--tw-animate-duration, 1s) var(--tw-animate-easing, ease) var(--tw-animate-delay, 0s) var(--tw-animate-iteration, 1) var(--tw-animate-fill, both);
+}
+
+@keyframes gradienttransition{
+  0%, 20%{
+    background-image: linear-gradient(to top, #ffa7cc, #f9bfe5, #f4d7f5, #f5ecfd, #ffffff);
+  }
+
+  25%, 45%{
+    background-image: linear-gradient(to top, #fffca7, #ffeec3, #ffeeed, #fff7ff, #ffffff);
+  }
+
+  50%, 70%{
+    background-image: linear-gradient(to top, #bcffa7, #96ffeb, #b3ffff, #e8fdff, #ffffff);
+  }
+
+  75%, 95%{
+    background-image: linear-gradient(to top, #a7fbff, #c2faff, #dffaff, #f5fbff, #ffffff);
+  }
+
+  100%{
+    background-image: linear-gradient(to top, #ffa7cc, #f9bfe5, #f4d7f5, #f5ecfd, #ffffff);
+  }
+}
+
+.animate-gradientcycle{
+  animation: gradienttransition 16s ease infinite;
 }
 
 @keyframes heartbeat{
@@ -2089,6 +2127,22 @@ video {
   --tw-bg-opacity: 0.85;
 }
 
+.bg-gradient-1{
+  background-image: linear-gradient(to top, #ffa7cc, #f9bfe5, #f4d7f5, #f5ecfd, #ffffff);
+}
+
+.bg-gradient-2{
+  background-image: linear-gradient(to top, #fffca7, #ffeec3, #ffeeed, #fff7ff, #ffffff);
+}
+
+.bg-gradient-3{
+  background-image: linear-gradient(to top, #bcffa7, #96ffeb, #b3ffff, #e8fdff, #ffffff);
+}
+
+.bg-gradient-4{
+  background-image: linear-gradient(to top, #7bd4ff, #addcff, #d3e5ff, #eef1ff, #ffffff);
+}
+
 .bg-gradiente-inicio{
   background-image: linear-gradient(to left top, #efceff, #ffcde5, #ffd7c5, #ffeab3, #ebffbf);
 }
@@ -2509,6 +2563,11 @@ video {
 
 .shadow-black\/70{
   --tw-shadow-color: rgb(0 0 0 / 0.7);
+  --tw-shadow: var(--tw-shadow-colored);
+}
+
+.shadow-black\/80{
+  --tw-shadow-color: rgb(0 0 0 / 0.8);
   --tw-shadow: var(--tw-shadow-colored);
 }
 
@@ -3731,6 +3790,10 @@ h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, p:hover{
     height: 0.75rem;
   }
 
+  .sm\:h-\[40vh\]{
+    height: 40vh;
+  }
+
   .sm\:max-h-\[80\%\]{
     max-height: 80%;
   }
@@ -4239,8 +4302,16 @@ h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, p:hover{
     height: 280px;
   }
 
+  .lg\:h-\[70vh\]{
+    height: 70vh;
+  }
+
   .lg\:h-full{
     height: 100%;
+  }
+
+  .lg\:h-screen{
+    height: 100vh;
   }
 
   .lg\:max-h-48{
@@ -4580,10 +4651,6 @@ h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, p:hover{
     height: 65%;
   }
 
-  .xl\:h-screen{
-    height: 100vh;
-  }
-
   .xl\:max-h-\[1700px\]{
     max-height: 1700px;
   }
@@ -4598,6 +4665,10 @@ h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, p:hover{
 
   .xl\:w-\[30\%\]{
     width: 30%;
+  }
+
+  .xl\:w-\[60\%\]{
+    width: 60%;
   }
 
   .xl\:w-\[85\%\]{
@@ -4659,6 +4730,10 @@ h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, p:hover{
   .xl\:py-3{
     padding-top: 0.75rem;
     padding-bottom: 0.75rem;
+  }
+
+  .xl\:pb-0{
+    padding-bottom: 0px;
   }
 
   .xl\:pb-6{

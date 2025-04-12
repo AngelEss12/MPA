@@ -8,7 +8,8 @@ module.exports = {
         cuerpos:["Raleway", "sans-serif"],
       },
       backgroundSize: {
-        '400%': '400%',
+        '400%': '400% 100%',
+        
       },
       backgroundImage: {
         'gradiente-inicio': 'linear-gradient(to left top, #efceff, #ffcde5, #ffd7c5, #ffeab3, #ebffbf)',
@@ -18,8 +19,11 @@ module.exports = {
         'gradiente-u': 'linear-gradient(to right bottom, #122a4a, #1c2852, #2c2357, #401a58, #530754)',
         'gradiente-footer': 'linear-gradient(to right bottom, #ffd0c5, #ffd7be, #ffdfba, #f7e8b9, #ebf2be, #d6f7c8, #c1fad7, #affce9, #a2f6fc, #a8ecff, #bde1ff, #d4d5ff)',
         'rainbow-gradient': 'linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet)',
-        "rainbow-pastel":
-          "linear-gradient(90deg, #FF9AA2, #FFB7B2, #FFDAC1, #E2F0CB, #B5EAD7, #C7CEEA, #D4A5A5)",
+        'gradient-1': "linear-gradient(to top, #ffa7cc, #f9bfe5, #f4d7f5, #f5ecfd, #ffffff)",
+        'gradient-2': "linear-gradient(to top, #fffca7, #ffeec3, #ffeeed, #fff7ff, #ffffff)",
+        'gradient-3': "linear-gradient(to top, #bcffa7, #96ffeb, #b3ffff, #e8fdff, #ffffff)",
+        'gradient-4': "linear-gradient(to top, #7bd4ff, #addcff, #d3e5ff, #eef1ff, #ffffff)",
+        
       },
       keyframes: {
         appear: {
@@ -101,16 +105,23 @@ module.exports = {
           from: { width: "0" },
           to: { width: "100%" },
         },
-        backgroundMove: {
-          '0%': { backgroundColor: "#ffe4e6 " },
-          '12%': { backgroundColor: "#ffedd5" },
-          '25%': { backgroundColor: "#fef9c3" },
-          '37%': { backgroundColor: "#dcfce7 " },
-          '50%': { backgroundColor: "#e0f2fe " },
-          '62%': { backgroundColor: "#e0e7ff " },
-          '75%': { backgroundColor: "#f3e8ff " },
-          '87%': { backgroundColor: "#fae8ff" },
-          '100%': { backgroundColor: "#ffe4e6" },
+
+        gradienttransition: {
+          '0%, 20%': { 
+            backgroundImage: "linear-gradient(to top, #ffa7cc, #f9bfe5, #f4d7f5, #f5ecfd, #ffffff)" 
+          },
+          '25%, 45%': { 
+            backgroundImage: "linear-gradient(to top, #fffca7, #ffeec3, #ffeeed, #fff7ff, #ffffff)" 
+          },
+          '50%, 70%': { 
+            backgroundImage: "linear-gradient(to top, #bcffa7, #96ffeb, #b3ffff, #e8fdff, #ffffff)" 
+          },
+          '75%, 95%': { 
+            backgroundImage: "linear-gradient(to top, #a7fbff, #c2faff, #dffaff, #f5fbff, #ffffff)" 
+          },
+          '100%': {
+            backgroundImage: "linear-gradient(to top, #ffa7cc, #f9bfe5, #f4d7f5, #f5ecfd, #ffffff)"
+          }
         }
       },
       animation: {
@@ -142,8 +153,8 @@ module.exports = {
         'gradient-x': 'gradient 5s ease infinite',
         rainbow: 'rainbow 5s infinite linear',
         typing: "typing 4s steps(40) forwards",
-        gradient: "gradient 5s linear infinite",
-        backgroundMove: "backgroundMove 15s linear infinite",
+        gradientcycle: 'gradienttransition 16s ease infinite'
+
       },
       
     },
