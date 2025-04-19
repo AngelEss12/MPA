@@ -19,10 +19,10 @@ module.exports = {
         'gradiente-u': 'linear-gradient(to right bottom, #122a4a, #1c2852, #2c2357, #401a58, #530754)',
         'gradiente-footer': 'linear-gradient(to right bottom, #ffd0c5, #ffd7be, #ffdfba, #f7e8b9, #ebf2be, #d6f7c8, #c1fad7, #affce9, #a2f6fc, #a8ecff, #bde1ff, #d4d5ff)',
         'rainbow-gradient': 'linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet)',
-        'gradient-1': "linear-gradient(to top, #ffa7cc, #f9bfe5, #f4d7f5, #f5ecfd, #ffffff)",
-        'gradient-2': "linear-gradient(to top, #fffca7, #ffeec3, #ffeeed, #fff7ff, #ffffff)",
-        'gradient-3': "linear-gradient(to top, #bcffa7, #96ffeb, #b3ffff, #e8fdff, #ffffff)",
-        'gradient-4': "linear-gradient(to top, #7bd4ff, #addcff, #d3e5ff, #eef1ff, #ffffff)",
+        'gradient-1': "linear-gradient(to bottom, #ffa7cc, #f9bfe5, #f4d7f5, #f5ecfd, #ffffff)",
+        'gradient-2': "linear-gradient(to bottom, #fffca7, #ffeec3, #ffeeed, #fff7ff, #ffffff)",
+        'gradient-3': "linear-gradient(to bottom, #bcffa7, #96ffeb, #b3ffff, #e8fdff, #ffffff)",
+        'gradient-4': "linear-gradient(to bottom, #7bd4ff, #addcff, #d3e5ff, #eef1ff, #ffffff)",
         
       },
       keyframes: {
@@ -153,7 +153,7 @@ module.exports = {
         'gradient-x': 'gradient 5s ease infinite',
         rainbow: 'rainbow 5s infinite linear',
         typing: "typing 4s steps(40) forwards",
-        gradientcycle: 'gradienttransition 16s ease infinite'
+        gradientcycle: 'gradienttransition 16s ease-in infinite'
 
       },
       

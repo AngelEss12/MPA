@@ -9,21 +9,21 @@ export const inicio = {
         mediaQueryImg: window.matchMedia('(min-width: 640px)'),
         
         srcBG: [
-            '/assets/banner/Banner.jpeg',
+            '/assets/banner/Banner.webp',
             '/assets/banner/Banner 1 H.webp',
             '/assets/banner/Banner 2 H.webp',
             '/assets/banner/Banner 3 H.webp'
         ],
 
         srcBGs: [
-            '/assets/banner/Banner.jpeg',
+            '/assets/banner/Banner.webp',
             '/assets/banner/Banner 1.webp',
             '/assets/banner/Banner 2.webp',
             '/assets/banner/Banner 3.webp'
         ],
 
         allImages: [
-            '/assets/banner/Banner.jpeg',
+            '/assets/banner/Banner.webp',
             '/assets/banner/Banner 1 H.webp',
             '/assets/banner/Banner 2 H.webp',
             '/assets/banner/Banner 3 H.webp',

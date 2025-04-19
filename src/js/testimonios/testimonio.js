@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     updateBubblePositions();
     // Repetir la ejecución de la función cada 8 segundos
-    setInterval(updateBubblePositions, 10000);
+    setInterval(updateBubblePositions, 8000);
 });
 
 menuBurger.addEventListener('click', () => {
@@ -16,23 +16,17 @@ menuBurger.addEventListener('click', () => {
     body.classList.toggle('overflow-hidden');
 });
 
-const fondo = document.querySelectorAll("#fondo > div");
-let index = 0;
+const inicio = document.querySelector("#inicio");
+const btnInicio = document.querySelector("#inicio > button");
+const mensaje = document.querySelector("#mensaje");
+const btnMensaje = document.querySelector("#mensaje > button");
 
-function fondoGradiente() {
-    if(index < fondo.length - 1) {
-        setTimeout(() => {
-            fondo[index].classList.add('hidden');
-            index = index + 1;
-            fondo[index].classList.remove('hidden');
-        }, 2000);
-    } else {
-        setTimeout(() => {
-            fondo[index].classList.add('hidden');
-            index = 0;
-            fondo[index].classList.remove('hidden');
-        }, 2000);
-    }
-}
+btnInicio.addEventListener("click", () => {
+    inicio.classList.toggle("hidden");
+    mensaje.classList.toggle("hidden");
+})
 
-setInterval(fondoGradiente, 2200);
+btnMensaje.addEventListener("click", () => {
+    inicio.classList.toggle("hidden");
+    mensaje.classList.toggle("hidden");
+})
