@@ -30,3 +30,37 @@ btnMensaje.addEventListener("click", () => {
     inicio.classList.toggle("hidden");
     mensaje.classList.toggle("hidden");
 })
+
+// Slider de testimonios
+const slider = document.querySelector('#t-container');
+const sliderItems = document.querySelectorAll('#t-container > div');
+const sliderBtnRegresar = document.querySelector('#t-container > #btn-regresar');
+const sliderBtnAvanzar = document.querySelector('#t-container > #btn-avanzar');
+let indexSlider = 0;
+
+console.log(sliderItems)
+
+sliderBtnAvanzar.addEventListener('click', () => {
+    if (indexSlider < sliderItems.length - 1) {
+        sliderItems[indexSlider].classList.add('hidden');
+        indexSlider++;
+        sliderItems[indexSlider].classList.remove('hidden');
+    } else {
+        sliderItems[indexSlider].classList.add('hidden');
+        indexSlider = 0;
+        sliderItems[indexSlider].classList.remove('hidden');
+    }
+})
+
+sliderBtnRegresar.addEventListener('click', () => {
+    console.log(indexSlider)
+    if (indexSlider > 0) {
+        sliderItems[indexSlider].classList.add('hidden');
+        indexSlider--;
+        sliderItems[indexSlider].classList.remove('hidden');
+    } else {
+        sliderItems[indexSlider].classList.add('hidden');
+        indexSlider = sliderItems.length - 1;
+        sliderItems[indexSlider].classList.remove('hidden');
+    }
+})
