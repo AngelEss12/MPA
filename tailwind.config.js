@@ -14,22 +14,16 @@ module.exports = {
       backgroundImage: {
         'gradiente-inicio': 'linear-gradient(to left top, #efceff, #ffcde5, #ffd7c5, #ffeab3, #ebffbf)',
         'gradiente-v1': 'linear-gradient(to bottom, #ffffff, #fafafe, #f5f5fc, #eff0fb, #e8ecfa, #d2d4e2, #bcbdca, #a7a6b3, #7d7982, #544f54, #2c292b, #000000)',
-        'gradiente-v2': 'linear-gradient(to left top, #f6dfed, #fedfe6, #ffe1de, #ffe4d8, #fde8d3, #f8ebd2, #f3edd2, #ecf0d4, #e7f1d6, #e3f2d8, #def3db, #daf4de)',
-        'gradiente-v3': 'linear-gradient(to right bottom, #151515, #1b1a1b, #202020, #262526, #2c2b2b)',
-        'gradiente-u': 'linear-gradient(to right bottom, #122a4a, #1c2852, #2c2357, #401a58, #530754)',
+        'gradiente-t1': 'linear-gradient(to bottom, #ffffff, #faf5fb, #fbeaf2, #fddfe2, #fbd5ce, #f1c5b6, #e4b69e, #d4a885, #c08e65, #ab7446, #955b28, #7f4305)',
+        'gradiente-t2': 'linear-gradient(to bottom, #ffffff, #fff7fd, #ffeef3, #ffe7df, #ffe4c9, #f4dab2, #e5d29d, #d2cb89, #bdb66b, #a9a24d, #948e2f, #7f7a05)',
+        'gradiente-t3': 'linear-gradient(to bottom, #ffffff, #ebf6ff, #c5f3ff, #98f1f9, #81ecd4, #77dcb2, #75cc8e, #78ba69, #5ea050, #438737, #286f1e, #025702)',
+        'gradiente-t4': 'linear-gradient(to bottom, #ffffff, #f0f1f9, #dee3f3, #c9d7ed, #b1cbe7, #9abad8, #82a9c9, #6a98ba, #527ea0, #3a6487, #214c6f, #023557)',
+        'gradiente-t5': 'linear-gradient(to bottom, #ffffff, #f0ebfd, #e5d7fa, #ddc1f4, #d8abec, #cc96dc, #c081cb, #b46bba, #9c53a0, #853a87, #6e226f, #570257)',
+        'gradiente-t6': 'linear-gradient(to bottom, #ffffff, #f1ebfa, #e7d7f1, #e2c1e6, #dfabd7, #d395c3, #c680af, #ba6a9b, #a15181, #883969, #6f2051, #57023a)',
         'gradiente-footer': 'linear-gradient(to right bottom, #ffd0c5, #ffd7be, #ffdfba, #f7e8b9, #ebf2be, #d6f7c8, #c1fad7, #affce9, #a2f6fc, #a8ecff, #bde1ff, #d4d5ff)',
-        'rainbow-gradient': 'linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet)',
-        'gradient-1': "linear-gradient(to bottom, #ffa7cc, #f9bfe5, #f4d7f5, #f5ecfd, #ffffff)",
-        'gradient-2': "linear-gradient(to bottom, #fffca7, #ffeec3, #ffeeed, #fff7ff, #ffffff)",
-        'gradient-3': "linear-gradient(to bottom, #bcffa7, #96ffeb, #b3ffff, #e8fdff, #ffffff)",
-        'gradient-4': "linear-gradient(to bottom, #7bd4ff, #addcff, #d3e5ff, #eef1ff, #ffffff)",
         
       },
       keyframes: {
-        appear: {
-          '0%': { opacity: '0', transform: 'scale(0.75)' }, // Escala inicial al 25%
-          '100%': { opacity: '1', transform: 'scale(1)' },   // Escala final al 100%
-        },
 
         heartbeat: {
           '0%': {
@@ -93,12 +87,6 @@ module.exports = {
         slideOut: {
           '0%': { transform: 'translateX(0)', opacity: '1' },
           '100%': { transform: 'translateX(-100%)', opacity: '0' },
-        },
-
-        gradient: {
-          "0%": { backgroundPosition: "0% 50%" },
-          "50%": { backgroundPosition: "100% 50%" },
-          "100%": { backgroundPosition: "0% 50%" },
         },
 
         typing: {
