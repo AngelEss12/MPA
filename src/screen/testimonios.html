@@ -154,11 +154,11 @@
             </div>
         </section>
 
-        <section id="testiminios" class="bg-gradiente-t5 contenedor-principal overflow-hidden">
+        <section id="testiminios" class="relative contenedor-principal overflow-hidden">
             <h2 class="w-full text-center text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold font-titulos py-4 overflow-hidden whitespace-nowrap pr-2 border-r-2 border-white/10 animate-typing animate-infinite">Testimonios</h2>
             
             <div id="t-container" class="relative w-[90%] flex flex-wrap justify-center gap-2">
-                <button id="btn-regresar" class="absolute top-[45%] text-white left-[25%] w-10 h-10 flex items-center justify-center p-2 rounded-full bg-black/50 hover:bg-black/70 transition-all ease-in-out duration-300">
+                <button id="btn-regresar" class="absolute top-[45%] text-white left-[25%] w-10 h-10 flex items-center justify-center p-2 rounded-full bg-black/50 hover:bg-black/70 transition-all ease-in-out duration-300 z-30">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 10 10" fill="none">
                         <path d="M7 2L3 5l4 3" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
@@ -271,11 +271,20 @@
                 </div>
                 <!-- Testiminio -->
                 
-                <button id="btn-avanzar" class="absolute top-[45%] text-white right-[25%] w-10 h-10 flex items-center justify-center p-2 rounded-full bg-black/50 hover:bg-black/70 transition-all ease-in-out duration-300">
+                <button id="btn-avanzar" class="absolute top-[45%] text-white right-[25%] w-10 h-10 flex items-center justify-center p-2 rounded-full bg-black/50 hover:bg-black/70 transition-all ease-in-out duration-300 z-30">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 10 10" fill="none">
                         <path d="M3 2l4 3-4 3" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                 </button>
+            </div>
+
+            <div id="t-background" class="absolute flex flex-row w-full h-full overflow-hidden -z-20 inset-0">
+                <div class="bg-gradiente-t1 w-full animate-fadeIn h-full"></div>
+                <div class="bg-gradiente-t2 w-full hidden animate-fadeIn h-full"></div>
+                <div class="bg-gradiente-t3 w-full hidden animate-fadeIn h-full"></div>
+                <div class="bg-gradiente-t4 w-full hidden animate-fadeIn h-full"></div>
+                <div class="bg-gradiente-t5 w-full hidden animate-fadeIn h-full"></div>
+                <div class="bg-gradiente-t6 w-full hidden animate-fadeIn h-full"></div>
             </div>
         </section>
         <!-- Fin de testimonios -->

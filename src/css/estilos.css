@@ -784,12 +784,20 @@ video {
   z-index: -10;
 }
 
+.-z-20{
+  z-index: -20;
+}
+
 .z-0{
   z-index: 0;
 }
 
 .z-10{
   z-index: 10;
+}
+
+.z-30{
+  z-index: 30;
 }
 
 .z-40{
@@ -1461,6 +1469,20 @@ video {
 
 .animate-fade-up{
   animation: fade-up var(--tw-animate-duration, 1s) var(--tw-animate-easing, ease) var(--tw-animate-delay, 0s) var(--tw-animate-iteration, 1) var(--tw-animate-fill, both);
+}
+
+@keyframes fadeIn{
+  0%{
+    opacity: 0.75;
+  }
+
+  100%{
+    opacity: 1;
+  }
+}
+
+.animate-fadeIn{
+  animation: fadeIn 1s ease-in-out;
 }
 
 @keyframes flip-down{
@@ -2209,8 +2231,28 @@ video {
   background-image: linear-gradient(to left top, #efceff, #ffcde5, #ffd7c5, #ffeab3, #ebffbf);
 }
 
+.bg-gradiente-t1{
+  background-image: linear-gradient(to bottom, #ffffff, #faf5fb, #fbeaf2, #fddfe2, #fbd5ce, #f1c5b6, #e4b69e, #d4a885, #c08e65, #ab7446, #955b28, #7f4305);
+}
+
+.bg-gradiente-t2{
+  background-image: linear-gradient(to bottom, #ffffff, #fff3fe, #ffe6ec, #ffdccd, #ffdaab, #ebce92, #d3c47b, #b8ba67, #9c9d4e, #808035, #65651d, #4b4b03);
+}
+
+.bg-gradiente-t3{
+  background-image: linear-gradient(to bottom, #ffffff, #eaf4ff, #c5edff, #99e8f2, #7de1d0, #70cfaf, #6abd8d, #69aa6b, #508d53, #37723d, #1f5727, #033e13);
+}
+
+.bg-gradiente-t4{
+  background-image: linear-gradient(to bottom, #ffffff, #f0f1f9, #dee3f3, #c9d7ed, #b1cbe7, #9abad8, #82a9c9, #6a98ba, #527ea0, #3a6487, #214c6f, #023557);
+}
+
 .bg-gradiente-t5{
   background-image: linear-gradient(to bottom, #ffffff, #f0ebfd, #e5d7fa, #ddc1f4, #d8abec, #cc96dc, #c081cb, #b46bba, #9c53a0, #853a87, #6e226f, #570257);
+}
+
+.bg-gradiente-t6{
+  background-image: linear-gradient(to bottom, #ffffff, #f1ebfa, #e7d7f1, #e2c1e6, #dfabd7, #d395c3, #c680af, #ba6a9b, #a15181, #883969, #6f2051, #57023a);
 }
 
 .bg-gradiente-v1{
@@ -2648,6 +2690,11 @@ video {
   --tw-shadow: var(--tw-shadow-colored);
 }
 
+.shadow-\[\#411b32\]{
+  --tw-shadow-color: #411b32;
+  --tw-shadow: var(--tw-shadow-colored);
+}
+
 .shadow-\[\#421f4b\]{
   --tw-shadow-color: #421f4b;
   --tw-shadow: var(--tw-shadow-colored);
@@ -2668,18 +2715,8 @@ video {
   --tw-shadow: var(--tw-shadow-colored);
 }
 
-.shadow-pink-900{
-  --tw-shadow-color: #831843;
-  --tw-shadow: var(--tw-shadow-colored);
-}
-
 .shadow-slate-950{
   --tw-shadow-color: #020617;
-  --tw-shadow: var(--tw-shadow-colored);
-}
-
-.shadow-\[\#411b32\]{
-  --tw-shadow-color: #411b32;
   --tw-shadow: var(--tw-shadow-colored);
 }
 

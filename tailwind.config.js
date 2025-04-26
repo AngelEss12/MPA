@@ -15,8 +15,8 @@ module.exports = {
         'gradiente-inicio': 'linear-gradient(to left top, #efceff, #ffcde5, #ffd7c5, #ffeab3, #ebffbf)',
         'gradiente-v1': 'linear-gradient(to bottom, #ffffff, #fafafe, #f5f5fc, #eff0fb, #e8ecfa, #d2d4e2, #bcbdca, #a7a6b3, #7d7982, #544f54, #2c292b, #000000)',
         'gradiente-t1': 'linear-gradient(to bottom, #ffffff, #faf5fb, #fbeaf2, #fddfe2, #fbd5ce, #f1c5b6, #e4b69e, #d4a885, #c08e65, #ab7446, #955b28, #7f4305)',
-        'gradiente-t2': 'linear-gradient(to bottom, #ffffff, #fff7fd, #ffeef3, #ffe7df, #ffe4c9, #f4dab2, #e5d29d, #d2cb89, #bdb66b, #a9a24d, #948e2f, #7f7a05)',
-        'gradiente-t3': 'linear-gradient(to bottom, #ffffff, #ebf6ff, #c5f3ff, #98f1f9, #81ecd4, #77dcb2, #75cc8e, #78ba69, #5ea050, #438737, #286f1e, #025702)',
+        'gradiente-t2': 'linear-gradient(to bottom, #ffffff, #fff3fe, #ffe6ec, #ffdccd, #ffdaab, #ebce92, #d3c47b, #b8ba67, #9c9d4e, #808035, #65651d, #4b4b03)',
+        'gradiente-t3': 'linear-gradient(to bottom, #ffffff, #eaf4ff, #c5edff, #99e8f2, #7de1d0, #70cfaf, #6abd8d, #69aa6b, #508d53, #37723d, #1f5727, #033e13)',
         'gradiente-t4': 'linear-gradient(to bottom, #ffffff, #f0f1f9, #dee3f3, #c9d7ed, #b1cbe7, #9abad8, #82a9c9, #6a98ba, #527ea0, #3a6487, #214c6f, #023557)',
         'gradiente-t5': 'linear-gradient(to bottom, #ffffff, #f0ebfd, #e5d7fa, #ddc1f4, #d8abec, #cc96dc, #c081cb, #b46bba, #9c53a0, #853a87, #6e226f, #570257)',
         'gradiente-t6': 'linear-gradient(to bottom, #ffffff, #f1ebfa, #e7d7f1, #e2c1e6, #dfabd7, #d395c3, #c680af, #ba6a9b, #a15181, #883969, #6f2051, #57023a)',
@@ -94,23 +94,10 @@ module.exports = {
           to: { width: "100%" },
         },
 
-        gradienttransition: {
-          '0%, 20%': { 
-            backgroundImage: "linear-gradient(to top, #ffa7cc, #f9bfe5, #f4d7f5, #f5ecfd, #ffffff)" 
-          },
-          '25%, 45%': { 
-            backgroundImage: "linear-gradient(to top, #fffca7, #ffeec3, #ffeeed, #fff7ff, #ffffff)" 
-          },
-          '50%, 70%': { 
-            backgroundImage: "linear-gradient(to top, #bcffa7, #96ffeb, #b3ffff, #e8fdff, #ffffff)" 
-          },
-          '75%, 95%': { 
-            backgroundImage: "linear-gradient(to top, #a7fbff, #c2faff, #dffaff, #f5fbff, #ffffff)" 
-          },
-          '100%': {
-            backgroundImage: "linear-gradient(to top, #ffa7cc, #f9bfe5, #f4d7f5, #f5ecfd, #ffffff)"
-          }
-        }
+        fadeIn: {
+          '0%': { opacity: '0.75' },
+          '100%': { opacity: '1' },
+        },
       },
       animation: {
         appear: 'appear 0.1s ease-out both',  // Define la animación con la duración y timing-function que desees
@@ -141,8 +128,7 @@ module.exports = {
         'gradient-x': 'gradient 5s ease infinite',
         rainbow: 'rainbow 5s infinite linear',
         typing: "typing 4s steps(40) forwards",
-        gradientcycle: 'gradienttransition 16s ease-in infinite'
-
+        fadeIn: 'fadeIn 1s ease-in-out',
       },
       
     },
