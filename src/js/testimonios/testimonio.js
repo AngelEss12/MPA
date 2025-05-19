@@ -145,7 +145,7 @@ sliderBtnTestimonio.forEach((btn) => {
         console.log(colores[indexSlider]);
 
         // Mostrar el lightbox del testimonio
-        body.classList.toggle('overflow-hidden');
+        body.classList.add('overflow-hidden');
         container.classList.remove('hidden');
         lightboxTestimonio.classList.add(colores[indexSlider]);
         lightboxTexto.textContent = testimoniosCompletos[indexSlider];
@@ -156,7 +156,7 @@ sliderBtnTestimonio.forEach((btn) => {
 function cerrarTestimonio(e) {
     if (e.target !== lightboxTestimonio) {
         container.classList.add('hidden')
-        body.classList.toggle('overflow-hidden');
+        body.classList.remove('overflow-hidden');
         lightboxTestimonio.classList.remove(colores[indexSlider]);
     }
 }

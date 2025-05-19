@@ -14,6 +14,8 @@ module.exports = {
       backgroundImage: {
         'gradiente-inicio': 'linear-gradient(to left top, #efceff, #ffcde5, #ffd7c5, #ffeab3, #ebffbf)',
         'gradiente-v1': 'linear-gradient(to bottom, #ffffff, #fafafe, #f5f5fc, #eff0fb, #e8ecfa, #d2d4e2, #bcbdca, #a7a6b3, #7d7982, #544f54, #2c292b, #000000)',
+        'gradiente-v2': 'linear-gradient(to bottom, #fbf6f8, #fcf3f3, #fcf2ed, #f8f1e7, #f0f1e4, #edf1e3, #e9f2e3, #e4f2e3, #e6f1e0, #e9f1de, #ecf0dc, #efefda)',
+        'gradiente-v3': 'linear-gradient(to right top, #1d222a, #1f2127, #1f2024, #1f2022, #1f1f1f)',
         'gradiente-t1': 'linear-gradient(to bottom, #ffffff, #faf5fb, #fbeaf2, #fddfe2, #fbd5ce, #f1c5b6, #e4b69e, #d4a885, #c08e65, #ab7446, #955b28, #7f4305)',
         'gradiente-t2': 'linear-gradient(to bottom, #ffffff, #fff3fe, #ffe6ec, #ffdccd, #ffdaab, #ebce92, #d3c47b, #b8ba67, #9c9d4e, #808035, #65651d, #4b4b03)',
         'gradiente-t3': 'linear-gradient(to bottom, #ffffff, #eaf4ff, #c5edff, #99e8f2, #7de1d0, #70cfaf, #6abd8d, #69aa6b, #508d53, #37723d, #1f5727, #033e13)',
