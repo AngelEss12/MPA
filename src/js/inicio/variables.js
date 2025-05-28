@@ -43,7 +43,7 @@ export const inicio = {
     },
 
     leyes: {
-        slides: document.querySelectorAll("#leyes a, #leyOro")
+        slides: document.querySelectorAll("#leyes p, #leyOro")
     },
 
     virtudes: {

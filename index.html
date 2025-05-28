@@ -4,8 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Preload de recursos críticos -->
+    <link rel="preload" href="/src/css/estilos.css" as="style">
+    <link rel="preload" href="/src/css/animation.css" as="style">
+    <link rel="preload" href="/assets/banner/Banner.webp" as="image">
+    
+    <!-- Hojas de estilo -->
     <link rel="stylesheet" href="/src/css/estilos.css">
     <link rel="stylesheet" href="/src/css/animation.css">
+    
+    <!-- Preconexión a recursos externos -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <title>MPA</title>
 </head>
 
@@ -47,7 +57,7 @@
 
             <!-- Titulo -->
             <div class="hd-body w-full overflow-hidden xl:text-[180px]">
-                <p class="text-white font-titulos text-center text-4xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-[155px] overflow-hidden whitespace-nowrap pr-2 border-r-2 border-white/10 animate-typing">
+                <p class="text-white font-titulos text-center text-4xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-[155px] pr-2 border-r-2 border-white/10 typing-animation">
                     Movimiento Pandillas <br> 
                     <span class="inline-block">de la Amistad</span>
                 </p>
@@ -59,10 +69,10 @@
 
         <!-- Fondo -->
         <div id="bgInicio" class="h-screen inset-0 w-full -z-10">
-            <img class="w-full h-full object-cover absolute inset-0 transition-opacity duration-500" src="/assets/banner/Banner.webp" alt="banner" loading="lazy">
-            <img class="w-full h-full object-cover absolute inset-0 opacity-0 transition-opacity duration-500" src="/assets/banner/Banner 1.webp" alt="banner" loading="lazy">
-            <img class="w-full h-full object-cover absolute inset-0 opacity-0 transition-opacity duration-500" src="/assets/banner/Banner 2.webp" alt="banner" loading="lazy">
-            <img class="w-full h-full object-cover absolute inset-0 opacity-0 transition-opacity duration-500" src="/assets/banner/Banner 3.webp" alt="banner" loading="lazy">
+            <img id="imgInicio" class="w-full h-full object-cover absolute inset-0 transition-opacity duration-500" src="/assets/banner/Banner.webp" alt="banner Principal">
+            <img class="w-full h-full object-cover absolute inset-0 opacity-0 transition-opacity duration-500" src="" alt="banner 2" loading="lazy">
+            <img class="w-full h-full object-cover absolute inset-0 opacity-0 transition-opacity duration-500" src="" alt="banner 3" loading="lazy">
+            <img class="w-full h-full object-cover absolute inset-0 opacity-0 transition-opacity duration-500" src="" alt="banner 4" loading="lazy">
         </div>
     </header>
 
@@ -94,20 +104,20 @@
                 <!-- Leyes -->
                 <div id="leyes" class="w-full flex justify-center relative lg:py-6">
 
-                    <a class="w-[70%] button sm:py-3 sm:rounded-[36px] lg:rounded-[120px] sm:text-lg md:py-5 md:text-2xl md:px-16 lg:text-3xl lg:py-7 lg:px-28 bg-purple-700 border-purple-700 text-purple-100 hidden xl:text-4xl">No te burles</a>
+                    <p class="w-[70%] button sm:py-3 sm:rounded-[36px] lg:rounded-[120px] sm:text-lg md:py-5 md:text-2xl md:px-16 lg:text-3xl lg:py-7 lg:px-28 bg-purple-700 border-purple-700 text-purple-100 hidden xl:text-4xl">No te burles</p>
 
-                    <a class="w-[70%] button sm:py-3 sm:rounded-[36px] lg:rounded-[120px] sm:text-lg md:py-5 md:text-2xl md:px-16 lg:text-3xl lg:py-7 lg:px-28 bg-blue-700 border-blue-700 text-blue-100 hidden xl:text-4xl">No mientas</a>
+                    <p class="w-[70%] button sm:py-3 sm:rounded-[36px] lg:rounded-[120px] sm:text-lg md:py-5 md:text-2xl md:px-16 lg:text-3xl lg:py-7 lg:px-28 bg-blue-700 border-blue-700 text-blue-100 hidden xl:text-4xl">No mientas</p>
 
-                    <a class="w-[70%] button sm:py-3 sm:rounded-[36px] lg:rounded-[120px] sm:text-lg md:py-5 md:text-2xl md:px-16 lg:text-3xl lg:py-7 lg:px-28 bg-cyan-700 border-cyan-700 text-cyan-100 hidden xl:text-4xl">No presumas</a>
+                    <p class="w-[70%] button sm:py-3 sm:rounded-[36px] lg:rounded-[120px] sm:text-lg md:py-5 md:text-2xl md:px-16 lg:text-3xl lg:py-7 lg:px-28 bg-cyan-700 border-cyan-700 text-cyan-100 hidden xl:text-4xl">No presumas</p>
 
-                    <a class="w-[70%] button sm:py-3 sm:rounded-[36px] lg:rounded-[120px] sm:text-lg md:py-5 md:text-2xl md:px-16 lg:text-3xl lg:py-7 lg:px-28 bg-lime-700 border-lime-700 text-lime-100 hidden xl:text-4xl">Se responsable</a>
+                    <p class="w-[70%] button sm:py-3 sm:rounded-[36px] lg:rounded-[120px] sm:text-lg md:py-5 md:text-2xl md:px-16 lg:text-3xl lg:py-7 lg:px-28 bg-lime-700 border-lime-700 text-lime-100 hidden xl:text-4xl">Se responsable</p>
 
-                    <a class="w-[70%] button sm:py-3 sm:rounded-[36px] lg:rounded-[120px] sm:text-lg md:py-5 md:text-2xl md:px-16 lg:text-3xl lg:py-7 lg:px-28 bg-pink-700 border-pink-700 text-pink-100 hidden xl:text-4xl">Se valiente</a>
+                    <p class="w-[70%] button sm:py-3 sm:rounded-[36px] lg:rounded-[120px] sm:text-lg md:py-5 md:text-2xl md:px-16 lg:text-3xl lg:py-7 lg:px-28 bg-pink-700 border-pink-700 text-pink-100 hidden xl:text-4xl">Se valiente</p>
 
                     <!-- Ley de Oro -->
                     <div id="leyOro" class="flex-col pb-2 w-[90%] hidden flex">
                         <h3 class="text-slate-200 text-center text-xl sm:text-3xl md:text-5xl lg:text-7xl font-titulos font-bold py-4 lg:pt-8 lg:pb-10">🥇Regla de Oro🥇</h3>
-                        <a class="button sm:px-4 sm:py-3 sm:rounded-[36px] lg:rounded-[120px] sm:text-lg md:py-5 md:text-2xl lg:text-3xl lg:py-7 xl:text-4xl bg-yellow-700 border-yellow-700 text-yellow-100">No hagas a otros lo que no quieras que te hagan a ti.</a>
+                        <p class="button sm:px-4 sm:py-3 sm:rounded-[36px] lg:rounded-[120px] sm:text-lg md:py-5 md:text-2xl lg:text-3xl lg:py-7 xl:text-4xl bg-yellow-700 border-yellow-700 text-yellow-100">No hagas a otros lo que no quieras que te hagan a ti.</a>
                     </div>
                 </div>
         </section> <!--Fin de Leyes -->
@@ -122,86 +132,86 @@
             </div>
 
             <div class="slider-container flex flex-col relative w-[90%] sm:w-[80%] md:w-full xl:w-[85%] mx-auto md:mx-0 pb-4">
-                <div class="slider flex xl:flex-wrap lg:w-full transition-transform duration-300 ease-linear my-3">
+                <div class="slider flex justify-center items-center xl:flex-wrap lg:w-full transition-transform duration-300 ease-linear my-3">
 
-                    <div class="card flex flex-shrink-0 w-full px-4 md:px-0 xl:p-2">
+                    <div class="card w-[300px] sm:w-full h-[400px] sm:h-auto flex flex-shrink-0 px-4 md:px-0 xl:p-2">
                         <div class="w-full flex flex-col md:flex-row items-center rounded-2xl md:rounded-none xl:rounded-2xl overflow-hidden shadow-[0px_0px_20px_-9px_rgba(0,_0,_0,_1)]">
-                            <img class="md:w-[50%] aspect-video md:aspect-square xl:aspect-video object-cover" src="../../assets/virtudes/Amistad.webp" alt="Amistad">
+                            <img class="md:w-[50%] aspect-video md:aspect-square xl:aspect-video object-cover" src="../../assets/virtudes/Amistad.webp" alt="Virtud de la Amistad">
 
                             <div class="bg-red-600 pb-4 space-y-2 h-full md:flex md:flex-col md:justify-center">
                                 <h3 class="text-center text-2xl sm:text-2xl md:text-5xl lg:text-6xl xl:text-7xl md:font-titulos font-cuerpos font-bold text-white py-4"> Amistad</h3>
-                                <p class="text-slate-100 text-justify text-base font-cuerpos font-semibold px-8 md:px-16 lg:px-24 sm:text-lg md:text-xl lg:text-2xl"> ¡Lo que nos une es la amistad! Creamos lazos que duran toda la vida, construidos en el respeto y el apoyo mutuo.</p>
+                                <p class="text-slate-100 text-justify text-base font-cuerpos font-semibold px-8 md:px-0 md:pl-10 md:pr-16 lg:px-24 sm:text-lg md:text-xl lg:text-2xl"> ¡Lo que nos une es la amistad! Creamos lazos que duran toda la vida, construidos en el respeto y el apoyo mutuo.</p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="card hidden flex-shrink-0 w-full px-4 md:px-0 xl:p-2">
+                    <div class="card w-[300px] sm:w-full h-[400px] sm:h-auto hidden flex-shrink-0 px-4 md:px-0 xl:p-2">
                         <div class="w-full flex flex-col md:flex-row items-center rounded-2xl md:rounded-none xl:rounded-2xl overflow-hidden shadow-[0px_0px_20px_-9px_rgba(0,_0,_0,_1)]">
-                            <img class="md:w-[50%] aspect-video md:aspect-square xl:aspect-auto object-cover" src="../../assets/virtudes/Trabajo en equipo.webp" alt="Trabajo en Equipo">
+                            <img class="md:w-[50%] aspect-video md:aspect-square xl:aspect-auto object-cover" src="../../assets/virtudes/Trabajo en equipo.webp" alt="Virtud del Trabajo en Equipo">
                             
                             <div class="bg-orange-600 pb-4 space-y-2 h-full md:flex md:flex-col md:justify-center">
                                 <h3 class="text-center text-2xl sm:text-2xl md:text-5xl lg:text-6xl xl:text-7xl md:font-titulos font-cuerpos font-bold text-white py-4">Trabajo en Equipo</h3>
     
-                                <p class="text-slate-100 text-justify text-base font-cuerpos font-semibold px-8 md:px-16 lg:px-24 sm:text-lg md:text-xl lg:text-2xl">¡Juntos somos más fuertes! En el MPA, trabajar en equipo es fundamental para alcanzar nuestras metas y llevar el mensaje de Dios a más corazones.</p>
+                                <p class="text-slate-100 text-justify text-base font-cuerpos font-semibold px-8 md:px-0 md:pl-10 md:pr-16 lg:px-24 sm:text-lg md:text-xl lg:text-2xl">¡Juntos somos más fuertes! En el MPA, trabajar en equipo es fundamental para alcanzar nuestras metas y llevar el mensaje de Dios a más corazones.</p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="card hidden flex-shrink-0 w-full px-4 md:px-0 xl:p-2">
+                    <div class="card w-[300px] sm:w-full h-[400px] sm:h-auto hidden flex-shrink-0 px-4 md:px-0 xl:p-2">
                         <div class="w-full flex flex-col md:flex-row items-center rounded-2xl md:rounded-none xl:rounded-2xl overflow-hidden shadow-[0px_0px_20px_-9px_rgba(0,_0,_0,_1)]">
-                            <img class="md:w-[50%] aspect-video md:aspect-square xl:aspect-video object-cover" src="../../assets/virtudes/Empatia.webp" alt="Empatia">
+                            <img class="md:w-[50%] aspect-video md:aspect-square xl:aspect-video object-cover" src="../../assets/virtudes/Empatia.webp" alt="Virtud de la Empatia">
                             
                             <div class="bg-yellow-600 pb-4 space-y-2 h-full md:flex md:flex-col md:justify-center">
                                 <h3 class="text-center text-2xl sm:text-2xl md:text-5xl lg:text-6xl xl:text-7xl md:font-titulos font-cuerpos font-bold text-white py-4">Empatia</h3>
     
-                                <p class="text-slate-100 text-justify text-base font-cuerpos font-semibold px-8 md:px-16 lg:px-24 sm:text-lg md:text-xl lg:text-2xl">Entender y ponerse en el lugar de los demás es clave. En el MPA aprendemos a escuchar y a apoyar a quienes nos rodean.</p>
+                                <p class="text-slate-100 text-justify text-base font-cuerpos font-semibold px-8 md:px-0 md:pl-10 md:pr-16 lg:px-24 sm:text-lg md:text-xl lg:text-2xl">Entender y ponerse en el lugar de los demás es clave. En el MPA aprendemos a escuchar y a apoyar a quienes nos rodean.</p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="card hidden flex-shrink-0 w-full px-4 md:px-0 xl:p-2">
+                    <div class="card w-[300px] sm:w-full h-[400px] sm:h-auto hidden flex-shrink-0 px-4 md:px-0 xl:p-2">
                         <div class="w-full flex flex-col md:flex-row items-center rounded-2xl md:rounded-none xl:rounded-2xl overflow-hidden shadow-[0px_0px_20px_-9px_rgba(0,_0,_0,_1)]">
-                            <img class="md:w-[50%] aspect-video md:aspect-square xl:aspect-video object-cover" src="../../assets/virtudes/Servicio.webp" alt="Servicio">
+                            <img class="md:w-[50%] aspect-video md:aspect-square xl:aspect-video object-cover" src="../../assets/virtudes/Servicio.webp" alt="Virtud del Servicio">
 
                             <div class="bg-lime-600 pb-4 space-y-2 h-full md:flex md:flex-col md:justify-center">
                                 <h3 class="text-center text-2xl sm:text-2xl md:text-5xl lg:text-6xl xl:text-7xl md:font-titulos font-cuerpos font-bold text-white py-4">Servicio</h3>
     
-                                <p class="text-slate-100 text-justify text-base font-cuerpos font-semibold px-8 md:px-16 lg:px-24 sm:text-lg md:text-xl lg:text-2xl">Ayudar a los demás sin esperar nada a cambio es el alma de nuestro movimiento. ¡Siempre estamos listos para servir a quienes lo necesiten!</p>
+                                <p class="text-slate-100 text-justify text-base font-cuerpos font-semibold px-8 md:px-0 md:pl-10 md:pr-16 lg:px-24 sm:text-lg md:text-xl lg:text-2xl">Ayudar a los demás sin esperar nada a cambio es el alma de nuestro movimiento. ¡Siempre estamos listos para servir a quienes lo necesiten!</p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="card hidden flex-shrink-0 w-full px-4 md:px-0 xl:p-2">
+                    <div class="card w-[300px] sm:w-full h-[400px] sm:h-auto hidden flex-shrink-0 px-4 md:px-0 xl:p-2">
                         <div class="w-full flex flex-col md:flex-row items-center rounded-2xl md:rounded-none xl:rounded-2xl overflow-hidden shadow-[0px_0px_20px_-9px_rgba(0,_0,_0,_1)]">
-                            <img class="md:w-[50%] aspect-video md:aspect-square xl:aspect-video object-cover" src="../../assets/virtudes/Espiritualidad.webp" alt="Espiritualidad">
+                            <img class="md:w-[50%] aspect-video md:aspect-square xl:aspect-video object-cover" src="../../assets/virtudes/Espiritualidad.webp" alt="Virtud de la Espiritualidad">
 
                             <div class="bg-sky-600 pb-4 space-y-2 h-full md:flex md:flex-col md:justify-center">
                                 <h3 class="text-center text-2xl sm:text-2xl md:text-5xl lg:text-6xl xl:text-7xl md:font-titulos font-cuerpos font-bold text-white py-4">Espiritualidad</h3>
     
-                                <p class="text-slate-100 text-justify text-base font-cuerpos font-semibold px-8 md:px-16 lg:px-24 sm:text-lg md:text-xl lg:text-2xl">Nos esforzamos por vivir de acuerdo con los valores cristianos y mantener nuestra relación con Dios como el centro de nuestras vidas.</p>
+                                <p class="text-slate-100 text-justify text-base font-cuerpos font-semibold px-8 md:px-0 md:pl-10 md:pr-16 lg:px-24 sm:text-lg md:text-xl lg:text-2xl">Nos esforzamos por vivir de acuerdo con los valores cristianos y mantener nuestra relación con Dios como el centro de nuestras vidas.</p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="card hidden flex-shrink-0 w-full px-4 md:px-0 xl:p-2">
+                    <div class="card w-[300px] sm:w-full h-[400px] sm:h-auto hidden flex-shrink-0 px-4 md:px-0 xl:p-2">
                         <div class="w-full flex flex-col md:flex-row items-center rounded-2xl md:rounded-none xl:rounded-2xl overflow-hidden shadow-[0px_0px_20px_-9px_rgba(0,_0,_0,_1)]">
-                            <img class="md:w-[50%] aspect-video md:aspect-square xl:aspect-video object-cover" src="../../assets/virtudes/Amor.webp" alt="Amor">
+                            <img class="md:w-[50%] aspect-video md:aspect-square xl:aspect-video object-cover" src="../../assets/virtudes/Amor.webp" alt="Virtud del Amor">
 
                             <div class="bg-fuchsia-600 pb-4 space-y-2 h-full md:flex md:flex-col md:justify-center">
                                 <h3 class="text-center text-2xl sm:text-2xl md:text-5xl lg:text-6xl xl:text-7xl md:font-titulos font-cuerpos font-bold text-white py-4"> Amor</h3>
-                                <p class="text-slate-100 text-justify text-base font-cuerpos font-semibold px-8 md:px-16 lg:px-24 sm:text-lg md:text-xl lg:text-2xl">El amor a Dios, al prójimo y a nosotros mismos es lo que impulsa todas nuestras acciones dentro del grupo.</p>
+                                <p class="text-slate-100 text-justify text-base font-cuerpos font-semibold px-8 md:px-0 md:pl-10 md:pr-16 lg:px-24 sm:text-lg md:text-xl lg:text-2xl">El amor a Dios, al prójimo y a nosotros mismos es lo que impulsa todas nuestras acciones dentro del grupo.</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 
                 <!-- Controles del Slider -->
-                <button id="prevBtn" class="hidden sm:block absolute left-[-8%] md:left-[2%] xl:left-[-5%] top-[50%] transform -translate-y-1/2 bg-slate-200 p-2 lg:p-4 rounded-full">
-                    <img class="w-5 md:w-3" src="/assets/virtudes/icons/flecha izquierda.png" alt="Boton Atras">
+                <button id="prevBtn" class="sm:block absolute left-[30%] md:left-[2%] xl:left-[-5%] top-[30%] sm:top-[50%] transform -translate-y-1/2 bg-slate-200 bg-opacity-65 hover:bg-white hover:bg-opacity-90 p-2 lg:p-4 rounded-full">
+                    <img class="w-3 md:w-4" src="/assets/virtudes/icons/flecha izquierda.png" alt="Boton para Anterior">
                 </button>
                 
-                <button id="nextBtn" class="hidden sm:block absolute right-[-8%] md:right-[2%] xl:right-[-5%] top-[50%] transform -translate-y-1/2 bg-slate-200 p-2 lg:p-4 rounded-full">
-                    <img class="w-5 md:w-3" src="/assets/virtudes/icons/flecha derecha.png" alt="Boton Siguiente">
+                <button id="nextBtn" class="sm:block absolute right-[30%] md:right-[2%] xl:right-[-5%] top-[30%] sm:top-[50%] transform -translate-y-1/2 bg-slate-200 bg-opacity-65 hover:bg-white hover:bg-opacity-90 p-2 lg:p-4 rounded-full">
+                    <img class="w-3 md:w-4" src="/assets/virtudes/icons/flecha derecha.png" alt="Boton para Siguiente">
                 </button>
             </div>
 
@@ -232,7 +242,7 @@
             <div
                 class="bg-black/55 text-white w-full flex flex-col justify-center items-center space-y-4 md:space-y-8 absolute z-0 h-full">
                 <h2 class="font-titulos text-3xl sm:text-4xl md:text-6xl lg:text8xl xl:text-9xl text-center">¡Estar con Dios tambien es divertido!</h2>
-                <a href="https://www.facebook.com/profile.php?id=100009602772757"
+                <a href="https://www.facebook.com/share/1C2c9ZYaCM/"
                     class="button sm:font-titulos sm:text-3xl sm:px-20 md:text-4xl lg:rounded-[44px] xl:rounded-[68px] lg:font-titulos lg:text-6xl lg:px-40 lg:py-6 hover:bg-pink-500 hover:text-pink-50 hover:border-[5px] lg:hover:border-[10px] transition-all ease-out">Siguenos</a>
             </div>
 

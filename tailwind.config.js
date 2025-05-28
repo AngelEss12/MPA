@@ -91,11 +91,6 @@ module.exports = {
           '100%': { transform: 'translateX(-100%)', opacity: '0' },
         },
 
-        typing: {
-          from: { width: "0" },
-          to: { width: "100%" },
-        },
-
         fadeIn: {
           '0%': { opacity: '0.75' },
           '100%': { opacity: '1' },
@@ -129,7 +124,6 @@ module.exports = {
         slideout: 'slideOut 1s forwards',
         'gradient-x': 'gradient 5s ease infinite',
         rainbow: 'rainbow 5s infinite linear',
-        typing: "typing 4s steps(40) forwards",
         fadeIn: 'fadeIn 1s ease-in-out',
       },
       

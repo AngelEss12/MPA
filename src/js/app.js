@@ -6,7 +6,9 @@ import { nextVirtud, backVirtud} from './inicio/navigacion.js';
 
 document.addEventListener("DOMContentLoaded", () => {
   leyes();
-  initTouchListeners(inicio.virtudes.slider, nextVirtud, backVirtud)
+  initTouchListeners(inicio.virtudes.slider, nextVirtud, backVirtud);
+  const imgInicio = document.querySelector('#imgInicio');
+  imgInicio.src = inicio.header.allImages[0]; // Establecer la primera imagen al cargar
 });
 
 // Header
@@ -27,11 +29,3 @@ menuBurger.addEventListener('click', () => {
 inicio.virtudes.nextBtn.addEventListener('click', nextVirtud); // Evento para el botón "Siguiente"
 
 inicio.virtudes.prevBtn.addEventListener('click',  backVirtud); // Evento para el botón "Anterior"
-
-// Pausar con un boton al interactuar
-// document.querySelectorAll('a, button').forEach(element => {
-//     element.addEventListener('click', () => {
-//         clearInterval(sliderInterval);
-//         sliderInterval = setInterval(() => actualizarBGIMG(mediaQueryImg), 5000);
-//     });
-// });

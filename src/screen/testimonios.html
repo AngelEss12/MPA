@@ -4,7 +4,26 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/src/css/estilos.css" />
+
+    <!-- Preload de recursos críticos -->
+    <link rel="preload" href="/src/css/estilos.css" as="style">
+    <link rel="preload" href="/src/css/animation.css" as="style">
+    <link rel="preload" href="/assets/testimonios/Testimonios.jpg" as="image">
+    
+    <!-- Hojas de estilo -->
+    <link rel="stylesheet" href="/src/css/estilos.css">
+    <link rel="stylesheet" href="/src/css/animation.css">
+
+    <!-- Preconexión a recursos externos -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Video -->
+    <link rel="modulepreload" href="https://cdn.jsdelivr.net/npm/@justinribeiro/lite-youtube@1/lite-youtube.min.js">
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@justinribeiro/lite-youtube@1/lite-youtube.min.js"></script>
+    <!-- Precarga de la miniatura -->
+    <link rel="preload" as="image" href="https://i.ytimg.com/vi/tziayBHHJxo/hqdefault.jpg">
+    
     <title>Testimonios</title>
 </head>
 
@@ -61,50 +80,37 @@
 
         <div class="h-screen inset-0 w-full -z-10">
             <img class="w-full h-full object-cover sm:aspect-video absolute inset-0"
-                src="/assets/testimonios/Testimonios.jpg" alt="banner nosotros" loading="lazy" />
+                src="/assets/testimonios/Testimonios.jpg" alt="banner testimonios"/>
         </div>
     </header>
 
     <main>
-        <section class="relative contenedor-principal h-screen overflow-hidden">
+        <section class="relative contenedor-principal overflow-hidden">
             <div id="inicio"
-                class="w-full flex flex-col justify-center items-center space-y-8 md:space-y-10 lg:space-y-12 animate-fade-up animate-ease-in-out">
+                class="w-[90%] h-[93vh] flex flex-col justify-center items-center space-y-8 md:space-y-10 lg:space-y-12 animate-fade-up animate-ease-in-out border-b-2 border-slate-500/50">
+            <!--Titulo Principal-->
                 <h2
-                    class="font-titulos font-black text-center text-4xl sm:text-5xl text-slate-800 md:text-6xl lg:text-8xl">
+                    class="font-titulos font-black text-center text-4xl sm:text-6xl text-slate-800 md:text-7xl lg:text-8xl">
                     Nuestro testimonio
                 </h2>
                 <p
-                    class="text-center text-slate-800/90 text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-cuerpos font-semibold px-4 md:px-8 lg:px-10">
+                    class="text-center text-slate-800/90 text-lg sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-cuerpos font-semibold px-4 md:px-8 lg:px-10">
                     Cada experiencia es difetente, es por ello que todos tenemos un
                     testimonio unico que contar.
                 </p>
 
                 <p
-                    class="text-center text-slate-800/90 text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-cuerpos font-semibold px-4 md:px-8 lg:px-10 animate-heartbeat">
+                    class="text-center text-slate-800/90 text-lg sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-cuerpos font-semibold px-4 md:px-8 lg:px-10 animate-heartbeat">
                     ¡Que Papito Dios y Mamita Maria te guien por siempre! 😇💖
                 </p>
-
-                <button
-                    class="text-base font-bold p-3 border-black border-2 rounded-full hover:bg-green-500 hover:border-green-600 transition-all ease-in animate-bounce animate-infinite hover:text-white">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 10 10" fill="none">
-                        <path d="M5 1v6M3 6l2 2 2-2" stroke="currentColor" stroke-width="1" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                    </svg>
-                </button>
             </div>
             <!--Titulo Principal-->
 
             <div id="mensaje"
-                class="hidden w-[90%] flex flex-col justify-center items-center space-y-8 lg:space-y-8 animate-fade-down animate-ease-in-out">
+                class=" w-[90%] h-[90vh] flex flex-col justify-center items-center space-y-8 lg:space-y-8 animate-fade-down animate-ease-in-out lg:py-20">
                 <h3 class="font-titulos font-black text-center text-4xl sm:text-5xl text-slate-900 md:text-6xl lg:text-7xl">Mensaje del Fundador</h3>
                 
-                <lite-youtube videoid="tziayBHHJxo" class="w-[90%] sm:h-[60vh] lg:w-[80%] lg:h-[70vh] xl:h-[60vh] xl:w-[60%] rounded-lg "></lite-youtube>
-                
-                <button class="text-base font-bold p-3 border-black border-2 rounded-full hover:bg-green-500 hover:border-green-600 transition-all ease-in animate-bounce animate-reverse animate-infinite hover:text-white">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 10 10" fill="none">
-                        <path d="M5 9V3M3 4l2-2 2 2" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                </button>
+                <lite-youtube videoid="tziayBHHJxo" class="w-[90%] md:w-[70%] max-h-[500px] rounded-lg "></lite-youtube>
             </div>
 
             <div id="burbujas" class="absolute inset-0 -z-10 overflow-hidden">
@@ -154,8 +160,8 @@
             </div>
         </section>
 
-        <section id="testiminios" class="relative contenedor-principal overflow-hidden">
-            <h2 class="w-full text-center text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold font-titulos pb-8 overflow-hidden whitespace-nowrap pr-2 border-r-2 border-white/10 animate-typing animate-infinite">Testimonios</h2>
+        <section id="testiminios" class="relative contenedor-principal xl:h-[95vh] overflow-hidden">
+            <h2 class="w-full text-center text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold font-titulos pb-8 pr-2 border-r-2 border-white/10 typing-animation-infinite">Testimonios</h2>
             
             <div id="t-container" class="relative w-[90%] flex flex-wrap justify-center gap-2">
                 <button id="btn-regresar" class="absolute top-[45%] text-white left-[25%] sm:left-[35%] md:left-0 w-10 h-10 flex items-center justify-center p-2 rounded-full bg-black/50 hover:bg-black/70 transition-all ease-in-out duration-300 z-30">
@@ -164,7 +170,7 @@
                     </svg>
                 </button>
                 
-                <div class="max-w-[300px] md:max-w-[400px] lg:max-w-[90%] h-[510px] md:h-[478px] lg:h-[350px] bg-[#d86111] text-white flex flex-col lg:flex-row justify-center items-center space-y-4 overflow-hidden rounded-lg shadow-md shadow-[#593a25] pb-6 lg:pb-0">
+                <div class="max-w-[300px] md:max-w-[400px] lg:max-w-[90%] h-[510px] md:h-[478px] lg:h-[300px] xl:h-[350px] bg-[#d86111] text-white flex flex-col lg:flex-row justify-center items-center space-y-4 overflow-hidden rounded-lg shadow-md shadow-[#593a25] pb-6 lg:pb-0">
                     <div class="t-Imagen">
                         <img class="w-full object-cover aspect-square md:aspect-video lg:aspect-square"
                             src="/assets/testimonios/testimonio 1.jpg" alt="" />
@@ -181,7 +187,7 @@
                 </div>
                 <!-- Testiminio -->
 
-                <div class="hidden max-w-[300px] md:max-w-[400px] lg:max-w-[90%] h-[510px] md:h-[478px] lg:h-[350px] bg-[#94861b] text-white flex flex-col lg:flex-row justify-center items-center space-y-4 overflow-hidden rounded-lg shadow-md shadow-[#47421e] pb-6 lg:pb-0">
+                <div class="hidden max-w-[300px] md:max-w-[400px] lg:max-w-[90%] h-[510px] md:h-[478px] lg:h-[300px] xl:h-[350px] bg-[#94861b] text-white flex flex-col lg:flex-row justify-center items-center space-y-4 overflow-hidden rounded-lg shadow-md shadow-[#47421e] pb-6 lg:pb-0">
                     <div class="t-Imagen">
                         <img class="w-full object-cover aspect-square md:aspect-video lg:aspect-square"
                             src="/assets/testimonios/testimonio 2.jpg" alt="" />
@@ -199,7 +205,7 @@
                 </div>
                 <!-- Testiminio -->
 
-                <div class="hidden max-w-[300px] md:max-w-[400px] lg:max-w-[90%] h-[510px] md:h-[478px] lg:h-[350px] bg-[#1b8736] text-white flex flex-col lg:flex-row justify-center items-center space-y-4 overflow-hidden rounded-lg shadow-md shadow-[#1c4325] pb-6 lg:pb-0">
+                <div class="hidden max-w-[300px] md:max-w-[400px] lg:max-w-[90%] h-[510px] md:h-[478px] lg:h-[300px] xl:h-[350px] bg-[#1b8736] text-white flex flex-col lg:flex-row justify-center items-center space-y-4 overflow-hidden rounded-lg shadow-md shadow-[#1c4325] pb-6 lg:pb-0">
                     <div class="t-Imagen">
                         <img class="w-full object-cover aspect-square md:aspect-video lg:aspect-square"
                             src="/assets/testimonios/testimonio 3.jpg" alt="" />
@@ -217,7 +223,7 @@
                 </div>
                 <!-- Testiminio -->
 
-                <div class="hidden max-w-[300px] md:max-w-[400px] lg:max-w-[90%] h-[510px] md:h-[478px] lg:h-[350px] bg-[#3168ac] text-white flex flex-col lg:flex-row justify-center items-center space-y-4 overflow-hidden rounded-lg shadow-md shadow-[#1f334b] pb-6 lg:pb-0">
+                <div class="hidden max-w-[300px] md:max-w-[400px] lg:max-w-[90%] h-[510px] md:h-[478px] lg:h-[300px] xl:h-[350px] bg-[#3168ac] text-white flex flex-col lg:flex-row justify-center items-center space-y-4 overflow-hidden rounded-lg shadow-md shadow-[#1f334b] pb-6 lg:pb-0">
                     <div class="t-Imagen">
                         <img class="w-full object-cover aspect-square md:aspect-video lg:aspect-square"
                             src="/assets/testimonios/testimonio 4.jpg" alt="" />
@@ -235,7 +241,7 @@
                 </div>
                 <!-- Testiminio -->
 
-                <div class="hidden max-w-[300px] md:max-w-[400px] lg:max-w-[90%] h-[510px] md:h-[478px] lg:h-[350px] bg-[#85319a] text-white flex flex-col lg:flex-row justify-center items-center space-y-4 overflow-hidden rounded-lg shadow-md shadow-[#421f4b] pb-6 lg:pb-0">
+                <div class="hidden max-w-[300px] md:max-w-[400px] lg:max-w-[90%] h-[510px] md:h-[478px] lg:h-[300px] xl:h-[350px] bg-[#85319a] text-white flex flex-col lg:flex-row justify-center items-center space-y-4 overflow-hidden rounded-lg shadow-md shadow-[#421f4b] pb-6 lg:pb-0">
                     <div class="t-Imagen">
                         <img class="w-full object-cover aspect-square md:aspect-video lg:aspect-square"
                             src="/assets/testimonios/testimonio 5.jpg" alt="" />
@@ -253,7 +259,7 @@
                 </div>
                 <!-- Testiminio -->
 
-                <div class="hidden max-w-[300px] md:max-w-[400px] lg:max-w-[90%] h-[510px] md:h-[478px] lg:h-[350px] bg-[#972168] text-white flex flex-col lg:flex-row justify-center items-center space-y-4 overflow-hidden rounded-lg shadow-md shadow-[#411b32] pb-6 lg:pb-0">
+                <div class="hidden max-w-[300px] md:max-w-[400px] lg:max-w-[90%] h-[510px] md:h-[478px] lg:h-[300px] xl:h-[350px] bg-[#972168] text-white flex flex-col lg:flex-row justify-center items-center space-y-4 overflow-hidden rounded-lg shadow-md shadow-[#411b32] pb-6 lg:pb-0">
                     <div class="t-Imagen">
                         <img class="w-full object-cover aspect-square md:aspect-video lg:aspect-square"
                             src="/assets/testimonios/testimonio 6.jpg" alt="" />
@@ -289,6 +295,17 @@
         </section>
         <!-- Fin de testimonios -->
 
+        <section class="w-full flex flex-col justify-center items-center relative overflow-hidden">
+            <div
+                class="bg-black/40 text-white w-full flex flex-col justify-center items-center space-y-4 md:space-y-8 absolute z-10 h-full">
+                <h2 class="font-titulos font-extrabold text-center px-4 text-4xl sm:text-6xl md:text-7xl md:px-8 lg:text-8xl xl:px-12">El mejor testimonio    que podemos dar es el que tu decides compartir 💕.</h2>
+            </div>
+
+            <div class="-z-10 w-full">
+                <img class="w-full object-cover aspect-video" src="/assets/actividades/viajes/Viajes 9.webp"
+                    alt="Banner final">
+            </div>
+        </section> <!--Fin de invitacion-->
     </main>
 
     <footer class="bg-gray-50 flex flex-col justify-center items-center">
@@ -322,6 +339,4 @@
     </div>
 </body>
 <script src="/src/js/testimonios/testimonio.js" type="module"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@justinribeiro/lite-youtube@1/lite-youtube.min.js"></script>
-
 </html>

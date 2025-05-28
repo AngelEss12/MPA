@@ -4,8 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Preload de recursos críticos -->
+    <link rel="preload" href="/src/css/estilos.css" as="style">
+    <link rel="preload" href="/src/css/animation.css" as="style">
+    <link rel="preload" href="/assets/actividades/header/Banner Header.webp" as="image">
+    
+    <!-- Hojas de estilo -->
     <link rel="stylesheet" href="/src/css/estilos.css">
     <link rel="stylesheet" href="/src/css/animation.css">
+    
+    <!-- Preconexión a recursos externos -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <title>Actividades</title>
 </head>
 
@@ -55,13 +65,13 @@
             </div>
 
             <div class="hd-body xl:text-[240px]">
-                <h1 class="hd-title">Actividades</h1>
+                <h1 class="text-white font-titulos animate-heartbeat">Actividades</h1>
             </div>
         </div>
 
         <div class="h-screen inset-0 w-full -z-10">
             <img class="w-full h-full object-cover sm:aspect-video absolute inset-0"
-                src="/assets/actividades/header/Banner Header.webp" alt="" loading="lazy" />
+                src="/assets/actividades/header/Banner Header.webp" alt=""/>
         </div>
     </header>
 
@@ -421,7 +431,7 @@
             <div
                 class="bg-black/40 text-white w-full flex flex-col justify-center items-center space-y-4 md:space-y-8 absolute z-10 h-full">
                 <h2 class="font-titulos font-extrabold text-center text-4xl sm:text-6xl md:text-7xl lg:text-8xl">¡La fe es un regalo de Dios que puedes compartir! ❤️</h2>
-                <a href="#"
+                <a href="/src/screen/nosotros.html"
                     class="button sm:font-titulos sm:text-3xl sm:px-20 md:text-4xl lg:rounded-[44px] xl:rounded-[68px] lg:font-titulos lg:text-6xl lg:px-40 lg:py-6 hover:bg-sky-500 hover:text-sky-50 hover:border-[5px] lg:hover:border-[10px] transition-all ease-out">¡Conocenos!</a>
             </div>
 

@@ -16,14 +16,6 @@ menuBurger.addEventListener('click', () => {
     body.classList.toggle('overflow-hidden');
 });
 
-const inicio = document.querySelector("#inicio");
-const btnInicio = document.querySelector("#inicio > button");
-const mensaje = document.querySelector("#mensaje");
-const btnMensaje = document.querySelector("#mensaje > button");
-
-
-const mtestimonio = document.querySelector("#tMensaje");
-
 // Testimonio completo
 const testimoniosCompletos = [
     "El pertenecer a este movimiento fue algo hermoso: un mosaico de experiencias, aventuras y desafíos. Comprendí que no estoy solo; hay más personas con vivencias similares a las mías y juntos podemos alejarnos de lo malo, apoyándonos entre nosotros y, a través de Dios, de manera sana y divertida: jugando, riendo, cantando, atrayendo a más niños, niñas y adolescentes al movimiento, colaborando en las misas y, sobre todo, ayudando de vez en cuando a quien más lo necesite.\n\nTodo empezó en un retiro al que realmente quería ir; no me arrepiento de haber asistido. Fue una experiencia única que impulsó mi crecimiento espiritual, social y personal. No solo me uní a un movimiento, me encontré con una segunda familia donde me sentía seguro y feliz. Con los años dejé de ser el que vivía el retiro para convertirme en quien lo organizaba —y no en uno, sino en varios—, cada uno espectacular. En ellos seguí aprendiendo a expresarme, a abrirme con los demás y a ser servicial. Gracias a esta vivencia, ahora sé que no estoy solo cuando estoy junto a Cristo y María.",
@@ -31,20 +23,10 @@ const testimoniosCompletos = [
     "Mi experiencia en Pandillas de la Amistad ha sido lo mejor de los diez años que llevo en el movimiento. Cuando era niña no comprendía su impacto; ahora sé que Pandillas me dio herramientas para crecer, descubrir mis habilidades y fortalecer mi amor y mi fe. Siempre me sentí acompañada y, a través de Dios, fui fortaleciéndome, sintiéndome amada y segura de que jamás volveré a estar sola.",
     "Pandillas de la Amistad fue un gran formador en mi niñez y adolescencia. Siempre estuve rodeado de niños y jóvenes responsables, dedicados y amigables, con el objetivo de servir a Dios y aprender sobre nosotros mismos en el camino. Vivir esa etapa en el grupo fue de gran ayuda: muchas de las habilidades y el autoconocimiento que adquirí los aplico hoy en mi vida diaria.",
     "Durante los siete años que pertenecí a Pandillas de la Amistad, tuve el privilegio de formar parte de una comunidad increíble que me ayudó a crecer como persona y en mi vida espiritual. En este viaje descubrí la importancia de la amistad y la fe; aprendí a ser más sociable y a encontrar mi voz. Descubrí que mis opiniones valen y que puedo expresarlas con confianza. \n\nLo más importante fue darme cuenta de que no estoy sola: tengo amigos que me apoyan y un Dios que me ama y me cuida. Mi paso por la Pandilla fue una de las mejores decisiones de mi vida. Llevo conmigo recuerdos y lecciones que me inspiran cada día.",
-    "Con cada encuentro fui dejando atrás el temor a mostrarme tal como soy. Entendí que Dios siempre había estado conmigo, y, él sabía que deseaba tener verdaderos amigos. Aprendí a confiar en los demás y a celebrar nuestros logros por muy pequeños que fueran. Con risas, juegos y reflexiones me ayudaron a desarrollar aquella empatía que yo tanto reprimía, fue ahí que aprendí que la responsabilidad y la seguridad de que llorar y compartir nuestros problemas no nos hace mas débiles, al contrario, demuestra la fortaleza de nuestros corazones al querer salir del sufrimiento todos juntos. \n\nY justo antes de irme, Dios me confió la tarea de guiar a mi Pandilla. Dudé, sentí pánico, pero comprendí que, la verdadera valentía nace de un corazón lleno de fe y amistad, así se puede superar cualquier adversidad.\n\nHoy, con orgullo, ofrezco esta página como testimonio de que confiar en Dios y en tus amigos transforma vidas."
+    "Con cada encuentro fui dejando atrás el temor a mostrarme tal como soy. Entendí que Dios siempre había estado conmigo, y, él sabía que deseaba tener verdaderos amigos. Aprendí a confiar en los demás y a celebrar nuestros logros por muy pequeños que fueran. Con risas, juegos y reflexiones me ayudaron a desarrollar aquella empatía que yo tanto reprimía, fue ahí que aprendí que la responsabilidad y la seguridad de llorar y compartir nuestros problemas no nos hace mas débiles, al contrario, demuestra la fortaleza de nuestros corazones al querer salir del sufrimiento todos juntos. \n\nY justo antes de irme, Dios me confió la tarea de guiar a mi Pandilla. Dudé, sentí pánico, pero comprendí que, la verdadera valentía nace de un corazón lleno de fe y amistad, así se puede superar cualquier adversidad.\n\nHoy, con orgullo, ofrezco esta página como testimonio de que confiar en Dios y en tus amigos transforma vidas."
 ];
 
 const colores = ["bg-[#a7531a]", "bg-[#928419]", "bg-[#136628]", "bg-[#214f87]", "bg-[#702583]", "bg-[#7e1a56]"]
-
-btnInicio.addEventListener("click", () => {
-    inicio.classList.toggle("hidden");
-    mensaje.classList.toggle("hidden");
-})
-
-btnMensaje.addEventListener("click", () => {
-    inicio.classList.toggle("hidden");
-    mensaje.classList.toggle("hidden");
-})
 
 // Slider de testimonios
 const sliderItems = document.querySelectorAll('#t-container > div');
