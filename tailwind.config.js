@@ -123,7 +123,6 @@ module.exports = {
         slidein: 'slideIn 1s forwards',
         slideout: 'slideOut 1s forwards',
         'gradient-x': 'gradient 5s ease infinite',
-        rainbow: 'rainbow 5s infinite linear',
         fadeIn: 'fadeIn 1s ease-in-out',
       },
       
