@@ -23,7 +23,6 @@ module.exports = {
         'gradiente-t5': 'linear-gradient(to bottom, #ffffff, #f0ebfd, #e5d7fa, #ddc1f4, #d8abec, #cc96dc, #c081cb, #b46bba, #9c53a0, #853a87, #6e226f, #570257)',
         'gradiente-t6': 'linear-gradient(to bottom, #ffffff, #f1ebfa, #e7d7f1, #e2c1e6, #dfabd7, #d395c3, #c680af, #ba6a9b, #a15181, #883969, #6f2051, #57023a)',
         'gradiente-footer': 'linear-gradient(to right bottom, #ffd0c5, #ffd7be, #ffdfba, #f7e8b9, #ebf2be, #d6f7c8, #c1fad7, #affce9, #a2f6fc, #a8ecff, #bde1ff, #d4d5ff)',
-        
       },
       keyframes: {
 

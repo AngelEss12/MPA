@@ -1,14 +1,15 @@
 import { inicio } from "./inicio/variables.js";
 import { actualizarBGIMG } from "./inicio/header.js";
-import { leyes } from "./inicio/leyes.js";
+import { observerLeyes } from "./inicio/leyes.js";
 import { initTouchListeners } from "./inicio/touchListener.js";
 import { nextVirtud, backVirtud} from './inicio/navigacion.js';
 
 document.addEventListener("DOMContentLoaded", () => {
-  leyes();
   initTouchListeners(inicio.virtudes.slider, nextVirtud, backVirtud);
   const imgInicio = document.querySelector('#imgInicio');
   imgInicio.src = inicio.header.allImages[0]; // Establecer la primera imagen al cargar
+
+  inicio.leyes.card.forEach(ley => observerLeyes.observe(ley));
 });
 
 // Header
