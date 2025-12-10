@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Header
 const { mediaQueryImg } = inicio.header;
-let sliderInterval = setInterval(() => actualizarBGIMG(mediaQueryImg), 4500); // Configurar intervalo
+let sliderInterval = setInterval(() => actualizarBGIMG(mediaQueryImg), 5000); // Configurar intervalo
 
 // Manejar resize correctamente
 mediaQueryImg.addEventListener('change', actualizarBGIMG);

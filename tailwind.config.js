@@ -16,6 +16,7 @@ module.exports = {
         'gradiente-v1': 'linear-gradient(to bottom, #ffffff, #fafafe, #f5f5fc, #eff0fb, #e8ecfa, #d2d4e2, #bcbdca, #a7a6b3, #7d7982, #544f54, #2c292b, #000000)',
         'gradiente-v2': 'linear-gradient(to bottom, #fbf6f8, #fcf3f3, #fcf2ed, #f8f1e7, #f0f1e4, #edf1e3, #e9f2e3, #e4f2e3, #e6f1e0, #e9f1de, #ecf0dc, #efefda)',
         'gradiente-v3': 'linear-gradient(to right top, #1d222a, #1f2127, #1f2024, #1f2022, #1f1f1f)',
+        'gradiente-t0': 'linear-gradient(to bottom, #29292a, #242627, #1f2323, #1b201e, #191c18)',
         'gradiente-t1': 'linear-gradient(to bottom, #ffffff, #faf5fb, #fbeaf2, #fddfe2, #fbd5ce, #f1c5b6, #e4b69e, #d4a885, #c08e65, #ab7446, #955b28, #7f4305)',
         'gradiente-t2': 'linear-gradient(to bottom, #ffffff, #fff3fe, #ffe6ec, #ffdccd, #ffdaab, #ebce92, #d3c47b, #b8ba67, #9c9d4e, #808035, #65651d, #4b4b03)',
         'gradiente-t3': 'linear-gradient(to bottom, #ffffff, #eaf4ff, #c5edff, #99e8f2, #7de1d0, #70cfaf, #6abd8d, #69aa6b, #508d53, #37723d, #1f5727, #033e13)',
@@ -52,11 +53,11 @@ module.exports = {
 
         bubbleup: {
           '0%': { transform: 'translateY(0) scale(1)' },
-          '100%': { transform: 'translateY(-1150px) scale(1.4)' },
+          '100%': { transform: 'translateY(-2450px) scale(1.2)' },
         },
         bubbledown: {
           '0%': { transform: 'translateY(0) scale(1)' },
-          '100%': { transform: 'translateY(3600px) scale(1.1)' },
+          '100%': { transform: 'translateY(1200%) scale(1.1)' },
         },
 
         positionSwap: {
@@ -94,12 +95,13 @@ module.exports = {
           '0%': { opacity: '0.75' },
           '100%': { opacity: '1' },
         },
+
       },
       animation: {
         appear: 'appear 0.1s ease-out both',  // Define la animación con la duración y timing-function que desees
         heartbeat: 'heartbeat 2s linear 1s infinite both',
         load: 'load 18s linear forwards',
-        marquee: 'marquee 10s linear infinite',
+        marquee: 'marquee 15s linear infinite',
         bubbleup: 'bubbleup 8s infinite',
         'bubbleup-delayed-1': 'bubbleup 8s infinite 2s',
         'bubbleup-delayed-2': 'bubbleup 8s infinite 4s',

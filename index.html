@@ -5,8 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Preconexión para Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+        <!-- Meta SEO importantes -->
+    <meta name="description" content="Movimiento Pandillas de la Amistad, un espacio de fe, amistad y crecimiento espiritual para niños y jóvenes. Únete y descubre más.">
+    <meta name="keywords" content="Pandillas de la Amistad, fe, jóvenes, niños, movimiento católico, crecimiento espiritual">
+    <meta name="author" content="Movimiento Pandillas de la Amistad">
+
+     <!-- Preconnect y Preload para optimizar recursos -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <!-- Preload imagen -->
@@ -16,6 +21,12 @@
     <link rel="stylesheet" href="/src/css/estilos.css">
 
     <title>MPA</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+
+    <!-- Evitar render blocking JS -->
+    <script defer src="/src/js/main.js"></script>
 </head>
 
 
@@ -57,13 +68,13 @@
 
             <!-- Titulo -->
             <div class="hd-body w-full overflow-hidden xl:text-[180px]">
-                <p class="text-rose-100 font-titulos text-center text-5xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-[155px] border-r-2 border-white/10 typing-animation">
+                <p class="text-rose-50 font-titulos text-center text-5xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-[155px] border-r-2 border-white/10 typing-animation">
                     Movimiento <br> 
                     <span>Pandillas de</span> <br> 
                     <span class="inline-block">la Amistad</span>
                 </p>
-                <p class="text-center text-3xl sm:text-4xl md:text-5xl lg:text-7xl xl:text-9xl font-semibold text-green-100 font-cuerpos px-8 sm:px-8 md:px-12 animate-fade-left animate-once animate-ease-in hidden">Movimiento catolico para niños y preadolescentes</p>
-                <p class="text-center text-3xl sm:text-5xl md:text-7xl lg:text-7xl xl:text-9xl font-semibold text-sky-100 font-cuerpos px-8 sm:px-8 md:px-12 animate-fade-left animate-once animate-ease-in hidden">Expandido por todo el pais, unidos todos para formar un mundo mejor.</p>
+                <p class="text-center text-3xl sm:text-4xl md:text-5xl lg:text-7xl xl:text-9xl font-semibold text-green-50 font-cuerpos px-8 sm:px-8 md:px-12 animate-fade-left animate-once animate-ease-in hidden">Movimiento catolico para niños y preadolescentes</p>
+                <p class="text-center text-3xl sm:text-5xl md:text-7xl lg:text-7xl xl:text-9xl font-semibold text-sky-50 font-cuerpos px-8 sm:px-8 md:px-12 animate-fade-left animate-once animate-ease-in hidden">Expandido por todo el pais, unidos todos para formar un mundo mejor.</p>
                 <p class="xl:h-full font-titulos font-extrabold text-sky-50/90 text-center text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[155px] px-8 md:px-9 lg:px-8 animate-heartbeat hidden"> <span class="text-base sm:text-lg md:text-xl lg:text-2xl font-bold font-cuerpos text-purple-200/95">
                     Nuestro Objetivo:
                 </span> <br> "Evangelizar al niño atraves del niño".</p>
@@ -73,9 +84,9 @@
         <!-- Fondo -->
         <div id="bgInicio" class="h-screen inset-0 w-full -z-10">
             <img id="imgInicio" class="w-full h-full object-cover absolute inset-0 transition-opacity duration-500" src="/assets/banner/Banner.webp" alt="banner Principal">
-            <img class="w-full h-full object-cover absolute inset-0 opacity-0 transition-opacity duration-500" src="" alt="banner 2" loading="lazy">
-            <img class="w-full h-full object-cover absolute inset-0 opacity-0 transition-opacity duration-500" src="" alt="banner 3" loading="lazy">
-            <img class="w-full h-full object-cover absolute inset-0 opacity-0 transition-opacity duration-500" src="" alt="banner 4" loading="lazy">
+            <img class="w-full h-full object-cover absolute inset-0 opacity-0 transition-opacity duration-500" src="" alt="banner 2">
+            <img class="w-full h-full object-cover absolute inset-0 opacity-0 transition-opacity duration-500" src="" alt="banner 3">
+            <img class="w-full h-full object-cover absolute inset-0 opacity-0 transition-opacity duration-500" src="" alt="banner 4">
         </div>
     </header>
 
@@ -83,7 +94,7 @@
         <section class="contenedor-principal">
             <h2 class="text-center text-gray-800 text-4xl font-bold font-cuerpos md:text-6xl lg:text-8xl xl:text-9xl px-4 pt-4 md:pb-6">¿Que es <span class="">MPA</span>?</h2>
 
-            <div class="w-[95%] flex flex-col justify-around items-center py-4 md:py-0 md:pb-4 xl:py-0 xl:flex-row xl:h-[55vh]">
+            <div class="w-[95%] flex flex-col justify-around items-center py-4 md:py-0 md:pb-4 xl:py-0 xl:flex-row xl:h-[65vh]">
                 <div class="">
                     <p class="font-cuerpos font-medium text-slate-950/90 text-justify text-base py-4 px-8 sm:text-lg md:text-xl md:py-5 md:px-12 lg:px-16 lg:py-5 xl:py-0 lg:text-2xl leading-7 md:leading-8 lg:leading-9 xl:leading-10">¡Un movimiento lleno de <span class="font-bold text-green-600">vida, fe y alegría</span>! 🌟. Pandillas de la Amistad es un <span class="font-bold text-rose-600">movimiento católico</span> donde los niños son los verdaderos protagonistas. Aquí <span class="font-bold text-sky-600">el niño evangeliza al niño</span>, descubriendo que es una creación maravillosa de Dios con una misión única: compartir amor, servir con alegría y construir un mundo mejor. 🕊️ Reconocido por la <span class="font-bold text-purple-600">Comisión Episcopal Mexicana</span>, MPA forma corazones valientes que viven su fe con entusiasmo, dentro de su comunidad y la Iglesia. </p>
                 </div>
@@ -92,7 +103,7 @@
             </div>
 
             <div class="w-[95%] flex justify-center items-center flex-col xl:h-[80vh]">
-                <h3 class="text-justify xl:text-right text-gray-700 md:w-[95%] lg:w-[90%] text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold font-cuerpos px-10 pt-4">Una familia que cambia vidas 💖</h3>
+                <h3 class="text-justify xl:text-right text-gray-700 md:w-[95%] lg:w-[90%] text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold font-cuerpos px-10 pt-4">Una familia que cambia vidas 💖</h3>
                 <div class="flex flex-col justify-around items-center xl:flex-row-reverse">
                     <div class="">
                         <p class="font-cuerpos font-medium text-slate-950/90 text-justify text-base py-4 px-8 sm:text-lg md:text-xl md:py-5 md:px-12 lg:px-16 lg:py-5 lg:text-2xl leading-7 md:leading-8 lg:leading-9 xl:leading-10">¡Somos más que un grupo, <span class="font-bold">somos una gran familia</span>! 👨‍👩‍👧‍👦 <span class="font-bold">Niños </span>entre 10 y 15 años, <span class="font-bold">jóvenes</span> llenos de energía llamados papis y mamis, y <span class="font-bold">matrimonios cariñosos</span> conocidos como tíos, todos caminamos juntos aprendiendo a <span class="font-bold">amar ❤️, servir 🤝 y ser felices 😊</span>. Aquí cada risa, cada abrazo y cada enseñanza nos acerca más a Dios y nos impulsa a transformar nuestro entorno con el poder de la <span class="font-bold">fe y la amistad</span>. 🌈</p>
@@ -104,63 +115,63 @@
         </section> <!--Fin de MPA-->
 
         <section class="bg-rose-600 contenedor-principal space-y-2">
-            <h2 class="text-center text-gray-100 text-4xl font-bold font-cuerpos md:text-6xl lg:text-8xl xl:text-9xl px-4 pt-4 md:pb-6">Nuestras Leyes</h2>
+            <h2 class="text-center text-gray-100 text-4xl font-bold font-cuerpos md:text-6xl lg:text-8xl xl:text-9xl px-4 pt-4">Nuestras Leyes</h2>
 
-            <p class="w-[95%] xl:w-[90%] font-cuerpos font-medium text-slate-200 text-justify text-base py-4 px-8 sm:text-lg md:text-xl md:py-5 md:px-12 lg:px-16 lg:py-5 xl:py-8 lg:text-2xl leading-7 md:leading-8 lg:leading-9 xl:leading-10">
+            <p class="w-[95%] xl:w-[90%] font-cuerpos font-medium text-slate-100/95 text-justify text-base py-4 px-8 sm:text-lg md:text-xl md:py-8 md:px-12 lg:px-16 lg:py-12 lg:text-2xl leading-7 md:leading-8 lg:leading-9 xl:leading-10">
                 Las leyes de Pandillas de la Amistad son el corazón de nuestra convivencia. Son <span class="font-bold">pequeños compromisos</span> que nos ayudan a ser mejores cada día, a vivir con alegría, respeto y amor hacia los demás. Con ellas, aprendemos a reflejar lo mejor de nosotros mismos y a seguir el camino que Jesús nos enseñó. ¡Juntos hacemos del movimiento una gran familia llena de amistad, servicio y fe! 💙
             </p>
 
             <!-- LEyes -->
-            <div class="w-[85%] flex flex-col justify-center items-center lg:grid lg:grid-cols-3 lg:gap-4 xl:gap-6">
-                <div class="ley w-full flex flex-col justify-center items-center bg-slate-50/95 rounded-md shadow-md shadow-gray-600/55 mb-4 py-4 space-y-2 lg:mb-0">
-                    <h3 class="w-full text-pink-700 py-2 text-left pl-6 text-lg uppercase font-bold">No te Burles</h3>
+            <div class="w-[85%] lg:w-[90%] flex flex-col justify-center items-center lg:grid lg:items-stretch lg:grid-cols-2 xl:grid-cols-3 lg:gap-4 xl:gap-6">
+                <div class="ley w-full flex flex-col justify-center lg:justify-start items-center bg-slate-50/95 rounded-md shadow-md shadow-gray-600/55 mb-4 py-4 space-y-2 lg:mb-0">
+                    <h3 class="w-full text-pink-600 py-2 text-left lg:text-center pl-6 lg:pl-0 text-lg sm:text-xl md:text-2xl lg:text-3xl uppercase font-bold">No te Burles</h3>
                     
-                    <div class="px-6 space-y-3">
+                    <div class="px-6 space-y-3 sm:text-lg lg:text-xl">
                         <p class="text-justify text-black/75">“Eviten toda palabra dañina; que sus palabras sean siempre buenas y edificantes, según la necesidad, para hacer bien a quienes las escuchan.”</p>
                         <p class="font-light italic text-black/90 pb-2">Efesios 4:29</p>
                     </div>
                 </div>
 
-                <div class="ley w-full flex flex-col justify-center items-center bg-slate-50/95 rounded-md shadow-md shadow-gray-600/55 mb-4 py-4 space-y-2 lg:mb-0">
-                    <h3 class="w-full text-emerald-700 py-2 text-left pl-6 text-lg uppercase font-bold">Se responsable</h3>
+                <div class="ley w-full flex flex-col justify-center lg:justify-start items-center bg-slate-50/95 rounded-md shadow-md shadow-gray-600/55 mb-4 py-4 space-y-2 lg:mb-0">
+                    <h3 class="w-full text-emerald-600 py-2 text-left lg:text-center pl-6 lg:pl-0 text-lg sm:text-xl md:text-2xl lg:text-3xl uppercase font-bold">Se responsable</h3>
                     
-                    <div class="px-6 space-y-3">
+                    <div class="px-6 space-y-3 sm:text-lg lg:text-xl">
                         <p class="text-justify text-black/75">“No nos cansemos de hacer el bien, porque a su debido tiempo cosecharemos, si no nos damos por vencidos.”</p>
                         <p class="font-light italic text-black/90 pb-2">Gálatas 6:9</p>
                     </div>
                 </div>
 
-                <div class="ley w-full flex flex-col justify-center items-center bg-slate-50/95 rounded-md shadow-md shadow-gray-600/55 mb-4 py-4 space-y-2 lg:mb-0">
-                    <h3 class="w-full text-sky-700 py-2 text-left pl-6 text-lg uppercase font-bold">No mientas</h3>
+                <div class="ley w-full flex flex-col justify-center lg:justify-start items-center bg-slate-50/95 rounded-md shadow-md shadow-gray-600/55 mb-4 py-4 space-y-2 lg:mb-0">
+                    <h3 class="w-full text-sky-600 py-2 text-left lg:text-center pl-6 lg:pl-0 text-lg sm:text-xl md:text-2xl lg:text-3xl uppercase font-bold">No mientas</h3>
                     
-                    <div class="px-6 space-y-3">
+                    <div class="px-6 space-y-3 sm:text-lg lg:text-xl">
                         <p class="text-justify text-black/75">“Por lo tanto, dejando la mentira, hablad verdad cada uno con su prójimo, porque somos miembros los unos de los otros.”</p>
                         <p class="font-light italic text-black/90 pb-2">Efesios 4:25</p>
                     </div>
                 </div>
 
-                <div class="ley w-full flex flex-col justify-center items-center bg-slate-50/95 rounded-md shadow-md shadow-gray-600/55 mb-4 py-4 space-y-2 lg:mb-0">
-                    <h3 class="w-full text-fuchsia-700 py-2 text-left pl-6 text-lg uppercase font-bold">Se Valiente</h3>
+                <div class="ley w-full flex flex-col justify-center lg:justify-start items-center bg-slate-50/95 rounded-md shadow-md shadow-gray-600/55 mb-4 py-4 space-y-2 lg:mb-0">
+                    <h3 class="w-full text-fuchsia-600 py-2 text-left lg:text-center pl-6 lg:pl-0 text-lg sm:text-xl md:text-2xl lg:text-3xl uppercase font-bold">Se Valiente</h3>
                     
-                    <div class="px-6 space-y-3">
+                    <div class="px-6 space-y-3 sm:text-lg lg:text-xl">
                         <p class="text-justify text-black/75">“Mira que te mando que te esfuerces y seas valiente; no temas ni desmayes, porque Jehová tu Dios estará contigo dondequiera que vayas.”</p>
                         <p class="font-light italic text-black/90 pb-2">Josué 1:9</p>
                     </div>
                 </div>
 
-                <div class="ley w-full flex flex-col justify-center items-center bg-slate-50/95 rounded-md shadow-md shadow-gray-600/55 mb-4 py-4 space-y-2 lg:mb-0">
-                    <h3 class="w-full text-gray-700 py-2 text-left pl-6 text-lg uppercase font-bold">No presumas</h3>
+                <div class="ley w-full flex flex-col justify-center lg:justify-start items-center bg-slate-50/95 rounded-md shadow-md shadow-gray-600/55 mb-4 py-4 space-y-2 lg:mb-0">
+                    <h3 class="w-full text-gray-600 py-2 text-left lg:text-center pl-6 lg:pl-0 text-lg sm:text-xl md:text-2xl lg:text-3xl uppercase font-bold">No presumas</h3>
                     
-                    <div class="px-6 space-y-3">
+                    <div class="px-6 space-y-3 sm:text-lg lg:text-xl">
                         <p class="text-justify text-black/75">“Que te alabe otro y no tu propia boca; que lo haga un desconocido, no tus propios labios.”</p>
                         <p class="font-light italic text-black/90 pb-2">Proverbios 27:2</p>
                     </div>
                 </div>
 
-                <div class="ley w-full flex flex-col justify-center items-center bg-slate-50/95 rounded-md shadow-md shadow-gray-600/55 mb-4 py-4 space-y-2 lg:mb-0">
-                    <h3 class="w-full text-yellow-700 py-2 text-center text-lg uppercase font-bold">Ley de Oro</h3>
+                <div class="ley w-full flex flex-col justify-center lg:justify-start items-center bg-slate-50/95 rounded-md shadow-md shadow-gray-600/55 mb-4 py-4 space-y-2 lg:mb-0">
+                    <h3 class="w-full text-yellow-600 py-2 text-center text-lg sm:text-xl md:text-2xl lg:text-3xl uppercase font-bold">Ley de Oro</h3>
                     
-                    <div class="px-6 space-y-3">
+                    <div class="px-6 space-y-3 sm:text-lg lg:text-xl">
                         <p class="text-justify text-black/75">“Así que, en todo, traten a los demás tal como quieren que ellos los traten a ustedes; porque esto es la ley y los profetas”</p>
 
                         <p class="font-light italic text-black/90 pb-2">Mateo 7:12</p>
@@ -171,12 +182,12 @@
 
         </section> <!--Fin de Leyes -->
 
-        <section class="bg-gradiente-v1 contenedor-principal relative overflow-hidden">
-            <h2 class="title md:text-6xl xl:text-8xl pb-4 md:pb-0">Virtudes</h2>
+        <section class="bg-slate-100 contenedor-principal relative overflow-hidden">
+            <h2 class="text-center text-gray-800 text-4xl font-bold font-cuerpos md:text-6xl lg:text-8xl xl:text-9xl px-4 pt-4">Virtudes</h2>
 
             <div class="w-full flex flex-col justify-around items-center sm:text-2xl lg:text-5xl">
-                <div class="w-[95%] space-y-4">
-                    <p class="text-justify text-base font-cuerpos font-medium px-8 pb-2 md:py-6 sm:text-lg md:text-xl md:px-12 lg:px-16 lg:pb-4 lg:text-2xl xl:text-3xl">El objetivo de MPA es claro: <span class="font-bold">lograr que más niños reconozcan a Dios como su amigo.</span> Y para alcanzar esta meta, niños, jóvenes y adultos unen sus fuerzas 💪🏽 para lograrlo ⭐.</p>
+                <div class="w-[95%] xl:w-[90%]">
+                    <p class="font-cuerpos font-medium text-slate-950/90 text-justify text-base py-4 px-8 sm:text-lg md:text-xl md:py-8 md:px-12 lg:px-16 lg:py-12 lg:text-2xl leading-7 md:leading-8 lg:leading-9 xl:leading-10">Cada actividad, juego y momento compartido tiene un propósito más profundo: <span class="font-bold">sembrar valores en el corazón de cada niño y joven 🌱💖</span>. Aquí no solo reímos y cantamos, también aprendemos a vivir con amor, a servir con alegría y a construir comunidad desde el ejemplo de Jesús 🙌. <span class="font-bold">Las virtudes</span> que cultivamos nos ayudan a crecer como mejores personas y nos preparan para ser luz en casa, en la escuela y en el mundo entero 🌟.</p>
                 </div>
             </div>
 
@@ -184,7 +195,7 @@
                 <div class="slider flex justify-center items-center xl:flex-wrap lg:w-full transition-transform duration-300 ease-linear my-3">
 
                     <div class="card w-[300px] sm:w-full h-[400px] sm:h-auto flex flex-shrink-0 px-4 md:px-0 xl:p-2">
-                        <div class="w-full flex flex-col md:flex-row items-center rounded-2xl md:rounded-none xl:rounded-2xl overflow-hidden shadow-[0px_0px_20px_-9px_rgba(0,_0,_0,_1)]">
+                        <div class="w-full flex flex-col md:flex-row items-center rounded-2xl md:rounded-none xl:rounded-2xl overflow-hidden shadow-[0px_1px_8px_3px_rgba(0,_0,_0,_0.35)]">
                             <img class="md:w-[50%] aspect-video md:aspect-square xl:aspect-video object-cover" src="../../assets/virtudes/Amistad.webp" alt="Virtud de la Amistad">
 
                             <div class="bg-red-600 pb-4 space-y-2 h-full md:flex md:flex-col md:justify-center">
@@ -195,8 +206,8 @@
                     </div>
 
                     <div class="card w-[300px] sm:w-full h-[400px] sm:h-auto hidden flex-shrink-0 px-4 md:px-0 xl:p-2">
-                        <div class="w-full flex flex-col md:flex-row items-center rounded-2xl md:rounded-none xl:rounded-2xl overflow-hidden shadow-[0px_0px_20px_-9px_rgba(0,_0,_0,_1)]">
-                            <img class="md:w-[50%] aspect-video md:aspect-square xl:aspect-auto object-cover" src="../../assets/virtudes/Trabajo en equipo.webp" alt="Virtud del Trabajo en Equipo">
+                        <div class="w-full flex flex-col md:flex-row items-center rounded-2xl md:rounded-none xl:rounded-2xl overflow-hidden shadow-[0px_1px_8px_3px_rgba(0,_0,_0,_0.35)]">
+                            <img class="md:w-[50%] aspect-video md:aspect-square xl:aspect-video object-cover" src="../../assets/virtudes/Trabajo en equipo.webp" alt="Virtud del Trabajo en Equipo">
                             
                             <div class="bg-orange-600 pb-4 space-y-2 h-full md:flex md:flex-col md:justify-center">
                                 <h3 class="text-center text-2xl sm:text-2xl md:text-5xl lg:text-6xl xl:text-7xl md:font-titulos font-cuerpos font-bold text-white py-4">Trabajo en Equipo</h3>
@@ -207,7 +218,7 @@
                     </div>
 
                     <div class="card w-[300px] sm:w-full h-[400px] sm:h-auto hidden flex-shrink-0 px-4 md:px-0 xl:p-2">
-                        <div class="w-full flex flex-col md:flex-row items-center rounded-2xl md:rounded-none xl:rounded-2xl overflow-hidden shadow-[0px_0px_20px_-9px_rgba(0,_0,_0,_1)]">
+                        <div class="w-full flex flex-col md:flex-row items-center rounded-2xl md:rounded-none xl:rounded-2xl overflow-hidden shadow-[0px_1px_8px_3px_rgba(0,_0,_0,_0.35)]">
                             <img class="md:w-[50%] aspect-video md:aspect-square xl:aspect-video object-cover" src="../../assets/virtudes/Empatia.webp" alt="Virtud de la Empatia">
                             
                             <div class="bg-yellow-600 pb-4 space-y-2 h-full md:flex md:flex-col md:justify-center">
@@ -219,7 +230,7 @@
                     </div>
 
                     <div class="card w-[300px] sm:w-full h-[400px] sm:h-auto hidden flex-shrink-0 px-4 md:px-0 xl:p-2">
-                        <div class="w-full flex flex-col md:flex-row items-center rounded-2xl md:rounded-none xl:rounded-2xl overflow-hidden shadow-[0px_0px_20px_-9px_rgba(0,_0,_0,_1)]">
+                        <div class="w-full flex flex-col md:flex-row items-center rounded-2xl md:rounded-none xl:rounded-2xl overflow-hidden shadow-[0px_1px_8px_3px_rgba(0,_0,_0,_0.35)]">
                             <img class="md:w-[50%] aspect-video md:aspect-square xl:aspect-video object-cover" src="../../assets/virtudes/Servicio.webp" alt="Virtud del Servicio">
 
                             <div class="bg-lime-600 pb-4 space-y-2 h-full md:flex md:flex-col md:justify-center">
@@ -231,7 +242,7 @@
                     </div>
 
                     <div class="card w-[300px] sm:w-full h-[400px] sm:h-auto hidden flex-shrink-0 px-4 md:px-0 xl:p-2">
-                        <div class="w-full flex flex-col md:flex-row items-center rounded-2xl md:rounded-none xl:rounded-2xl overflow-hidden shadow-[0px_0px_20px_-9px_rgba(0,_0,_0,_1)]">
+                        <div class="w-full flex flex-col md:flex-row items-center rounded-2xl md:rounded-none xl:rounded-2xl overflow-hidden shadow-[0px_1px_8px_3px_rgba(0,_0,_0,_0.35)]">
                             <img class="md:w-[50%] aspect-video md:aspect-square xl:aspect-video object-cover" src="../../assets/virtudes/Espiritualidad.webp" alt="Virtud de la Espiritualidad">
 
                             <div class="bg-sky-600 pb-4 space-y-2 h-full md:flex md:flex-col md:justify-center">
@@ -243,7 +254,7 @@
                     </div>
 
                     <div class="card w-[300px] sm:w-full h-[400px] sm:h-auto hidden flex-shrink-0 px-4 md:px-0 xl:p-2">
-                        <div class="w-full flex flex-col md:flex-row items-center rounded-2xl md:rounded-none xl:rounded-2xl overflow-hidden shadow-[0px_0px_20px_-9px_rgba(0,_0,_0,_1)]">
+                        <div class="w-full flex flex-col md:flex-row items-center rounded-2xl md:rounded-none xl:rounded-2xl overflow-hidden shadow-[0px_1px_8px_3px_rgba(0,_0,_0,_0.35)]">
                             <img class="md:w-[50%] aspect-video md:aspect-square xl:aspect-video object-cover" src="../../assets/virtudes/Amor.webp" alt="Virtud del Amor">
 
                             <div class="bg-fuchsia-600 pb-4 space-y-2 h-full md:flex md:flex-col md:justify-center">
